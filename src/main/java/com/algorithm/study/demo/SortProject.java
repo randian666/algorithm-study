@@ -1,5 +1,7 @@
 package com.algorithm.study.demo;
 
+import java.util.Collections;
+
 /**
  * 排序算法-内排序
  * Created by liuxun on 2017/5/17.
@@ -152,7 +154,7 @@ public class SortProject {
         }
     }
     public static void quick(int[] a2) {
-        if (a2.length > 0) {    //查看数组是否为空
+        if (a2.length > 1) {    //查看数组是否为空
             _quickSort(a2, 0, a2.length - 1);
         }
     }
