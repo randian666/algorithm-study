@@ -1,9 +1,5 @@
 package com.algorithm.study.demo;
 
-import com.algorithm.study.demo.mode.Rectangle;
-import com.algorithm.study.demo.mode.RedShapeDecorator;
-import com.algorithm.study.demo.mode.Shape;
-
 /**
  * 查找算法
  * Created by liuxun on 2017/4/25.
