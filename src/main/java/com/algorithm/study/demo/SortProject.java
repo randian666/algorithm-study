@@ -131,38 +131,39 @@ public class SortProject {
      * @param high
      * @return
      */
-    public static void _quickSort(int[] a,int low,int high) {
-        int start = low;
-        int end = high;
-        int key = a[low];
-        while (end > start) {
-            //从后往前比较
-            while (end > start && a[end] >= key)  //如果没有比关键值小的，比较下一个，直到有比关键值小的交换位置，然后又从前往后比较
-                end--;
+    public static void quickSort(int[] a,int low,int high) {
+        int lo = low;
+        int hi = high;
 
-            if (a[end] <= key) {
-                int temp = a[end];
-                a[end] = a[start];
-                a[start] = temp;
-            }
-            //从前往后比较
-            while (end > start && a[start] <= key)//如果没有比关键值大的，比较下一个，直到有比关键值大的交换位置
-                start++;
+        if (lo >= hi)
+            return;
 
-            if (a[start] >= key) {
-                int temp = a[start];
-                a[start] = a[end];
-                a[end] = temp;
+        //确定指针方向的逻辑变量
+        boolean transfer=true;
+        while (lo != hi) {
+            if (a[lo] > a[hi]) {
+                //交换数字
+                int temp = a[lo];
+                a[lo] = a[hi];
+                a[hi] = temp;
+                //决定下标移动，还是上标移动
+                transfer = false;
             }
-            //此时第一次循环比较结束，关键值的位置已经确定了。左边的值都比关键值小，右边的值都比关键值大，但是两边的顺序还有可能是不一样的，进行下面的递归调用
+            //将指针向前或者向后移动
+            if(transfer)
+                hi--;
+            else
+                lo++;
         }
-        //递归
-        if (start > low) _quickSort(a, low, start - 1);//左边序列。第一个索引位置到关键值索引-1
-        if (end < high) _quickSort(a, end + 1, high);//右边序列。从关键值索引+1到最后一个
+        //将数组分开两半，确定每个数字的正确位置
+        lo--;
+        hi++;
+        quickSort(a, low, lo);
+        quickSort(a, hi, high);
     }
     public static void quick(int[] a2) {
         if (a2.length > 1) {    //查看数组是否为空
-            _quickSort(a2, 0, a2.length - 1);
+            quickSort(a2, 0, a2.length - 1);
         }
     }
 }
