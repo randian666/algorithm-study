@@ -1,6 +1,9 @@
 package com.algorithm.study.demo;
 
-import java.util.Collections;
+import com.algorithm.study.demo.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 排序算法-内排序
@@ -8,7 +11,7 @@ import java.util.Collections;
  */
 public class SortProject {
     public static void main(String[] args) {
-        int a[] = {69, 70, 2, 87,3};
+//        int a[] = {69, 70, 2, 87,3};
 //        maopaoSort(a);
 //        selectSort(a);
 
@@ -16,12 +19,24 @@ public class SortProject {
 
 //        shellSort(a);
 
-        quick(a);
+//        quick(a);
+//        System.out.print("数组最终排序结果：");
+//        for(int i = 0; i < a.length; i++){
+//            System.out.print(a[i] + "\t");
+//        }
 
-        System.out.print("最终排序结果：");
-        for(int i = 0; i < a.length; i++){
-            System.out.print(a[i] + "\t");
+        List<User> lists=new ArrayList<User>();
+        lists.add(new User(1,"张1"));
+        lists.add(new User(6,"张6"));
+        lists.add(new User(2,"张2"));
+        lists.add(new User(4,"张4"));
+        lists.add(new User(9,"张9"));
+        quickSortByList(lists,0, lists.size()-1);
+        System.out.println("集合最终排序结果：");
+        for(int i = 0; i < lists.size(); i++){
+            System.out.println("ID:"+lists.get(i).getId()+",姓名:"+lists.get(i).getName()+ "\t");
         }
+
     }
 
     /**
@@ -160,6 +175,39 @@ public class SortProject {
         hi++;
         quickSort(a, low, lo);
         quickSort(a, hi, high);
+    }
+
+    /**快速排序方法（列表）*/
+    public static void quickSortByList(List<User> list, int low, int high) {
+        int lo = low;
+        int hi = high;
+        if (lo >= hi)
+            return;
+
+        //确定指针方向的逻辑变量
+        boolean transfer=true;
+
+        while (lo != hi) {
+            if (list.get(lo).getId() > list.get(hi).getId()) {
+                //交换
+                User temp = list.get(lo);
+                list.set(lo, list.get(hi));
+                list.set(hi, temp);
+                //决定下标移动，还是上标移动
+                transfer =false;
+            }
+
+            //将指针向前或者向后移动
+            if(transfer)
+                hi--;
+            else
+                lo++;
+        }
+        //将数组分开两半，确定每个数字的正确位置
+        lo--;
+        hi++;
+        quickSortByList(list, low, lo);
+        quickSortByList(list, hi, high);
     }
     public static void quick(int[] a2) {
         if (a2.length > 1) {    //查看数组是否为空
