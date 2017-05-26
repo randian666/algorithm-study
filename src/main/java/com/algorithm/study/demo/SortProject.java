@@ -2,7 +2,9 @@ package com.algorithm.study.demo;
 
 import com.algorithm.study.demo.model.User;
 
-import java.util.ArrayList;
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -10,35 +12,49 @@ import java.util.List;
  * Created by liuxun on 2017/5/17.
  */
 public class SortProject {
+    // 被测试的方法集合
+    static String[] methodNames = new String[]{
+//            "maopaoSort",
+//            "selectSort",
+//            "insertSort",
+//            "shellSort",
+//            "quick",
+//            "listSort",
+//            "mergeSort",
+//            "heapSort",
+            "binaryTreeSort"
+    };
     public static void main(String[] args) {
-//        int a[] = {69, 70, 2, 87,3};
-//        maopaoSort(a);
-//        selectSort(a);
-
-//        insertSort(a);
-
-//        shellSort(a);
-
-//        quick(a);
-//        System.out.print("数组最终排序结果：");
-//        for(int i = 0; i < a.length; i++){
-//            System.out.print(a[i] + "\t");
-//        }
-
-        List<User> lists=new ArrayList<User>();
-        lists.add(new User(1,"张1"));
-        lists.add(new User(6,"张6"));
-        lists.add(new User(2,"张2"));
-        lists.add(new User(4,"张4"));
-        lists.add(new User(9,"张9"));
-        quickSortByList(lists,0, lists.size()-1);
-        System.out.println("集合最终排序结果：");
-        for(int i = 0; i < lists.size(); i++){
-            System.out.println("ID:"+lists.get(i).getId()+",姓名:"+lists.get(i).getName()+ "\t");
+        try {
+            performanceTest(10);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
 
+    /**
+     * 算法性能测试
+     * @param len
+     * @throws Exception
+     */
+    public static void performanceTest(int len) throws Exception{
+        int[] a = new int[len];
+        int times = 1;//每个算法跑20次
+        for(int i=0; i<methodNames.length; i++){
+            Method method = SortProject.class.getDeclaredMethod(methodNames[i], a.getClass());
+            int totalTime=0;//每个算法20次跑完的总时间
+            for(int j=0; j<times; j++) {
+                for (int k = 0; k < len; k++) {
+                    a[k] = (int) Math.floor(Math.random() * 20000);
+                }
+                long begin=System.currentTimeMillis();
+                method.invoke(SortProject.class.newInstance(),a);
+                long end=System.currentTimeMillis();
+                totalTime+=(end-begin);
+            }
+            System.out.println(methodNames[i] + "，总耗时: " + (totalTime) + " ms");
+        }
+    }
     /**
      * 冒泡排序
      * 两两相邻比较记录的关键字，如果反序就交换，直到没有反序的记录为止。
@@ -55,12 +71,22 @@ public class SortProject {
                     flag=true;//发生了数据交换
                 }
             }
-            System.out.print("第" + (i) + "趟排序结果：");
-            for(int a = 0; a < score.length; a++){
-                System.out.print(score[a] + "\t");
-            }
-            System.out.println("");
+//            System.out.print("第" + (i) + "趟排序结果：");
+//            for(int a = 0; a < score.length; a++){
+//                System.out.print(score[a] + "\t");
+//            }
+//            System.out.println("");
         }
+    }
+
+    /**
+     * 在Java 6中Arrays.sort()和Collections.sort()使用的是MergeSort，而在Java 7中，内部实现换成了TimSort
+     * TimSort算法是一种起源于归并排序和插入排序的混合排序算法
+     * @param ls
+     */
+    private static void listSort(int ls[]){
+        List asList=Arrays.asList(ls);
+        Collections.sort(asList);
     }
     /**
      * 简单选择排序算法
@@ -80,11 +106,11 @@ public class SortProject {
                 ls[i]=ls[min];
                 ls[min]=temp;
             }
-            System.out.print("第" + (i + 1) + "趟排序结果：");
-            for(int a = 0; a < ls.length; a++){
-                System.out.print(ls[a] + "\t");
-            }
-            System.out.println("");
+//            System.out.print("第" + (i + 1) + "趟排序结果：");
+//            for(int a = 0; a < ls.length; a++){
+//                System.out.print(ls[a] + "\t");
+//            }
+//            System.out.println("");
         }
     }
 
@@ -103,11 +129,11 @@ public class SortProject {
             }
             ls[j+1] = key;
 
-            System.out.print("第" + (i + 1) + "趟排序结果：");
-            for(int a = 0; a < ls.length; a++){
-                System.out.print(ls[a] + "\t");
-            }
-            System.out.println("");
+//            System.out.print("第" + (i + 1) + "趟排序结果：");
+//            for(int a = 0; a < ls.length; a++){
+//                System.out.print(ls[a] + "\t");
+//            }
+//            System.out.println("");
         }
     }
     /**
@@ -118,7 +144,6 @@ public class SortProject {
      */
     private static void shellSort( int ls[]){
         int d=ls.length;
-        int index=0;
         while (d>1){
             d=(d+1)/2;
             for(int i=0;i<ls.length-d;i++){
@@ -128,12 +153,6 @@ public class SortProject {
                     ls[i]=temp;
                 }
             }
-            index++;
-            System.out.print("第" + index + "趟排序结果：");
-            for(int a = 0; a < ls.length; a++){
-                System.out.print(ls[a] + "\t");
-            }
-            System.out.println("");
         }
     }
 
@@ -149,10 +168,8 @@ public class SortProject {
     public static void quickSort(int[] a,int low,int high) {
         int lo = low;
         int hi = high;
-
         if (lo >= hi)
             return;
-
         //确定指针方向的逻辑变量
         boolean transfer=true;
         while (lo != hi) {
@@ -213,5 +230,190 @@ public class SortProject {
         if (a2.length > 1) {    //查看数组是否为空
             quickSort(a2, 0, a2.length - 1);
         }
+    }
+
+    /**
+     * 归并排序<br>
+     * 所谓归并，就是合并两个有序数组；归并排序也用了分而治之的思想，把一个数组分为若干个子数组；<br>
+     * 当子数组的长度为1的时候，则子数组是有序的，于是就可以两两归并了；<br>
+     * <br>
+     * 由于归并排序需要分配空间来转储归并的结果，为了算法上的方便，归并算法的结果以返回值的形式出现；<br>
+     */
+
+    /**
+     * 合并两个有序数组
+     * @param a 有序数组1
+     * @param b 有序数组2
+     * @return 合并之后的有序数组；
+     */
+    public static int[] merge(int[] a, int[] b){
+        int result[] = new int[a.length+b.length];
+        int i=0,j=0,k=0;
+        while(i<a.length&&j<b.length){
+            if(a[i]<b[j]){
+                result[k++] = a[i];
+                i++;
+            }
+            else{
+                result[k++] = b[j];
+                j++;
+            }
+        }
+        while(i<a.length){
+            result[k++] = a[i++];
+        }
+        while(j<b.length){
+            result[k++] = b[j++];
+        }
+        return result;
+    }
+    /**
+     * 归并排序<br>
+     * 把数组从中间一分为二，并对左右两部分递归调用，直到数组长度为1的时候，开始两两归并；<br>
+     * 时间复杂度: 平均:O(nlogn)，最好:O(nlogn);最坏:O(nlogn);
+     * 空间复杂度: O(n);要为归并的结果分配空间
+     * @param a 待排序数组；
+     * @return 有序数组；
+     */
+    public static int[] mergeSort(int[] a){
+        if(a.length==1){
+            return a;
+        }
+        int mid = a.length/2;
+        int[] leftPart = new int[mid];
+        int[] rightPart = new int[a.length-mid];
+        System.arraycopy(a, 0, leftPart, 0, leftPart.length);
+        System.arraycopy(a, mid, rightPart, 0, rightPart.length);
+        leftPart = mergeSort(leftPart);
+        rightPart = mergeSort(rightPart);
+        return merge(leftPart, rightPart);
+    }
+
+
+    /**
+     * 堆排序<br>
+     * 堆的定义：堆是一个完全，或近似完全的二叉树，堆顶元素的值大于左右孩子的值，左右孩子也需要满足这个条件；<br>
+     * 按照堆的定义，堆可以是大顶堆(maxHeap)，或小顶堆(minHeap)；<br>
+     * 一般用数组即可模拟二叉树，对于任意元素i，左孩子为2*i+1,右孩子为2*i+2;父节点为(i-1)/2;
+     *
+     * 时间复杂度: 平均:O(nlogn);
+     * 空间复杂度: O(1);
+     * @param a
+     */
+    public static void heapSort(int[] a){
+
+        // 先从最后一个非叶子节点往上调整，使满足堆结构；
+        for(int i=(a.length-2)/2; i>=0; i--){
+            maxHeapAdjust(a, i, a.length);
+        }
+        // 每次拿最后一个节点和第一个交换，然后调整堆；直到堆顶；
+        for(int i=a.length-1; i>0; i--){
+            int tmp = a[i]; a[i] = a[0]; a[0] = tmp;
+            maxHeapAdjust(a, 0, i);
+        }
+    }
+
+    /**
+     * 调整堆<br>
+     * 把以i为跟节点的二叉树调整为堆；<br>
+     * 可以这么来思考这个过程：这个完全二叉树就像一个金字塔，塔顶的小元素沿着树结构，往下沉降；<br>
+     * 调整的结果是最大的元素在金字塔顶，然后把它从堆中删除(把它交换到堆尾，然后堆收缩一格)；<br>
+     * 堆排序快的原因就是根据二叉树的特点，一个节点要沉降到合适的位置，只需要logn步；同时前期调整的结果(大小顺序)会被记录下来，从而加快后续的调整；<br>
+     * @param a 待排数组
+     * @param i 堆顶
+     * @param len 堆长度
+     */
+    public static void maxHeapAdjust(int[] a, int i, int len){
+        int tmp = a[i];
+        // j是左孩子节点
+        int j = i*2+1;
+        //
+        while(j<len){
+            // 从左右孩子中挑选大的
+            // j+1是右孩子节点
+            if((j+1)<len && a[j+1]>a[j]){
+                j++;
+            }
+            // 找到恰当的位置就不再找
+            if(a[j]<tmp){
+                break;
+            }
+            // 否则把较大者沿着树往上移动；
+            a[i] = a[j];
+            // i指向刚才的较大的孩子；
+            i = j;
+            // j指向新的左孩子节点；
+            j = 2*i + 1;
+        }
+        // 把要调整的节点值下沉到适当的位置；
+        a[i] = tmp;
+    }
+
+
+    /**
+     * 二叉树排序<br>
+     * 二叉树的定义是嵌套的：<br>节点的值大于左叶子节点的值，小于右叶子节点的值；叶子节点同样满足这个要求；<br>
+     * 二叉树的构造过程就是排序的过程：<br>
+     * 先构造跟节点，然后调用add方法添加后续节点为跟节点的子孙节点；这个过程也是嵌套的;<br>
+     * <br>
+     * 中序遍历二叉树即得到有序结果；<br>
+     * 二叉树排序用法特殊，使用情形要视情况而定；<br>
+     *
+     * 时间复杂度: 平均:O(nlogn);
+     * 空间复杂度: O(n);
+     *
+     * @param a
+     */
+    public static void binaryTreeSort(int[] a){
+        // 构造一个二叉树节点内部类来实现二叉树排序算法；
+        class BinaryNode{
+            int value;
+            BinaryNode left;
+            BinaryNode right;
+
+            public BinaryNode(int value){
+                this.value = value;
+                this.left = null;
+                this.right = null;
+            }
+
+            public void add(int value){
+                if(value>this.value){
+                    if(this.right!=null){
+                        this.right.add(value);
+                    }
+                    else{
+                        this.right = new BinaryNode(value);
+                    }
+                }
+                else{
+                    if(this.left!=null){
+                        this.left.add(value);
+                    }
+                    else{
+                        this.left = new BinaryNode(value);
+                    }
+                }
+            }
+            /**
+             * 按中序遍历二叉树，就是有序的。
+             */
+            public void iterate(){
+                if(this.left!=null){
+                    this.left.iterate();
+                }
+                System.out.print(value + ", ");
+                if(this.right!=null){
+                    this.right.iterate();
+                }
+
+            }
+        }
+
+        BinaryNode root = new BinaryNode(a[0]);
+        for(int i=1; i<a.length; i++){
+            root.add(a[i]);
+        }
+        root.iterate();
     }
 }
