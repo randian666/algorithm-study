@@ -14,22 +14,24 @@ import java.util.List;
 public class SortProject {
     // 被测试的方法集合
     static String[] methodNames = new String[]{
-//            "maopaoSort",
-//            "selectSort",
-//            "insertSort",
-//            "shellSort",
-//            "quick",
-//            "listSort",
-//            "mergeSort",
-//            "heapSort",
+            "maopaoSort",
+            "selectSort",
+            "insertSort",
+            "shellSort",
+            "quick",
+            "listSort",
+            "mergeSort",
+            "heapSort",
             "binaryTreeSort"
     };
     public static void main(String[] args) {
-        try {
-            performanceTest(10);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        int[] ls=new int[]{1,30,15,11,40};
+        quick(ls);
+//        try {
+//            performanceTest(10000);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
     /**
@@ -39,10 +41,10 @@ public class SortProject {
      */
     public static void performanceTest(int len) throws Exception{
         int[] a = new int[len];
-        int times = 1;//每个算法跑20次
+        int times = 10;//每个算法跑10次
         for(int i=0; i<methodNames.length; i++){
             Method method = SortProject.class.getDeclaredMethod(methodNames[i], a.getClass());
-            int totalTime=0;//每个算法20次跑完的总时间
+            int totalTime=0;//每个算法10次跑完的总时间
             for(int j=0; j<times; j++) {
                 for (int k = 0; k < len; k++) {
                     a[k] = (int) Math.floor(Math.random() * 20000);
@@ -402,7 +404,7 @@ public class SortProject {
                 if(this.left!=null){
                     this.left.iterate();
                 }
-                System.out.print(value + ", ");
+//                System.out.print(value + ", ");
                 if(this.right!=null){
                     this.right.iterate();
                 }

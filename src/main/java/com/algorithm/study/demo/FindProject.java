@@ -6,13 +6,41 @@ package com.algorithm.study.demo;
  */
 public class FindProject {
     public static void main(String[] args) {
-        int[] is = new int[]{1, 2, 3, 4,5,6,10,11,12,13,14,15,16};
+        int[] is = new int[]{1, 2, 2, 4,6,6};
 //        System.out.println(search(is,is.length-1,6));
-        System.out.println(binarySearch(is,15));
+        System.out.println(binarySearch(is,2));
 //        Shape redRectangle = new RedShapeDecorator(new Rectangle());
 //        redRectangle.doShaper();
     }
-
+    /**
+     * @param nums: The integer array.
+     * @param target: Target to find.
+     * @return: The first position of target. Position starts from 0.
+     */
+    public static int binarySearch(int[] nums, int target) {
+        //write your code here
+        int low=0;
+        int heigth=nums.length-1;
+        int middle;
+        while (low<=heigth){
+            middle=(low+heigth)/2;
+            if (target==nums[middle]){
+                for (int i=(middle-1);i>=0;i--){
+                    if (nums[i]==target){
+                        middle=i;
+                    }else{
+                        break;
+                    }
+                }
+                return middle;
+            }else if(target>nums[middle]){
+                low=middle+1;
+            }else{
+                heigth=middle-1;
+            }
+        }
+        return -1;
+    }
     /**
      * 求等差数列算法
      * 从1加到100
@@ -50,7 +78,7 @@ public class FindProject {
      * @param des
      * @return
      */
-    public static int binarySearch(int[] srcArray, int des){
+    public static int binary_search(int[] srcArray, int des){
        int low=0;//最低下标
        int height=srcArray.length-1;//最高下标
        int middle=0;//中间下标
