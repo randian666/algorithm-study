@@ -15,9 +15,12 @@ public class Lintcode2Project {
 
 //        removeDuplicates(A);
 
-        int[] A={3,5,11,12,13};
-        int[] B={4,5,6,7};
-        mergeSortedArray(A,A.length,B,B.length);
+//        int[] A={3,5,11,12,13};
+//        int[] B={4,5,6,7};
+//        mergeSortedArray(A,A.length,B,B.length);
+        int[] A={1,0,-1};
+        int[] result = twoSum(A, -1);
+        System.out.println(Arrays.toString(result));
     }
     /**
      * 给定一个数组和一个值，在原地删除与值相同的数字，返回新数组的长度。元素的顺序可以改变，并且对新的数组不会有影响。
@@ -120,5 +123,26 @@ public class Lintcode2Project {
             A[k--] = B[j--];
         }
         System.out.println(Arrays.toString(A));
+    }
+
+    /**
+     * 给一个整数数组，找到两个数使得他们的和等于一个给定的数 target。
+      * @param numbers : An array of Integer
+      * @param target : target = numbers[index1] + numbers[index2]
+      * @return : [index1 + 1, index2 + 1] (index1 < index2)
+      */
+    public static int[] twoSum(int[] numbers, int target) {
+        // write your code here
+        int a=0;
+        int m=numbers.length;
+        while (a<=m){
+            for (int j=(a+1);j<m;j++){
+                if (numbers[a]+numbers[j]==target){
+                    return new int[]{a+1,j+1};
+                }
+            }
+            a++;
+        }
+        return null;
     }
 }
