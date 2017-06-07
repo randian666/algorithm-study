@@ -12,6 +12,7 @@ public class FindProject {
 //        Shape redRectangle = new RedShapeDecorator(new Rectangle());
 //        redRectangle.doShaper();
     }
+
     /**
      * @param nums: The integer array.
      * @param target: Target to find.
