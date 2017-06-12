@@ -6,9 +6,9 @@ package com.algorithm.study.demo;
  */
 public class FindProject {
     public static void main(String[] args) {
-        int[] is = new int[]{1, 2, 2, 4,6,6};
+//        int[] is = new int[]{1, 2, 2, 4,6,6};
 //        System.out.println(search(is,is.length-1,6));
-        System.out.println(binarySearch(is,2));
+//        System.out.println(binarySearch(is,2));
 //        Shape redRectangle = new RedShapeDecorator(new Rectangle());
 //        redRectangle.doShaper();
     }

@@ -66,7 +66,7 @@ public class SortProject {
         for (int i = 1; i < score.length && flag; i++){    //最多做n-1趟排序
             flag=false;
             for(int j = 0 ;j < score.length - i; j++){    //对当前无序区间score[0......length-i-1]进行排序(j的范围很关键，这个范围是在逐步缩小的)
-                if(score[j] > score[j + 1]){    //把小的值交换到后面
+                if(score[j] > score[j + 1]){    //把大或者小的值交换到后面
                     int temp = score[j];
                     score[j] = score[j + 1];
                     score[j + 1] = temp;

@@ -18,9 +18,19 @@ public class Lintcode2Project {
 //        int[] A={3,5,11,12,13};
 //        int[] B={4,5,6,7};
 //        mergeSortedArray(A,A.length,B,B.length);
-        int[] A={1,0,-1};
-        int[] result = twoSum(A, -1);
-        System.out.println(Arrays.toString(result));
+//        int[] A={1,0,-1};
+//        int[] result = twoSum(A, -1);
+//        System.out.println(Arrays.toString(result));
+
+//        ArrayList<Integer> list=new ArrayList<Integer>();
+//        list.add(1);
+//        list.add(2);
+//        list.add(3);
+//        System.out.println(productExcludeItself(list).toString());
+//        int[] A={1,3,4,5};
+//        System.out.println(threeSumClosest(A,2));
+
+        ss();
     }
     /**
      * 给定一个数组和一个值，在原地删除与值相同的数字，返回新数组的长度。元素的顺序可以改变，并且对新的数组不会有影响。
@@ -61,12 +71,19 @@ public class Lintcode2Project {
      *          and the index of the last number
      */
     public ArrayList<Integer> subarraySum(int[] nums) {
-        // write your code here
-        for (int i=0;i<nums.length-1;i++){
-            if (nums[i]+nums[i+1]==0){
 
-            }
-        }
+
+        // write your code here
+//        int a=0;
+//        int m=nums.length;
+//        while (a<=m){
+//            for (int j=(a+1);j<m;j++){
+//                if (nums[a]+nums[j]==0){
+//                    return new int[]{a+1,j+1};
+//                }
+//            }
+//            a++;
+//        }
         return null;
     }
 
@@ -144,5 +161,162 @@ public class Lintcode2Project {
             a++;
         }
         return null;
+    }
+
+    /**
+     * 数组剔除元素后的乘积
+     * @param A: Given an integers array A
+     * @return: A Long array B and B[i]= A[0] * ... * A[i-1] * A[i+1] * ... * A[n-1]
+     */
+    public static ArrayList<Long> productExcludeItself(ArrayList<Integer> A) {
+        // write your code
+        ArrayList<Long> result = new ArrayList<Long>();
+        for(int i=0;i<A.size();i++){
+            Long mul = 1L;
+            for(int j=0;j<A.size();j++){
+                if(j!=i){
+                    mul = mul*A.get(j);
+                }
+            }
+            result.add(mul);
+        }
+
+        return result;
+    }
+    /**
+     * 丢失的第一个正整数
+     * 给出一个无序的正数数组，找出其中没有出现的最小正整数。
+     * 如果给出 [1,2,0], return 3
+     * @param A: an array of integers
+     * @return: an integer
+     */
+    public static int firstMissingPositive(int[] A) {
+        // write your code here
+        Arrays.sort(A);
+        int data = 0;
+        for (int i = 0; i < A.length; ++i) {
+            if (A[i]>0 && A[i]-data > 1)
+                return data +1;
+            else if (A[i] > 0)
+                data = A[i];
+        }
+        return data + 1;
+    }
+
+    /**
+     * 最接近的三数之和
+     * @param numbers: Give an array numbers of n integer
+     * @param target : An integer
+     * @return : return the sum of the three integers, the sum closest target.
+     */
+    public static int threeSumClosest(int[] numbers, int target) {
+        // write your code here
+        // 记录最小的差值
+        long minDiff = Long.MAX_VALUE;
+        // 记录最小差值对应的三个整数和
+        long result = 0;
+        // 每次求得的差值
+        long diff;
+        // 每次求得的三个整数的和
+        long sum;
+
+        // 先对数组进行排序
+        Arrays.sort(numbers);
+
+        // i表示假设取第i个数作为结果
+        for (int i = 0; i < numbers.length - 2; i++) {
+            // 第二个数可能的起始位置
+            int j = i + 1;
+            // 第三个数可能是结束位置
+            int k = numbers.length - 1;
+
+            while (j < k) {
+                // 求当前三个数的和
+                sum = numbers[j] + numbers[k] + numbers[i];
+                // 当前和与目标和之间的差值
+                diff = Math.abs(target - sum);
+
+                // 差值为0就直接返回
+                if (diff == 0) {
+                    return (int) sum;
+                }
+
+                // 如果当前的差值比之前记录的差值小
+                if (diff < minDiff) {
+                    // 更新最小的差值
+                    minDiff = diff;
+                    // 更新最小差值对应的和
+                    result = sum;
+
+                    // 以上的设置在下一次元素处理时生效
+                }
+                // 和大于target
+                if (sum > target) {
+                    k--;
+                }
+                // 和小于target
+                else {
+                    j++;
+                }
+            }
+        }
+        return (int) result;
+    }
+
+
+    public static String longestPalindrome1(String s) {
+
+        int maxPalinLength = 0;
+        String longestPalindrome = null;
+        int length = s.length();
+
+        // check all possible sub strings
+        for (int i = 0; i < length; i++) {
+            for (int j = i + 1; j < length; j++) {
+                int len = j - i;
+                String curr = s.substring(i, j + 1);
+                if (isPalindrome(curr)) {
+                    if (len > maxPalinLength) {
+                        longestPalindrome = curr;
+                        maxPalinLength = len;
+                    }
+                }
+            }
+        }
+
+        return longestPalindrome;
+    }
+    public static boolean isPalindrome(String s) {
+
+        for (int i = 0; i < s.length() - 1; i++) {
+            if (s.charAt(i) != s.charAt(s.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void ss(){
+        String s="abccba";
+        int[] a = new int[58];
+        for(int i=0;i<58;i++){
+            a[i]=0;
+        }
+        char[] c = s.toCharArray();
+        for(int i=0;i<c.length;i++){
+            int temp = c[i]-'A';
+            a[temp]++;
+        }
+        int length = 0;
+        boolean flat1 = false;
+        for(int i=0;i<58;i++){
+            length += (a[i]/2)*2;
+            if(a[i]%2==1){
+                flat1=true;
+            }
+        }
+        if(flat1)length++;
+        System.out.println(length);
+
     }
 }
