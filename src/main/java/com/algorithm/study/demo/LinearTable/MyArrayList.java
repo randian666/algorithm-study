@@ -2,6 +2,8 @@ package com.algorithm.study.demo.LinearTable;
 
 /**
  * 线性表的顺序存储结构
+ * 优点：可以快速的存取表中的任意元素；无须为表中元素之间的逻辑关系而增加额外的存储空间。
+ * 缺点：插入和删除操作需要移动大量元素；当线性表长度变化较大时，难以确定存储空间容量；造成存储空间的碎片。
  * Created by liuxun on 2017/6/14.
  */
 public class MyArrayList<E> implements MList{
