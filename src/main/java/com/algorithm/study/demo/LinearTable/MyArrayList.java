@@ -7,9 +7,8 @@ package com.algorithm.study.demo.LinearTable;
 public class MyArrayList<E> implements MList{
 
     private Object[] data;//数组存储数据元素
-    private final static int MAXSIZE=20;  //数组长度maxSize 存放线性表的存储空间长度，不变的。
     private int size;    //线性表当前的长度size，数据元素的个数，是变化的，长度小于等于数组的长度
-    private final static int DEFAULT_CAPACITY=16;
+    private final static int DEFAULT_CAPACITY=16;//数组默认长度，存放线性表的存储空间长度
     public MyArrayList(int capacity){
         this.data=new Object[Math.abs(capacity)];
         this.size=0;
