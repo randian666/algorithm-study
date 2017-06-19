@@ -59,7 +59,15 @@ public class TwoLinkList<E> {
         last=temp;
         size++;
     }
-
+    public void set(int index,E element){
+        Node temp=first;
+        int i=0;
+        while (i<index){
+            temp=temp.next;
+            i++;
+        }
+        temp.element=element;
+    }
     public void add(E element){
         this.addLast(element);
     }
@@ -109,7 +117,6 @@ public class TwoLinkList<E> {
         }
         return temp.element;
     }
-
     /**
      * 获取头元素
      * @return
