@@ -42,6 +42,7 @@ public class Test {
         linkList.add("C");
         linkList.add("D");
         linkList.delete("D");
+//        linkList.clear();
 //        System.out.println("已删除头结点："+linkList.deleteFirst());
         for (int i=0;i<linkList.size();i++){
             System.out.println(linkList.get(i));

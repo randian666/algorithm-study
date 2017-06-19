@@ -155,6 +155,10 @@ public class MLinkList<E> {
         }
         size--;
     }
+    public void clear(){
+        data=null;
+        size=0;
+    }
     private void checkPositionIndex(int index) {
         if (index<0 || index>size-1)
             throw new IndexOutOfBoundsException("数组越界Index: "+index+", Size: "+size);
