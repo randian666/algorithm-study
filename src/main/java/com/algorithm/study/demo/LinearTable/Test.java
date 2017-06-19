@@ -27,9 +27,10 @@ public class Test {
         LinkedList<String> list3=new LinkedList<String>();
         list3.add("a");
         list3.add("b");
-//        for (int i=0;i<list3.size();i++){
-//            System.out.println(list3.get(i));
-//        }
+        list3.add(1,"c");
+        for (int i=0;i<list3.size();i++){
+            System.out.println(list3.get(i));
+        }
 
         MLinkList<String> linkList=new MLinkList<String>();
 //        linkList.addFirst("A");
@@ -40,9 +41,11 @@ public class Test {
         linkList.add("A");
         linkList.add("B");
         linkList.add("C");
-        linkList.add("D");
-        linkList.add(2,"E");
-        linkList.set(2,"PPP");
+//        linkList.add("D");
+        linkList.add(2,"D");
+        linkList.add("E");
+        linkList.delete(4);
+//        linkList.set(2,"PPP");
 //        linkList.delete("D");
 //        linkList.clear();
 //        System.out.println("已删除头结点："+linkList.deleteFirst());

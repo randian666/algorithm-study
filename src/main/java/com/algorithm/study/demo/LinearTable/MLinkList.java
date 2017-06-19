@@ -2,6 +2,10 @@ package com.algorithm.study.demo.LinearTable;
 
 /**
  * 线性表的链式存储-单链表的实现
+ * 单链表采用链式存储结构，用一组任意的存储单元存放线性表元素
+ * 单链表不需要分配存储空间，元素个数也受限制
+ * 若线性表需要频繁查找，很少进行插入和删除操作时，宜采用顺序存储结构，若需要频繁插入和删除时，宜采用单链表结构。
+ * 当线性表的元素个数变化较大或者根本不知道有多大时，最好用单链表结构。这样可以不需要考虑存储空间的大小问题。
  * Created by liuxun on 2017/6/16.
  */
 public class MLinkList<E> {
@@ -64,15 +68,13 @@ public class MLinkList<E> {
             return;
         }
         Node newNode=new Node(element,null);//新的结点
-        Node after=data;//保存index之后的结点
         Node current=data;//保存index当前的结点
-        int i=0;//从第一个结点开始遍历
-        while (i!=index){//遍历index之前的结点
-            current=after;
-            after=after.next;
+        int i=1;//默认是第i个结点
+        while (i<index){//寻找第i个结点
+            current=current.next;
             i++;
         }
-        newNode.next=after;
+        newNode.next=current.next;
         current.next=newNode;
         size++;
     }
@@ -86,7 +88,7 @@ public class MLinkList<E> {
         checkPositionIndex(inddex);
         Node current=data;//保存index当前的结点
         int j=0;
-        while (j!=inddex){
+        while (j!=inddex){//找到第j个结点
             current=current.next;
             j++;
         }
@@ -103,8 +105,8 @@ public class MLinkList<E> {
         }
         Node newNode=new Node(element,null);//新的结点
         Node temp=data;
-        int j=0;
-        while (j<(size-1)){
+        int j=1;
+        while (j<size){
             temp= temp.next;//找到最后一个结点
             j++;
         }
@@ -133,17 +135,17 @@ public class MLinkList<E> {
      */
     public void delete(int index){
         checkPositionIndex(index);
-        Node temp=data;
-        Node current=data;
-        int j=0;
-        while (j<index){
-            current=temp;
-            temp=temp.next;
-            j++;
-        }
-        if (temp==data){
-            data=data.next;
+        if (index==0){
+            deleteFirst();
         }else{
+            Node current,temp;
+            current=data;
+            int j=1;
+            while (j<index){//找到第j个结点
+                current=current.next;
+                j++;
+            }
+            temp=current.next;
             current.next=temp.next;
         }
         size--;
