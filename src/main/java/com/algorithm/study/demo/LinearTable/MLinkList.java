@@ -1,7 +1,7 @@
 package com.algorithm.study.demo.LinearTable;
 
 /**
- * 单链表的实现
+ * 线性表的链式存储-单链表的实现
  * Created by liuxun on 2017/6/16.
  */
 public class MLinkList<E> {
@@ -77,6 +77,21 @@ public class MLinkList<E> {
         size++;
     }
 
+    /**
+     * 把index结点设置成新的值
+     * @param inddex
+     * @param element
+     */
+    public void set(int inddex,E element){
+        checkPositionIndex(inddex);
+        Node current=data;//保存index当前的结点
+        int j=0;
+        while (j!=inddex){
+            current=current.next;
+            j++;
+        }
+        current.data=element;
+    }
     /**
      * 增加一个末尾结点
      * @param element
