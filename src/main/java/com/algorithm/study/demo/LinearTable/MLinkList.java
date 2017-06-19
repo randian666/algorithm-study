@@ -132,6 +132,28 @@ public class MLinkList<E> {
         }
         size--;
     }
+
+    /**
+     * 删除元素
+     * @param element
+     */
+    public void delete(E element){
+        Node temp=data;
+        Node current=data;
+        while (!temp.data.equals(element)){
+            if (temp.next==null){
+                return;
+            }
+            current=temp;
+            temp=temp.next;
+        }
+        if (temp==data){
+            data=data.next;
+        }else{
+            current.next=temp.next;
+        }
+        size--;
+    }
     private void checkPositionIndex(int index) {
         if (index<0 || index>size-1)
             throw new IndexOutOfBoundsException("数组越界Index: "+index+", Size: "+size);
