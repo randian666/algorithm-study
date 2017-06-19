@@ -1,6 +1,7 @@
 package com.algorithm.study.demo.LinearTable;
 
 /**
+ * 单链表的实现
  * Created by liuxun on 2017/6/16.
  */
 public class MLinkList<E> {
