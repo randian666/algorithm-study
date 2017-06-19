@@ -24,7 +24,6 @@ public class MLinkList<E> {
         }
     }
     private Node data;// 保存头结点
-//    private Node last;// 保存尾结点
     private int size=0;// 保存已含有的节点数
 
     public MLinkList(){
