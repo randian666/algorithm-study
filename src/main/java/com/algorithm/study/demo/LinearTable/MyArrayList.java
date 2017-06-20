@@ -6,7 +6,7 @@ package com.algorithm.study.demo.LinearTable;
  * 缺点：插入和删除操作需要移动大量元素；当线性表长度变化较大时，难以确定存储空间容量；造成存储空间的碎片。
  * Created by liuxun on 2017/6/14.
  */
-public class MyArrayList<E> implements MList{
+public class MyArrayList<E>{
 
     private Object[] data;//数组存储数据元素
     private int size;    //线性表当前的长度size，数据元素的个数，是变化的，长度小于等于数组的长度

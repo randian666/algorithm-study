@@ -3,13 +3,14 @@ package com.algorithm.study.demo.LinearTable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * Created by liuxun on 2017/6/14.
  */
 public class Test {
     public static void main(String[] args) {
-//        MList<String> list=new MyArrayList<String>();
+//        MyArrayList<String> list=new MyArrayList<String>();
 //        list.addElem(0,"hello2");
 //        list.addElem(0,"hello1");
 ////        list.setElem(0,"hello3");
@@ -57,21 +58,36 @@ public class Test {
 //        }
 
 
-        TwoLinkList<String> twoLinkList=new TwoLinkList<String>();
-        twoLinkList.addFirst("A");
-        twoLinkList.addFirst("B");
-        twoLinkList.addFirst("C");
-        twoLinkList.addLast("D");
-        twoLinkList.add("E");
+//        TwoLinkList<String> twoLinkList=new TwoLinkList<String>();
+//        twoLinkList.addFirst("A");
+//        twoLinkList.addFirst("B");
+//        twoLinkList.addFirst("C");
+//        twoLinkList.addLast("D");
+//        twoLinkList.add("E");
 //        System.out.println("头元素："+twoLinkList.getFirst());
 //        System.out.println("尾元素："+twoLinkList.getLast());
-        System.out.println("删除后的头元素："+twoLinkList.deleteFirst());
-        System.out.println("删除后的尾元素："+twoLinkList.deleteLast());
+//        System.out.println("删除后的头元素："+twoLinkList.deleteFirst());
+//        System.out.println("删除后的尾元素："+twoLinkList.deleteLast());
 //        twoLinkList.set(0,"KKK");
-        for (int i=0;i<twoLinkList.size();i++){
-            System.out.println(twoLinkList.get(i));
-        }
-        System.out.println("头元素："+twoLinkList.getFirst());
-        System.out.println("尾元素："+twoLinkList.getLast());
+//        for (int i=0;i<twoLinkList.size();i++){
+//            System.out.println(twoLinkList.get(i));
+//        }
+//        System.out.println("头元素："+twoLinkList.getFirst());
+//        System.out.println("尾元素："+twoLinkList.getLast());
+        ArrayStack<String> stack=new ArrayStack<String>();
+        stack.push("A1");
+        stack.push("A2");
+        stack.push("A3");
+        stack.push("A4");
+        stack.push("A5");
+        System.out.println("出栈元素："+stack.pop());
+        System.out.println("出栈元素："+stack.pop());
+        System.out.println("出栈元素："+stack.pop());
+        System.out.println("出栈元素："+stack.pop());
+        System.out.println("出栈元素："+stack.pop());
+//        System.out.println("出栈元素："+stack.pop());
+        Stack stack1=new Stack();
+        stack1.push("a");
+        System.out.println(stack1.pop());
     }
 }
