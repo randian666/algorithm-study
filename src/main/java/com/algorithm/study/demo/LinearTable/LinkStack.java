@@ -65,4 +65,5 @@ public class LinkStack<T> {
     public int length(){
         return  size;
     }
+
 }

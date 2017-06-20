@@ -94,4 +94,12 @@ public class Test {
         System.out.println("栈顶元素为："+linkStack.peek());
         System.out.println("出栈元素为："+linkStack.pop());
     }
+    //斐波那契数列递归实现方式
+    public static int fibonacci(int n){
+        if(n <= 2){
+            return 1;
+        }else{
+            return fibonacci(n-1) + fibonacci(n-2);
+        }
+    }
 }
