@@ -80,7 +80,7 @@ public class TwoLinkList<E> {
         if (first.next==null){
             last=null;
         }else{
-            first.next.prev=null;
+            temp.next.prev=null;
         }
         first=temp.next;
         size--;

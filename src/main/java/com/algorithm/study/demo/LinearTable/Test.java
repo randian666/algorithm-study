@@ -65,9 +65,9 @@ public class Test {
         twoLinkList.add("E");
 //        System.out.println("头元素："+twoLinkList.getFirst());
 //        System.out.println("尾元素："+twoLinkList.getLast());
-//        System.out.println("删除后的头元素："+twoLinkList.deleteFirst());
-//        System.out.println("删除后的尾元素："+twoLinkList.deleteLast());
-        twoLinkList.set(0,"KKK");
+        System.out.println("删除后的头元素："+twoLinkList.deleteFirst());
+        System.out.println("删除后的尾元素："+twoLinkList.deleteLast());
+//        twoLinkList.set(0,"KKK");
         for (int i=0;i<twoLinkList.size();i++){
             System.out.println(twoLinkList.get(i));
         }
