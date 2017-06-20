@@ -51,6 +51,7 @@ public class MLinkList<E> {
     public E deleteFirst(){
         Node temp=data;
         data=temp.next;
+        temp.next=null;//释放应用
         size--;
         return temp.data;
     }

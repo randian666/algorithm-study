@@ -74,20 +74,24 @@ public class Test {
 //        }
 //        System.out.println("头元素："+twoLinkList.getFirst());
 //        System.out.println("尾元素："+twoLinkList.getLast());
-        ArrayStack<String> stack=new ArrayStack<String>();
-        stack.push("A1");
-        stack.push("A2");
-        stack.push("A3");
-        stack.push("A4");
-        stack.push("A5");
-        System.out.println("出栈元素："+stack.pop());
-        System.out.println("出栈元素："+stack.pop());
-        System.out.println("出栈元素："+stack.pop());
-        System.out.println("出栈元素："+stack.pop());
-        System.out.println("出栈元素："+stack.pop());
+//        ArrayStack<String> stack=new ArrayStack<String>();
+//        stack.push("A1");
+//        stack.push("A2");
+//        stack.push("A3");
+//        stack.push("A4");
+//        stack.push("A5");
 //        System.out.println("出栈元素："+stack.pop());
-        Stack stack1=new Stack();
-        stack1.push("a");
-        System.out.println(stack1.pop());
+//        System.out.println("出栈元素："+stack.pop());
+//        System.out.println("出栈元素："+stack.pop());
+//        System.out.println("出栈元素："+stack.pop());
+//        System.out.println("栈顶元素："+stack.peek());
+//        System.out.println("出栈元素："+stack.pop());
+
+        LinkStack<String> linkStack=new LinkStack<String>();
+        linkStack.push("A");
+        linkStack.push("B");
+        linkStack.push("C");
+        System.out.println("栈顶元素为："+linkStack.peek());
+        System.out.println("出栈元素为："+linkStack.pop());
     }
 }

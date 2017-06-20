@@ -52,6 +52,11 @@ public class ArrayStack<E> {
         size--;
         return result;
     }
+    //返回栈顶的元素，但不出栈
+    public Object peek(){
+        return data[size-1];
+
+    }
     //获取栈的大小
     public int getLength()
     {
