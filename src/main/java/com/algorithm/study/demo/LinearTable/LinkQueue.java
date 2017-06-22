@@ -29,7 +29,7 @@ public class LinkQueue<E> {
     }
     public LinkQueue(int capacity){
             this.capacity=capacity;
-            head=last=new Node(null,null);
+            head=last=null;
     }
     public int size(){
         return size;
@@ -39,7 +39,7 @@ public class LinkQueue<E> {
             throw new RuntimeException("队列已满，size:"+size());
         }
         Node node=new Node(element,null);
-        if (head.data==null){
+        if (head==null){
             last=head=node;
         }else{
             last=last.next=node;//尾部的下一个指针尾node,并设置新的尾部

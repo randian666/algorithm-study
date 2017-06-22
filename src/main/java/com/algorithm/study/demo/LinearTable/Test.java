@@ -100,6 +100,7 @@ public class Test {
         System.out.println("出队："+linkQueue.poll());
         System.out.println("出队："+linkQueue.poll());
         System.out.println("出队："+linkQueue.poll());
+        linkQueue.add("d");
         System.out.println("出队："+linkQueue.poll());
 //        linkQueue.poll();
 //        linkQueue.poll();
