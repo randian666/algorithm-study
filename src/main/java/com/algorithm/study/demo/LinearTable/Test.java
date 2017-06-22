@@ -1,9 +1,8 @@
 package com.algorithm.study.demo.LinearTable;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Created by liuxun on 2017/6/14.
@@ -87,12 +86,29 @@ public class Test {
 //        System.out.println("栈顶元素："+stack.peek());
 //        System.out.println("出栈元素："+stack.pop());
 
-        LinkStack<String> linkStack=new LinkStack<String>();
-        linkStack.push("A");
-        linkStack.push("B");
-        linkStack.push("C");
-        System.out.println("栈顶元素为："+linkStack.peek());
-        System.out.println("出栈元素为："+linkStack.pop());
+//        LinkStack<String> linkStack=new LinkStack<String>();
+//        linkStack.push("A");
+//        linkStack.push("B");
+//        linkStack.push("C");
+//        System.out.println("栈顶元素为："+linkStack.peek());
+//        System.out.println("出栈元素为："+linkStack.pop());
+//        SqQueue sqQueue=new SqQueue(3);
+        LinkQueue linkQueue=new LinkQueue(3);
+        linkQueue.add("a");
+        linkQueue.add("b");
+        linkQueue.add("c");
+        System.out.println("出队："+linkQueue.poll());
+        System.out.println("出队："+linkQueue.poll());
+        System.out.println("出队："+linkQueue.poll());
+        System.out.println("出队："+linkQueue.poll());
+//        linkQueue.poll();
+//        linkQueue.poll();
+        System.out.println(linkQueue.size());
+//        Queue queue=new ArrayBlockingQueue(1);
+//        queue.add("1");
+//        queue.poll();
+//        queue.peek();
+        Queue queue1=new LinkedBlockingQueue(1);
     }
     //斐波那契数列递归实现方式
     public static int fibonacci(int n){
