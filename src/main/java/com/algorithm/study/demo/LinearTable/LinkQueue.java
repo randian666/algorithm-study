@@ -1,6 +1,7 @@
 package com.algorithm.study.demo.LinearTable;
 
 /**
+ * 链表式队列
  * Created by liuxun on 2017/6/22.
  */
 public class LinkQueue<E> {

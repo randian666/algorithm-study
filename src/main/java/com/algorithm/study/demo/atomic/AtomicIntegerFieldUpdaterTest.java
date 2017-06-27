@@ -1,7 +1,6 @@
-package com.algorithm.study.demo.thread;
+package com.algorithm.study.demo.atomic;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
-import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * 如果我们只需要某个类里的某个字段，那么就需要使用原子更新字段类，Atomic包提供了以下三个类：
@@ -18,6 +17,8 @@ public class AtomicIntegerFieldUpdaterTest {
         User user = new User("conan", 15);
         atomicUserRef.set(user,15);
         atomicUserRef.compareAndSet(user,user.getOld(),17);
+        System.out.println(atomicUserRef.get(user));
+        System.out.println(atomicUserRef.getAndIncrement(user));
         System.out.println(atomicUserRef.get(user));
     }
 

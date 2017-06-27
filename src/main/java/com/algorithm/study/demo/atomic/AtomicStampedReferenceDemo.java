@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.thread;
+package com.algorithm.study.demo.atomic;
 
 import java.util.concurrent.atomic.AtomicStampedReference;
 
@@ -10,6 +10,10 @@ import java.util.concurrent.atomic.AtomicStampedReference;
  Java 1.5开始，JDK的Atomic包里提供了一个类AtomicStampedReference来解决ABA问题。这个
  类的compareAndSet方法的作用是首先检查当前引用是否等于预期引用，并且检查当前标志是
  否等于预期标志，如果全部相等，则以原子方式将该引用和该标志的值设置为给定的更新值。
+
+ AtomicStampedReference：原子更新带有版本号的引用类型。该类将整数值与引用关联起
+ 来，可用于原子的更新数据和数据的版本号，可以解决使用CAS进行原子更新时可能出现的
+ ABA问题。
  * Created by liuxun on 2017/6/13.
  */
 public class AtomicStampedReferenceDemo {

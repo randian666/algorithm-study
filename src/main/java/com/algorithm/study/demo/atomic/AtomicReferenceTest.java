@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.thread;
+package com.algorithm.study.demo.atomic;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -17,7 +17,7 @@ public class AtomicReferenceTest {
         User user = new User("conan", 15);
         atomicUserRef.set(user);
         User updateUser = new User("Shinichi", 17);
-        atomicUserRef.compareAndSet(user, updateUser);
+        atomicUserRef.compareAndSet(atomicUserRef.get(), updateUser);
         System.out.println(atomicUserRef.get().getName());
         System.out.println(atomicUserRef.get().getOld());
     }
