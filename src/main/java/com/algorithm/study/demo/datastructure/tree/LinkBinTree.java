@@ -7,6 +7,9 @@ import java.util.Queue;
 
 /**
  * 二叉树链表存储
+ 前序遍历：根节点->左子树->右子树
+ 中序遍历：左子树->根节点->右子树
+ 后序遍历：左子树->右子树->根节点
  * Created by liuxun on 2017/6/29.
  */
 public class LinkBinTree {
@@ -232,6 +235,9 @@ public class LinkBinTree {
           linkBinTree.postOrderTraverse();//后序遍历
         System.out.println("-----------------------------");
         linkBinTree.divOrderTraverse();//层次遍历
+        //前序遍历：根节点->左子树->右子树
+        //中序遍历：左子树->根节点->右子树
+        //后序遍历：左子树->右子树->根节点
     }
 
 }
