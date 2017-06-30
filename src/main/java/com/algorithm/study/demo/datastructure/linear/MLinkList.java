@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.LinearTable;
+package com.algorithm.study.demo.datastructure.linear;
 
 /**
  * 线性表的链式存储-单链表的实现

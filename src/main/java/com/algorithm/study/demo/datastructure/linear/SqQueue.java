@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.LinearTable;
+package com.algorithm.study.demo.datastructure.linear;
 
 /**
  　队列（简称作队，Queue）也是一种特殊的线性表，队列的数据元素以及数据元素间的逻辑关系和线性表完全相同，

@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.LinearTable;
+package com.algorithm.study.demo.datastructure.linear;
 
 /**
  *

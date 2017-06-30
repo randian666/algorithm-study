@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.LinearTable;
+package com.algorithm.study.demo.datastructure.linear;
 
 /**
  * 线性表的顺序存储结构

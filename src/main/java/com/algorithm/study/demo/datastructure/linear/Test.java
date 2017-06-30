@@ -1,8 +1,6 @@
-package com.algorithm.study.demo.LinearTable;
+package com.algorithm.study.demo.datastructure.linear;
 
-import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
+
 
 /**
  * Created by liuxun on 2017/6/14.
@@ -109,7 +107,7 @@ public class Test {
 //        queue.add("1");
 //        queue.poll();
 //        queue.peek();
-        Queue queue1=new LinkedBlockingQueue(1);
+//        Queue queue1=new LinkedBlockingQueue(1);
     }
     //斐波那契数列递归实现方式
     public static int fibonacci(int n){
