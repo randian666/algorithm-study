@@ -1,6 +1,8 @@
 package com.algorithm.study.demo.datastructure.tree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -55,7 +57,40 @@ public class LinkBinTree {
         int r=getDeep(t.right);
         return l>r?(l+1):(r+1);
     }
+    /**获取树的最小深度**/
+    public int getMinDeep(TreeNode t){
+        if (t==null){
+            return 0;
+        }
+        if (t.left==null && t.right==null){
+            return 1;
+        }
+        int l=getMinDeep(t.left);
+        int r=getMinDeep(t.right);
+        return l<r?(l+1):(r+1);
 
+    }
+    /**获取结点数**/
+    public int numOfTreeNode(TreeNode t){
+        if (t==null){
+            return 0;
+        }
+        int left = numOfTreeNode(t.left);
+        int right = numOfTreeNode(t.right);
+        return left + right + 1;
+    }
+    /**第K层的结点数**/
+    int numsOfkLevelTreeNode(TreeNode root,int k){
+        if(root == null||k<1){
+            return 0;
+        }
+        if(k==1){
+            return 1;
+        }
+        int numsLeft = numsOfkLevelTreeNode(root.left,k-1);
+        int numsRight = numsOfkLevelTreeNode(root.right,k-1);
+        return numsLeft + numsRight;
+    }
     private void add(TreeNode t,int value){
         if(value>t.data){
             if(t.right!=null){
@@ -74,8 +109,6 @@ public class LinkBinTree {
             }
         }
     }
-
-
     /**
      * 从根节点开始插入数据，大于根节点放在右子树，小于根节点放在左子树
      * @param value
@@ -158,6 +191,21 @@ public class LinkBinTree {
     public void divOrderTraverse(){
         divOrderTraverse(root);
     }
+    /**区间搜索**/
+    private void searchSection(TreeNode t,int k1,int k2,ArrayList<Integer> result){
+        if (t==null){
+            return;
+        }
+        if(t.data>k1){
+            searchSection(t.left,k1,k2,result);
+        }
+        if(t.data>=k1&&t.data<=k2){
+            result.add(t.data);
+        }
+        if(t.data<k2){
+            searchSection(t.right,k1,k2,result);
+        }
+    }
 
     public static void main(String[] args) {
         int[] ls=new int[]{30,9,10,15,11,40};
@@ -165,11 +213,25 @@ public class LinkBinTree {
         for (int i=1;i<ls.length;i++){
             linkBinTree.add(ls[i]);
         }
-//        System.out.println(linkBinTree.getDeep(linkBinTree.getRoot()));//返回指定结点的深度
-//        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
-//        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
-//          linkBinTree.postOrderTraverse();//后序遍历
-        linkBinTree.divOrderTraverse();
+        System.out.println("树的深度"+linkBinTree.getDeep(linkBinTree.getRoot()));//返回指定结点的深度
+        System.out.println("-----------------------------");
+        System.out.println("最小树的深度"+linkBinTree.getMinDeep(linkBinTree.getRoot()));//返回最小树的深度
+        System.out.println("-----------------------------");
+        System.out.println("节点数"+linkBinTree.numOfTreeNode(linkBinTree.getRoot()));
+        System.out.println("-----------------------------");
+        System.out.println("第K层的结点数"+linkBinTree.numsOfkLevelTreeNode(linkBinTree.getRoot(),4));
+        System.out.println("-----------------------------");
+        ArrayList<Integer> list=new ArrayList<Integer>();
+        linkBinTree.searchSection(linkBinTree.getRoot(),10,20,list);
+        System.out.println("区间查询"+list.toString());
+        System.out.println("-----------------------------");
+        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
+        System.out.println("-----------------------------");
+        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
+        System.out.println("-----------------------------");
+          linkBinTree.postOrderTraverse();//后序遍历
+        System.out.println("-----------------------------");
+        linkBinTree.divOrderTraverse();//层次遍历
     }
 
 }
