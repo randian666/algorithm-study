@@ -2,7 +2,6 @@ package com.algorithm.study.demo.datastructure.tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**
@@ -232,7 +231,7 @@ public class LinkBinTree {
         System.out.println("-----------------------------");
         linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
         System.out.println("-----------------------------");
-          linkBinTree.postOrderTraverse();//后序遍历
+        linkBinTree.postOrderTraverse();//后序遍历
         System.out.println("-----------------------------");
         linkBinTree.divOrderTraverse();//层次遍历
         //前序遍历：根节点->左子树->右子树
