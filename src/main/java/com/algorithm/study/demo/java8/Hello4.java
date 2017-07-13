@@ -21,8 +21,7 @@ public class Hello4 {
         foreach(listLength,(Integer i)-> System.out.println(i));
 
         int num=5656;
-        Runnable o = () -> System.out.println(num);
-        Thread t=newBean(()->new Thread(o));
+        Thread t=new Thread(() -> System.out.println(num));
         t.start();
     }
 

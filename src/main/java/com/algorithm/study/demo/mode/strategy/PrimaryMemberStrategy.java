@@ -1,7 +1,7 @@
 package com.algorithm.study.demo.mode.strategy;
 
 /**
- * 初级会员价格
+ * 初级会员价格--策略
  * Created by LiuXun on 2017/7/13.
  */
 public class PrimaryMemberStrategy implements MemberStrategy {

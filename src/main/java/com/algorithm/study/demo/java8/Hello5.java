@@ -51,6 +51,7 @@ public class Hello5 {
         Predicate<Apple> isGreenApple=Apple::isGreenApple;//指向静态方法的方法引用 此方法只能是static
         System.out.println(isGreenApple.test(ap));
         Predicate<Apple> isHeavyApple=ap::isHeavyApple;//指向现有对象的实例方法的方法引用 此方法不能是static修饰的
+
         System.out.println(isHeavyApple.test(ap));
         Function<Integer,Integer> function=Integer::intValue;
         System.out.println(function.apply(456465));//指向任意类型实例方法的方法引用
