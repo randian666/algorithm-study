@@ -7,7 +7,7 @@ import java.lang.reflect.Proxy;
 /**
  * 动态代理解决方案
  在JDK 1.3以后提供了动态代理的技术，允许开发者在运行期创建接口的代理实例。在Sun刚推出动态代理时，还很难想象它有多大的实际用途，
- 现在我们终于发现动态代理是实现AOP的绝好底层技术。DK的动态代理主要涉及到java.lang.reflect包中的两个类：Proxy和InvocationHandler。
+ 现在我们终于发现动态代理是实现AOP的绝好底层技术。JDK的动态代理主要涉及到java.lang.reflect包中的两个类：Proxy和InvocationHandler。
  其中InvocationHandler是一个接口，可以通过实现该接口定义横切逻辑，在并通过反射机制调用目标类的代码，动态将横切逻辑和业务逻辑编织在一起。
  而Proxy为InvocationHandler实现类动态创建一个符合某一接口的代理实例。
  * Created by liuxun on 2017/7/17.
