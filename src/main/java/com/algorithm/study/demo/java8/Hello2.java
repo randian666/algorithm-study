@@ -3,6 +3,7 @@ package com.algorithm.study.demo.java8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 匿名类实现行为参数化
@@ -18,6 +19,7 @@ public class Hello2 {
             }
         });
         list2.forEach((Apple a)-> System.out.println(a.getColor()));
+
     }
     public static List<Apple> filterApple(List<Apple> list,ApplePredicate predicate){
         List<Apple> l=new ArrayList<>();

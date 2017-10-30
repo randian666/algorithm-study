@@ -15,8 +15,9 @@ public class SingletonTest1 {
 
     // 定义一个静态的方法（调用时再初始化SingletonTest，但是多线程访问时，可能造成重复初始化问题）
     public static SingletonTest1 getInstance(){
-        if (instance==null)
-            instance= new SingletonTest1();
+        if (instance==null) {
+            instance = new SingletonTest1();
+        }
         return instance;
     }
 }

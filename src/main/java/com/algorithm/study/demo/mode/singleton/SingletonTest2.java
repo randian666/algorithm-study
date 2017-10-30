@@ -15,8 +15,9 @@ public class SingletonTest2 {
 
     // 定义一个静态的方法（调用时再初始化SingletonTest，使用synchronized 避免多线程访问时，可能造成重的复初始化问题）
     public static synchronized SingletonTest2 getInstance(){
-        if (instance==null)
-            instance= new SingletonTest2();
+        if (instance==null) {
+            instance = new SingletonTest2();
+        }
         return instance;
     }
 }

@@ -1,9 +1,6 @@
 package com.algorithm.study.demo.concurrent;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.*;
 
 /**
  * CountDownLatch允许一个或多个线程等待其他线程完成操作。
@@ -18,16 +15,23 @@ public class JoinCountDownLatchTest {
     static CountDownLatch c=new CountDownLatch(2);
     static ExecutorService fixedThreadPool = Executors.newFixedThreadPool(2);
     public static void main(String[] args) throws InterruptedException {
-        fixedThreadPool.submit(new Runnable() {
+        fixedThreadPool.execute(new Runnable() {
+            @Override
             public void run() {
-                c.countDown();
+                try {
+                    TimeUnit.SECONDS.sleep(2);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 System.out.println("1");
+                c.countDown();
             }
         });
-        fixedThreadPool.submit(new Runnable() {
+        fixedThreadPool.execute(new Runnable() {
+            @Override
             public void run() {
-                c.countDown();
                 System.out.println("2");
+                c.countDown();
             }
         });
         c.await();
