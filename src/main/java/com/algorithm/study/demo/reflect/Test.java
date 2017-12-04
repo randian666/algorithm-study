@@ -14,10 +14,15 @@ import java.util.LinkedHashMap;
  */
 public class Test {
     public static void main(String[] args) {
+        //基于JDK的动态代理
         Service service=new ServiceImpl();
         ServiceHandler serviceHandler=new ServiceHandler(service);
         Service proxy = (Service)serviceHandler.createProxyIntance();
-//        Service proxy = (Service) Proxy.newProxyInstance(service.getClass().getClassLoader(),service.getClass().getInterfaces(),serviceHandler);
         proxy.service("hello reflect");
+
+        //基于CGlib动态代理实现
+        CGlibProxyFactory cglib=new CGlibProxyFactory();
+        CGlibServiceImpl object = (CGlibServiceImpl)cglib.getInstance(new CGlibServiceImpl());
+        object.excute();
     }
 }

@@ -12,7 +12,7 @@ public class StackSOF {
         stackLength++;
         stackLeak();
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         StackSOF sof=new StackSOF();
         try {
             sof.stackLeak();
