@@ -29,6 +29,7 @@ public class ServerSocketChannelTest {
         server.configureBlocking(false);
         // 将server注册到指定Selector对象
         server.register(selector, SelectionKey.OP_ACCEPT);
+        // 一直阻塞到某个注册的通道有事件就绪
         while (selector.select() > 0) {
             // 依次处理selector上的每个已选择的SelectionKey
             for (SelectionKey sk : selector.selectedKeys()) {
