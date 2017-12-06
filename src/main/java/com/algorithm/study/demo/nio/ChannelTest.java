@@ -1,6 +1,5 @@
 package com.algorithm.study.demo.nio;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -24,6 +23,12 @@ public class ChannelTest {
 
             RandomAccessFile raf = new RandomAccessFile("E:\\data.txt", "rw");
             FileChannel fc = raf.getChannel();
+
+//            RandomAccessFile raf1 = new RandomAccessFile("E:\\count.txt", "rw");
+//            FileChannel fc1 = raf1.getChannel();
+//
+//            fc1.transferTo(0, fc.size(),fc);
+
             //create buffer with capatity of 512 bytes
             ByteBuffer buffer = ByteBuffer.allocate(512);
             CharBuffer cb = CharBuffer.allocate(512);
