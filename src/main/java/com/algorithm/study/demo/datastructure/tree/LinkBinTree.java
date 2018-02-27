@@ -3,6 +3,7 @@ package com.algorithm.study.demo.datastructure.tree;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * 二叉树链表存储
@@ -135,6 +136,30 @@ public class LinkBinTree {
         preOrderTraverse(root);
     }
 
+    /**
+     * 非递归前序遍历
+     * @param t
+     */
+    public void preOrderTraverse2(TreeNode t) {
+        if (t==null) {
+            return;
+        }
+        Stack<TreeNode> stack=new Stack<>();
+        while(t!=null || !stack.isEmpty()){
+            while (t!=null){
+                System.out.println(t.data);
+                stack.push(t);
+                t=t.left;
+            }
+            if (!stack.isEmpty()){
+                t=stack.pop();
+                t=t.right;
+            }
+        }
+    }
+    public void preOrderTraverse2(){
+        preOrderTraverse2(root);
+    }
 
     /**
      * 中序遍历
@@ -153,6 +178,31 @@ public class LinkBinTree {
     }
 
     /**
+     * 非递归中序遍历
+     * @param t
+     */
+    public void inOrderTraverse2(TreeNode t){
+        if (t==null) {
+            return;
+        }
+        Stack<TreeNode> stack=new Stack<>();
+        while (t!=null || !stack.isEmpty()){
+            while (t!=null){
+                stack.push(t);
+                t=t.left;
+            }
+            if (!stack.isEmpty()){
+                t=stack.pop();
+                System.out.println(t.data);
+                t=t.right;
+            }
+        }
+
+    }
+    public void inOrderTraverse2(){
+        inOrderTraverse2(root);
+    }
+    /**
      * 后续遍历
      * @param t
      */
@@ -168,6 +218,36 @@ public class LinkBinTree {
         postOrderTraverse(root);
     }
 
+    /**
+     * 非递归后续遍历
+     * @param root
+     */
+    public void postOrderTraverse2(TreeNode root){
+        Stack<TreeNode> s = new Stack<TreeNode>();
+        Stack<Integer> s2 = new Stack<Integer>();
+        Integer i = new Integer(1);                     //0表示对应位置上的节点还没有遍历过右节点，1表示已经遍历过
+        while (root != null || !s.empty()) {
+            while (root != null) {      //这个while找到最深处的左节点
+                s.push(root);
+                s2.push(new Integer(0));                    //0 表示该节点的右节点还没有遍历
+                root = root.left;
+            }
+            while (!s.empty() && s2.peek().equals(i)) {    //判断栈s最上面节点的【右节点】是否已经遍历过
+                s2.pop();
+                System.out.println(s.pop().data);
+            }
+
+            if (!s.empty()) {                           //取出s最上面的节点，遍历右节点，并将该节点的标志 从0修改成1
+                s2.pop();
+                s2.push(new Integer(1));
+                root = s.peek();
+                root = root.right;
+            }
+        }
+    }
+    public void postOrderTraverse2(){
+        postOrderTraverse2(root);
+    }
     /**
      * 层级遍历
      * @param t
@@ -210,7 +290,7 @@ public class LinkBinTree {
     }
 
     public static void main(String[] args) {
-        int[] ls=new int[]{30,9,10,15,11,40};
+        int[] ls=new int[]{30,9,8,10,40,38,41};
         LinkBinTree linkBinTree=new LinkBinTree(ls[0]);
         for (int i=1;i<ls.length;i++){
             linkBinTree.add(ls[i]);
@@ -226,7 +306,7 @@ public class LinkBinTree {
         ArrayList<Integer> list=new ArrayList<Integer>();
         linkBinTree.searchSection(linkBinTree.getRoot(),10,20,list);
         System.out.println("区间查询"+list.toString());
-        System.out.println("-----------------------------");
+        System.out.println("-------------递归遍历----------------");
         linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
         System.out.println("-----------------------------");
         linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
@@ -237,6 +317,13 @@ public class LinkBinTree {
         //前序遍历：根节点->左子树->右子树
         //中序遍历：左子树->根节点->右子树
         //后序遍历：左子树->右子树->根节点
+        System.out.println();
+        System.out.println("-------------非递归遍历----------------");
+        linkBinTree.preOrderTraverse2();//前序遍历
+        System.out.println("-----------------------------");
+        linkBinTree.inOrderTraverse2();//中序遍历
+        System.out.println("-----------------------------");
+        linkBinTree.postOrderTraverse2();//后序遍历
     }
 
 }
