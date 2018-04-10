@@ -1,6 +1,5 @@
-package com.algorithm.study.demo;
+package com.algorithm.study.demo.algorithm;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
