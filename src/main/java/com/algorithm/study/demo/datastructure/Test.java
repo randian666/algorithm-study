@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.datastructure.linear;
+package com.algorithm.study.demo.datastructure;
 
 
 
@@ -91,18 +91,18 @@ public class Test {
 //        System.out.println("栈顶元素为："+linkStack.peek());
 //        System.out.println("出栈元素为："+linkStack.pop());
 //        SqQueue sqQueue=new SqQueue(3);
-        LinkQueue linkQueue=new LinkQueue(3);
-        linkQueue.add("a");
-        linkQueue.add("b");
-        linkQueue.add("c");
-        System.out.println("出队："+linkQueue.poll());
-        System.out.println("出队："+linkQueue.poll());
-        System.out.println("出队："+linkQueue.poll());
-        linkQueue.add("d");
-        System.out.println("出队："+linkQueue.poll());
+//        LinkQueue linkQueue=new LinkQueue(3);
+//        linkQueue.add("a");
+//        linkQueue.add("b");
+//        linkQueue.add("c");
+//        System.out.println("出队："+linkQueue.poll());
+//        System.out.println("出队："+linkQueue.poll());
+//        System.out.println("出队："+linkQueue.poll());
+//        linkQueue.add("d");
+//        System.out.println("出队："+linkQueue.poll());
 //        linkQueue.poll();
 //        linkQueue.poll();
-        System.out.println(linkQueue.size());
+//        System.out.println(linkQueue.size());
 //        Queue queue=new ArrayBlockingQueue(1);
 //        queue.add("1");
 //        queue.poll();

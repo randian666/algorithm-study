@@ -6,7 +6,8 @@ import java.util.Queue;
 import java.util.Stack;
 
 /**
- * 二叉树链表存储
+ *
+ * 二叉搜索树链表存储
  前序遍历：根节点->左子树->右子树
  中序遍历：左子树->根节点->右子树
  后序遍历：左子树->右子树->根节点
@@ -14,9 +15,9 @@ import java.util.Stack;
  */
 public class LinkBinTree {
     public static class TreeNode{
-        Integer data;
-        TreeNode left;
-        TreeNode right;
+        Integer data;//节点数据
+        TreeNode left;//左子节点数据
+        TreeNode right;//右子节点数据
         TreeNode(){}
         TreeNode(Integer data){
             this.data = data;
@@ -112,14 +113,41 @@ public class LinkBinTree {
             }
         }
     }
+    private void add2(TreeNode t,int value){
+        TreeNode node=new TreeNode(value);
+        TreeNode current=t;
+        while(current!=null){
+            TreeNode parentNode=current;
+            if (current.data>value){
+                current=current.left;
+                if (current==null){
+                    parentNode.left=node;
+                    return;
+                }
+            }else{
+                current=current.right;
+                if (current==null){
+                    parentNode.right=node;
+                    return;
+                }
+            }
+        }
+    }
     /**
-     * 从根节点开始插入数据，大于根节点放在右子树，小于根节点放在左子树
+     * 递归从根节点开始插入数据，大于根节点放在右子树，小于根节点放在左子树
      * @param value
      */
     public void add(int value){
             add(root,value);
     }
-
+    /**
+     * 非递归模式插入数据
+     * 从根节点开始插入数据，大于根节点放在右子树，小于根节点放在左子树
+     * @param value
+     */
+    public void add2(int value){
+        add2(root,value);
+    }
     /**
      * 前序遍历
      * 如果树为空返回，如果不为空首先从根节点开始遍历，然后先前序遍历左子树，最后前序遍历右子树。
@@ -289,41 +317,92 @@ public class LinkBinTree {
         }
     }
 
+    /**
+     * 二叉查找树搜索
+     * @param key
+     * @return
+     */
+    public TreeNode find(int key){
+        TreeNode currnode=root;
+        while (currnode!=null){
+            if (currnode.data>key){
+                currnode=currnode.left;
+            }else if (currnode.data<key){
+                currnode=currnode.right;
+            }else{
+                return currnode;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 查找最小值
+     * @return
+     */
+    public TreeNode findMin(){
+        TreeNode current=root;
+        TreeNode minNode=current;
+        while(current!=null){
+            minNode=current;
+            current=current.left;
+        }
+        return minNode;
+    }
+
+    /**
+     * 查找最大值
+     * @return
+     */
+    public TreeNode findMax(){
+        TreeNode current=root;
+        TreeNode maxNode=current;
+        while(current!=null){
+            maxNode=current;
+            current=current.right;
+        }
+        return maxNode;
+    }
     public static void main(String[] args) {
-        int[] ls=new int[]{30,9,8,10,40,38,41};
+        int[] ls=new int[]{30,9,8};
         LinkBinTree linkBinTree=new LinkBinTree(ls[0]);
         for (int i=1;i<ls.length;i++){
-            linkBinTree.add(ls[i]);
+            linkBinTree.add2(ls[i]);//非递归
+//            linkBinTree.add(ls[i]);//递归
         }
         System.out.println("树的深度"+linkBinTree.getDeep(linkBinTree.getRoot()));//返回指定结点的深度
         System.out.println("-----------------------------");
-        System.out.println("最小树的深度"+linkBinTree.getMinDeep(linkBinTree.getRoot()));//返回最小树的深度
-        System.out.println("-----------------------------");
-        System.out.println("节点数"+linkBinTree.numOfTreeNode(linkBinTree.getRoot()));
-        System.out.println("-----------------------------");
-        System.out.println("第K层的结点数"+linkBinTree.numsOfkLevelTreeNode(linkBinTree.getRoot(),4));
-        System.out.println("-----------------------------");
-        ArrayList<Integer> list=new ArrayList<Integer>();
-        linkBinTree.searchSection(linkBinTree.getRoot(),10,20,list);
-        System.out.println("区间查询"+list.toString());
-        System.out.println("-------------递归遍历----------------");
-        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
-        System.out.println("-----------------------------");
-        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
-        System.out.println("-----------------------------");
-        linkBinTree.postOrderTraverse();//后序遍历
-        System.out.println("-----------------------------");
-        linkBinTree.divOrderTraverse();//层次遍历
-        //前序遍历：根节点->左子树->右子树
-        //中序遍历：左子树->根节点->右子树
-        //后序遍历：左子树->右子树->根节点
-        System.out.println();
-        System.out.println("-------------非递归遍历----------------");
-        linkBinTree.preOrderTraverse2();//前序遍历
-        System.out.println("-----------------------------");
-        linkBinTree.inOrderTraverse2();//中序遍历
-        System.out.println("-----------------------------");
-        linkBinTree.postOrderTraverse2();//后序遍历
+//        System.out.println("最小树的深度"+linkBinTree.getMinDeep(linkBinTree.getRoot()));//返回最小树的深度
+//        System.out.println("-----------------------------");
+//        System.out.println("节点数"+linkBinTree.numOfTreeNode(linkBinTree.getRoot()));
+//        System.out.println("-----------------------------");
+//        System.out.println("第K层的结点数"+linkBinTree.numsOfkLevelTreeNode(linkBinTree.getRoot(),4));
+//        System.out.println("-----------------------------");
+//        ArrayList<Integer> list=new ArrayList<Integer>();
+//        linkBinTree.searchSection(linkBinTree.getRoot(),10,20,list);
+//        System.out.println("区间查询"+list.toString());
+//        System.out.println("-------------递归遍历----------------");
+//        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
+//        System.out.println("-----------------------------");
+//        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
+//        System.out.println("-----------------------------");
+//        linkBinTree.postOrderTraverse();//后序遍历
+//        System.out.println("-----------------------------");
+//        linkBinTree.divOrderTraverse();//层次遍历
+//        //前序遍历：根节点->左子树->右子树
+//        //中序遍历：左子树->根节点->右子树
+//        //后序遍历：左子树->右子树->根节点
+//        System.out.println();
+//        System.out.println("-------------非递归遍历----------------");
+//        linkBinTree.preOrderTraverse2();//前序遍历
+//        System.out.println("-----------------------------");
+//        linkBinTree.inOrderTraverse2();//中序遍历
+//        System.out.println("-----------------------------");
+//        linkBinTree.postOrderTraverse2();//后序遍历
+          //二叉查找树搜索
+          TreeNode node = linkBinTree.find(9);
+          System.out.println(node.data);
+          System.out.println("最小值为："+linkBinTree.findMin().data);
     }
 
 }

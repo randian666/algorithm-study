@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.datastructure.linear;
+package com.algorithm.study.demo.datastructure.queue;
 
 /**
  * 链表式队列
