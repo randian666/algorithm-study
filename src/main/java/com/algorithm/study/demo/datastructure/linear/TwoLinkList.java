@@ -1,5 +1,7 @@
 package com.algorithm.study.demo.datastructure.linear;
 
+import com.algorithm.study.demo.LRUCache.LRUMap;
+
 /**
  * 双向链表实现
  * Created by liuxun on 2017/6/19.
@@ -144,5 +146,22 @@ public class TwoLinkList<E> {
     }
     public int size(){
         return size;
+    }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder() ;
+        Node node= first ;
+        while (node != null){
+            sb.append(node.element)
+                    .append("-->") ;
+            node = node.next ;
+        }
+        return sb.toString();
+    }
+    public static void main(String[] args) {
+        TwoLinkList<String> twoLinkList=new TwoLinkList<>();
+//        twoLinkList.add("1");
+//        twoLinkList.add("2");
+        System.out.println(twoLinkList.toString());
     }
 }
