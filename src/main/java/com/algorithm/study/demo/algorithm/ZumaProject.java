@@ -31,6 +31,7 @@ public class ZumaProject {
         String findInput=find(index,newInput);
         System.out.println("消除后的结果："+findInput);
 
+
     }
     public static String matcher(String input)
     {
