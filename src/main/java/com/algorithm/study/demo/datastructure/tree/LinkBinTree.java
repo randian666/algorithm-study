@@ -394,7 +394,7 @@ public class LinkBinTree {
 //        //后序遍历：左子树->右子树->根节点
 //        System.out.println();
 //        System.out.println("-------------非递归遍历----------------");
-//        linkBinTree.preOrderTraverse2();//前序遍历
+        linkBinTree.preOrderTraverse2();//前序遍历
 //        System.out.println("-----------------------------");
 //        linkBinTree.inOrderTraverse2();//中序遍历
 //        System.out.println("-----------------------------");

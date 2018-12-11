@@ -29,7 +29,6 @@ public class DeadlockTest {
               }
           }.start();
 
-
         new Thread(){
             @Override
             public void run() {

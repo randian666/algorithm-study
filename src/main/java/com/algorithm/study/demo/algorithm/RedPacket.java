@@ -1,8 +1,11 @@
 package com.algorithm.study.demo.algorithm;
 
 
+import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
+
 /**
  *
  * 模拟微信红包生成，以分为单位
@@ -131,15 +134,20 @@ public class RedPacket {
 
 
     public static void main(String[] args) {
-        RedPacket redPacket = new RedPacket();
-        List<Integer> redPackets = redPacket.splitRedPacket(10, 10);
-        System.out.println(redPackets);
+//        RedPacket redPacket = new RedPacket();
+//        List<Integer> redPackets = redPacket.splitRedPacket(200*100, 10);
+//        System.out.println(redPackets);
+//
+//        int sum = 0;
+//        for (Integer red : redPackets) {
+//            sum += red;
+//        }
+//        System.out.println(sum);
 
-        int sum = 0;
-        for (Integer red : redPackets) {
-            sum += red;
-        }
-        System.out.println(sum);
+        BigDecimal dis=new BigDecimal("100.01");
+        System.out.printf(dis.toString());
+        System.out.println();
+
     }
 
 }
