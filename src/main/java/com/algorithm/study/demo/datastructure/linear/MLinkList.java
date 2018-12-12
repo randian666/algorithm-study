@@ -1,5 +1,7 @@
 package com.algorithm.study.demo.datastructure.linear;
 
+import java.util.Stack;
+
 /**
  * 线性表的链式存储-单链表的实现
  * 单链表采用链式存储结构，用一组任意的存储单元存放线性表元素
@@ -177,11 +179,38 @@ public class MLinkList<E> {
         size=0;
     }
     private void checkPositionIndex(int index) {
-        if (index<0 || index>size-1)
+        if (index<0 || index>size-1){
             throw new IndexOutOfBoundsException("数组越界Index: "+index+", Size: "+size);
+        }
     }
     public int size(){
         return size;
+    }
+
+
+    @Override
+    public String toString(){
+        StringBuilder sb=new StringBuilder();
+        int j=1;
+        Node temp=data;
+        while (j<size){
+            sb.append(data.data);
+            temp= data.next;//找到最后一个结点
+            j++;
+        }
+        return sb.toString();
+    }
+    public static void main(String[] args) {
+        MLinkList mLinkList=new MLinkList();
+        mLinkList.add("a");
+        mLinkList.add("b");
+        mLinkList.add("c");
+        mLinkList.add("b");
+        mLinkList.add("a");
+        System.out.println(mLinkList.toString());
+        System.out.println(mLinkList.size);
+        System.out.println(mLinkList.toString());
+
     }
 
 }

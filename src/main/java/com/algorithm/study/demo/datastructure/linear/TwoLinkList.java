@@ -1,12 +1,11 @@
 package com.algorithm.study.demo.datastructure.linear;
 
-import com.algorithm.study.demo.LRUCache.LRUMap;
-
 /**
  * 双向链表实现
  * Created by liuxun on 2017/6/19.
  */
-public class TwoLinkList<E> {
+public class TwoLinkList<E>{
+
 
     private class Node<E> {
        private Node prev;//上一节点
@@ -141,8 +140,9 @@ public class TwoLinkList<E> {
         return last.element;
     }
     private void checkPositionIndex(int index) {
-        if (index<0 || index>size-1)
+        if (index<0 || index>size-1){
             throw new IndexOutOfBoundsException("数组越界Index: "+index+", Size: "+size);
+        }
     }
     public int size(){
         return size;
@@ -159,9 +159,10 @@ public class TwoLinkList<E> {
         return sb.toString();
     }
     public static void main(String[] args) {
-        TwoLinkList<String> twoLinkList=new TwoLinkList<>();
-//        twoLinkList.add("1");
-//        twoLinkList.add("2");
+        TwoLinkList<String> twoLinkList=new TwoLinkList<String>();
+        twoLinkList.add("1");
+        twoLinkList.add("2");
+        twoLinkList.add("3");
         System.out.println(twoLinkList.toString());
     }
 }

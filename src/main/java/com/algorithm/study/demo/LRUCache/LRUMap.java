@@ -166,6 +166,7 @@ public class LRUMap<K,V> {
         lruMap.get("1");
         lruMap.put("4","4");
         System.out.println(lruMap.toString());
+        System.out.println(lruMap.cacheSize);
     }
 
 }
