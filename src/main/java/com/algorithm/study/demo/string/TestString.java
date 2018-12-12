@@ -28,7 +28,7 @@ public class TestString {
             }
         }
 
-        if (j>=t.length()) {
+            if (j>=t.length()) {
             return i-t.length();
         }else {
             return -1;
