@@ -5,7 +5,7 @@
 | [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统知识) |[多线程](#多线程)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[算法](#数据结构与算法)|[数据库知识](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
 
 ### JAVA基础
- - String，Stringbuffer，StringBuilder的区别。
+  - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
  - ArrayList和LinkedList有什么区别。
  - 讲讲类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当new的时候，他们的执行顺序。
  - 用过哪些Map类，都有什么区别，HashMap是线程安全的吗,并发下使用的Map是什么，他们内部原理分别是什么，比如存储方式，hashcode，扩容，默认容量等。
