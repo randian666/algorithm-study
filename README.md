@@ -16,17 +16,16 @@
  - IO模型有哪些，讲讲你理解的nio ，他和bio，aio的区别是啥，谈谈reactor模型。
  - 反射的原理，反射创建类实例的三种方式是什么。
  - 反射中，Class.forName和ClassLoader区别 。
- - 描述动态代理的几种实现方式，分别说出相应的优缺点。
+ - [描述动态代理的几种实现方式，分别说出相应的优缺点。](https://blog.csdn.net/wufaliang003/article/details/79305688/)
  - 动态代理与cglib实现的区别。
  - 为什么CGlib方式可以对接口实现代理。
  - final的用途。
  - [写出三种单例模式实现](http://tech.hunts.work/2015/09/01/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/#1-%E5%8D%95%E4%BE%8Bsingleton) 。
  - 如何在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣。
  - 请结合OO设计理念，谈谈访问修饰符public、private、protected、default在应用设计中的作用。
- - 深拷贝和浅拷贝区别。
+ - [深拷贝和浅拷贝区别](https://blog.csdn.net/wangxueming/article/details/52034841)。
  - 数组和链表数据结构描述，各自的时间复杂度。
- - error和exception的区别，CheckedException，RuntimeException的区别。
- - 请列出5个运行时异常。
+ - [error和exception的区别，CheckedException，RuntimeException的区别。](https://blog.csdn.net/iblade/article/details/78196016)
  - 在自己的代码中，如果创建一个java.lang.String类，这个类是否可以被类加载器加载？为什么。
  - 说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需
  - 要重新实现这两个方法。
