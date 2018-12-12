@@ -6,13 +6,13 @@
 
 ### JAVA基础
   - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
- - ArrayList和LinkedList有什么区别。
+ - [ArrayList和LinkedList有什么区别。](https://blog.csdn.net/seulzz/article/details/77905779)
  - 讲讲类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当new的时候，他们的执行顺序。
+ - [什么是HashMap?](https://mp.weixin.qq.com/s/SZqJBLRVIT-Y4SqGoVzP9g)
  - 用过哪些Map类，都有什么区别，HashMap是线程安全的吗,并发下使用的Map是什么，他们内部原理分别是什么，比如存储方式，hashcode，扩容，默认容量等。
  - JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。
  - 有没有有顺序的Map实现类，如果有，他们是怎么保证有序的。
  - 抽象类和接口的区别，类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么。
- - 继承和聚合的区别在哪。
  - IO模型有哪些，讲讲你理解的nio ，他和bio，aio的区别是啥，谈谈reactor模型。
  - 反射的原理，反射创建类实例的三种方式是什么。
  - 反射中，Class.forName和ClassLoader区别 。
@@ -37,7 +37,7 @@
  - 什么是序列化，怎么序列化，为什么序列化，反序列化会遇到什么问题，如何解决。
  - java8的新特性。
 ### JVM知识
- 
+ - 
  - 什么情况下会发生栈内存溢出。
  - JVM的内存结构，Eden和Survivor比例。
  - JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。
