@@ -26,9 +26,8 @@
  - [深拷贝和浅拷贝区别](https://blog.csdn.net/wangxueming/article/details/52034841)。
  - 数组和链表数据结构描述，各自的时间复杂度。
  - [error和exception的区别，CheckedException，RuntimeException的区别。](https://blog.csdn.net/iblade/article/details/78196016)
- - 在自己的代码中，如果创建一个java.lang.String类，这个类是否可以被类加载器加载？为什么。
- - 说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需
- - 要重新实现这两个方法。
+ - [在自己的代码中，如果创建一个java.lang.String类，这个类是否可以被类加载器加载？为什么。](https://blog.csdn.net/qq_26807245/article/details/80912026)
+ - [说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需要重新实现这两个方法。](https://blog.csdn.net/qq_21163061/article/details/73606523)
  - 在jdk1.5中，引入了泛型，泛型的存在是用来解决什么问题。
  - 这样的a.hashcode() 有什么用，与a.equals(b)有什么关系。
  - 有没有可能2个不相等的对象有相同的hashcode。
