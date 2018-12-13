@@ -59,7 +59,7 @@
  - tomcat如何调优，涉及哪些参数 。
  - 讲讲Spring加载流程。
  - Spring AOP的实现原理。
- - 讲讲Spring事务的传播属性。
+ - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - Spring如何管理事务的。
  - Spring怎么配置事务（具体说出一些关键的xml 元素）。
  - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理，aop的实现原
