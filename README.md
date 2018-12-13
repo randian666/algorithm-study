@@ -34,6 +34,9 @@
  - Java中的HashSet内部是如何工作的。
  - 什么是序列化，怎么序列化，为什么序列化，反序列化会遇到什么问题，如何解决。
  - java8的新特性。
+ - [史上最全Java面试题](https://blog.csdn.net/linzhiqiang0316/article/details/80473906)
+ - [各大公司Java面试题超详细总结](http://www.cnblogs.com/java1024/p/7685400.html)
+ 
 ### JVM知识
  - 
  - 什么情况下会发生栈内存溢出。
