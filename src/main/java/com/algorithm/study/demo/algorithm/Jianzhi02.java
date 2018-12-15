@@ -24,6 +24,11 @@ public class Jianzhi02 {
     private  int size=0;// 保存已含有的节点数
     private  ListNode root;
     private  ListNode last;
+
+    /**
+     * 添加元素到链表头部
+     * @param e
+     */
     public  void addFirst(int e){
         ListNode first=root;
         ListNode listNode=new ListNode(e,null);
@@ -33,6 +38,11 @@ public class Jianzhi02 {
         }
         size++;
     }
+
+    /**
+     * 添加元素到链表末尾
+     * @param e
+     */
     public  void add(int e){
         ListNode temp=last;
         if (temp==null){
@@ -45,14 +55,18 @@ public class Jianzhi02 {
         }
         size++;
     }
+    public int size(){
+        return size;
+    }
     /**
      * 从尾到头反过来打印出每个结点的值
      */
     public void printListInverselyUsingIteration() {
         Stack<ListNode> stack=new Stack();
-        while (root!=null){
-            stack.push(root);
-            root=root.next;
+        ListNode tempNode=root;
+        while (tempNode!=null){
+            stack.push(tempNode);
+            tempNode=tempNode.next;
         }
         ListNode temp=null;
         while (!stack.isEmpty()){
@@ -69,9 +83,8 @@ public class Jianzhi02 {
         listnode.add(3);
         listnode.add(2);
         listnode.add(1);
+        System.out.println("size:"+listnode.size());
         listnode.printListInverselyUsingIteration();
-        LinkedList linkedList=new LinkedList();
-        linkedList.add(1);
 
     }
 }
