@@ -58,10 +58,9 @@
  - 简单讲讲tomcat结构，以及其类加载器流程，线程模型等。
  - tomcat如何调优，涉及哪些参数 。
  - 讲讲Spring加载流程。
- - Spring AOP的实现原理。
+ - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
- - Spring如何管理事务的。
- - Spring怎么配置事务（具体说出一些关键的xml 元素）。
+ - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
  - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理，aop的实现原
  - 理，说说aop中的几个术语，它们是怎么相互工作的。
  - Springmvc 中DispatcherServlet初始化过程。
