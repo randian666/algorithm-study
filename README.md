@@ -49,7 +49,7 @@
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
  - 简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。
  - 讲讲JAVA的反射机制。
- - 你们线上应用的JVM参数有哪些。
+ - [你们线上应用的JVM参数有哪些。](https://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html)
  - g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择。
  - 怎么打出线程栈信息。
  
@@ -61,8 +61,7 @@
  - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
- - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理，aop的实现原
- - 理，说说aop中的几个术语，它们是怎么相互工作的。
+ - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理。
  - Springmvc 中DispatcherServlet初始化过程。
  - netty的线程模型，netty如何基于reactor模型上实现的。
  - 为什么选择netty。
@@ -147,7 +146,7 @@
  - 如果有人恶意创建非法连接，怎么解决。
  - 分布式事务的原理，优缺点，如何使用分布式事务，2pc 3pc 的区别，解决了哪些问题，还有
  - 哪些问题没解决，如何解决，你自己项目里涉及到分布式事务是怎么处理的。
- - 什么是一致性hash。
+ - [什么是一致性hash。](https://www.cnblogs.com/lpfuture/p/5796398.html)
  - 什么是restful，讲讲你理解的restful。
  - 如何设计一个良好的API。
  - 如何设计建立和保持100w的长连接。
