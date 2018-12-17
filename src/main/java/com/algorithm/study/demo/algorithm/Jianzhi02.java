@@ -79,10 +79,14 @@ public class Jianzhi02 {
      *单链表反转
      */
     public ListNode reversalNode(){
+        //当前节点的上一个节点
         ListNode previousNode = null;
+        //当前节点
         ListNode currentNode = root;
+        //返回反转后的节点
         ListNode headNode = null;
         while (currentNode != null) {
+            //当前节点的下一个节点
             ListNode nextNode = currentNode.next;
             if (nextNode == null) {
                 headNode = currentNode;
