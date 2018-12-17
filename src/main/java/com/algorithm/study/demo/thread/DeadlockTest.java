@@ -3,8 +3,7 @@ package com.algorithm.study.demo.thread;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 死锁案例
- *
+ * 死锁是指两个或两个以上的进程在执行过程中，因争夺资源而造成的一种互相等待的现象，若无外力作用，它们都将无法推进下去
  * 避免死锁：一种是加锁顺序（线程按照一定的顺序加锁）；另一种是加锁时限（线程尝试获取锁的时候加上一定的时限，超过时限则放弃对该锁的请求，并释放自己占有的锁）；
  */
 public class DeadlockTest {

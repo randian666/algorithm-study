@@ -113,7 +113,7 @@
  - 对AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平所加锁有什么不同。
  - 使用synchronized修饰静态方法和非静态方法有什么区别。
  - 简述ConcurrentLinkedQueue和LinkedBlockingQueue的用处和不同之处。
- - 导致线程死锁的原因？怎么解除线程死锁。
+ - [导致线程死锁的原因？怎么解除线程死锁。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/thread/DeadlockTest.java)
  - 非常多个线程（可能是不同机器），相互之间需要等待协调，才能完成某种工作，问怎么设计这种协调方案。
  - 用过读写锁吗，原理是什么，一般在什么场景下用。
  - 开启多个线程，如果保证顺序执行，有哪几种实现方式，或者如何保证多个线程都执行完再拿到结果。
