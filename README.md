@@ -50,7 +50,7 @@
  - 简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。
  - 讲讲JAVA的反射机制。
  - [你们线上应用的JVM参数有哪些。](https://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html)
- - g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择。
+ - [g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择。](https://blog.csdn.net/ZYC88888/article/details/80353357)
  - 怎么打出线程栈信息。
  
 ### 开源框架知识
