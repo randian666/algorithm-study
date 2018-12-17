@@ -62,7 +62,7 @@
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
  - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理。
- - Springmvc 中DispatcherServlet初始化过程。
+ - [Springmvc 中DispatcherServlet初始化过程。](https://www.cnblogs.com/xiaoxi/p/6164383.html)
  - netty的线程模型，netty如何基于reactor模型上实现的。
  - 为什么选择netty。
  - 什么是TCP粘包，拆包。解决方式是什么。
