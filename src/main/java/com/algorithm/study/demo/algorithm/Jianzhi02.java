@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  *
- * 输入个链表的头结点，从尾到头反过来打印出每个结点的值
+ * 单链表操作
  *
  **/
 
@@ -59,7 +59,7 @@ public class Jianzhi02 {
         return size;
     }
     /**
-     * 从尾到头反过来打印出每个结点的值
+     * 输入个链表的头结点，从尾到头反过来打印出每个结点的值
      */
     public void printListInverselyUsingIteration() {
         Stack<ListNode> stack=new Stack();
@@ -75,6 +75,33 @@ public class Jianzhi02 {
         }
 
     }
+    /****
+     *单链表反转
+     */
+    public ListNode reversalNode(){
+        ListNode previousNode = null;
+        ListNode currentNode = root;
+        ListNode headNode = null;
+        while (currentNode != null) {
+            ListNode nextNode = currentNode.next;
+            if (nextNode == null) {
+                headNode = currentNode;
+            }
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = nextNode;
+            System.out.println();
+        }
+        return headNode;
+    }
+
+    /**
+     * 链表中环检测
+     *      *合并两个有序链表
+     *      * 删除链表倒数第N个节点
+     *      * 求链表的中间节点
+     * @param args
+     */
 
 
         public static void main(String[] args) {
@@ -85,6 +112,6 @@ public class Jianzhi02 {
         listnode.add(1);
         System.out.println("size:"+listnode.size());
         listnode.printListInverselyUsingIteration();
-
+        listnode.reversalNode();
     }
 }

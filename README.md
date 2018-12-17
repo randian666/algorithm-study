@@ -138,7 +138,7 @@
  - Session和cookie的区别。
 ### 架构设计与分布式
 
- - 用java自己实现一个LRU。
+ - [用java自己实现一个LRU。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/LRUCache/LRUMap.java)
  - 分布式集群下如何做到唯一序列号。
  - 设计一个秒杀系统，30分钟没付款就自动关闭交易。
  - 如何使用redis和zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么
@@ -226,21 +226,21 @@
  - MYSQL的主从延迟怎么解决。
 ### 消息队列
 
- - 消息队列的使用场景。
+ - [消息队列的使用场景。](https://blog.csdn.net/seven__________7/article/details/70225830)
  - 消息的重发，补充策略。
  - 如何保证消息的有序性。
  - 用过哪些MQ，和其他mq比较有什么优缺点，MQ的连接是线程安全的吗，你们公司的MQ服务
  - 架构怎样的。
  - MQ系统的数据如何保证不丢失。
  - rabbitmq如何实现集群高可用。
- - kafka吞吐量高的原因。
- - kafka 和其他消息队列的区别，kafka 主从同步怎么实现。
+ - [kafka吞吐量高的原因。](https://my.oschina.net/runningwork/blog/918613)
+ - [kafka架构和原理](http://lxw1234.com/archives/2015/09/504.htm)
  - 利用mq怎么实现最终一致性。
  - 使用kafka有没有遇到什么问题，怎么解决的。
  - MQ有可能发生重复消费，如何避免，如何做到幂等。
  - MQ的消息延迟了怎么处理，消息可以设置过期时间么，过期了你们一般怎么处理。
 ### 缓存
-
+ - [Redis的高并发和快速原因](https://mp.weixin.qq.com/s/HuwgTvNtmHJ9tpF7V53opg)
  - 常见的缓存策略有哪些，如何做到缓存(比如redis)与DB里的数据一致性，你们项目中用到了
  - 什么缓存系统，如何设计的。
  - [如何防止缓存击穿和雪崩。](https://mp.weixin.qq.com/s/SQQy6NKvoAgIaeAjzkRpDw)
@@ -264,10 +264,11 @@
  - 
 ### 搜索
 
- - elasticsearch了解多少，说说你们公司es的集群架构，索引数据大小，分片有多少，以及一些调优手段 。elasticsearch的倒排索引是什么。
+ - elasticsearch了解多少，说说你们公司es的集群架构，索引数据大小，分片有多少，以及一些调优手段 。
+ - elasticsearch的倒排索引是什么。
  - elasticsearch 索引数据多了怎么办，如何调优，部署。
- - elasticsearch是如何实现master选举的。
+ - [elasticsearch是如何实现master选举的。](https://zhuanlan.zhihu.com/p/34830403)
  - 详细描述一下Elasticsearch索引文档的过程。
- - 详细描述一下Elasticsearch搜索的过程。
+ - [详细描述一下Elasticsearch搜索的过程。](https://blog.csdn.net/u010454030/article/details/79794788)
  - Elasticsearch在部署时，对Linux的设置有哪些优化方法？
- - lucence内部结构是什么。
+ - [lucence内部结构是什么。](https://www.jianshu.com/p/0dfcee4637c5)
