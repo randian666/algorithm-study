@@ -9,9 +9,10 @@
  - [ArrayList和LinkedList有什么区别。](https://blog.csdn.net/seulzz/article/details/77905779)
  - [讲讲类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当new的时候，他们的执行顺序。](https://blog.csdn.net/justloveyou_/article/details/72466416)
  - [什么是HashMap?](https://mp.weixin.qq.com/s/SZqJBLRVIT-Y4SqGoVzP9g)
- - 用过哪些Map类，都有什么区别，HashMap是线程安全的吗,并发下使用的Map是什么，他们内部原理分别是什么，比如存储方式，hashcode，扩容，默认容量等。
- - JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。
- - 有没有有顺序的Map实现类，如果有，他们是怎么保证有序的。
+ - [用过哪些Map类，都有什么区别](https://blog.csdn.net/qq_30683329/article/details/80455779)
+ - [JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。](http://www.importnew.com/28263.html)
+ - [HashMap, ConcurrentHashMap 原理](https://mp.weixin.qq.com/s/QggmWkrgYrNtVkdSKYuRfg) 
+ - [有没有有顺序的Map实现类，如果有，他们是怎么保证有序的。](https://www.jianshu.com/p/07cceede7b03)
  - 抽象类和接口的区别，类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么。
  - [IO模型有哪些，讲讲你理解的nio ，他和bio，aio的区别是啥，谈谈reactor模型。](https://www.cnblogs.com/javalyy/p/8882066.html)
  - [反射的原理，反射创建类实例的三种方式是什么。](http://blog.51cto.com/4247649/2109128)
@@ -241,7 +242,7 @@
  - MQ的消息延迟了怎么处理，消息可以设置过期时间么，过期了你们一般怎么处理。
 ### 缓存
  - [Redis的高并发和快速原因](https://mp.weixin.qq.com/s/HuwgTvNtmHJ9tpF7V53opg)
- - 常见的缓存策略有哪些，如何做到缓存(比如redis)与DB里的数据一致性，你们项目中用到了
+ - [常见的缓存策略有哪些，如何做到缓存(比如redis)与DB里的数据一致性，你们项目中用到了](https://mp.weixin.qq.com/s/yQjTddLWy-oSYPYxyGVeKw)
  - 什么缓存系统，如何设计的。
  - [如何防止缓存击穿和雪崩。](https://mp.weixin.qq.com/s/SQQy6NKvoAgIaeAjzkRpDw)
  - 缓存数据过期后的更新如何设计。

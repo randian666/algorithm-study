@@ -12,5 +12,14 @@ public class MainDemo {
             System.out.println(redPacket);
         }
         System.out.println((int)(Math.random()*0.9+0.1));
+
+        System.out.println((3+1)%8);
+        System.out.println(f(9));
+    }
+
+    public static int f(int i){
+        if (i==1) return 1;
+        System.out.println(i);
+        return f(i-1)+1;
     }
 }
