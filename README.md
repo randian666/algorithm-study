@@ -7,7 +7,7 @@
 ### JAVA基础
  - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
  - [ArrayList和LinkedList有什么区别。](https://blog.csdn.net/seulzz/article/details/77905779)
- - [讲讲类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当new的时候，他们的执行顺序。](https://blog.csdn.net/justloveyou_/article/details/72466105)
+ - [讲讲类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当new的时候，他们的执行顺序。](http://blog.csdn.net/justloveyou_/article/details/72466416)
  - [什么是HashMap?](https://mp.weixin.qq.com/s/SZqJBLRVIT-Y4SqGoVzP9g)
  - [用过哪些Map类，都有什么区别](https://blog.csdn.net/qq_30683329/article/details/80455779)
  - [JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。](http://www.importnew.com/28263.html)
@@ -51,6 +51,7 @@
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
  - 简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。
  - 讲讲JAVA的反射机制。
+ - [加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
  - [你们线上应用的JVM参数有哪些。](https://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html)
  - [g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择。](https://blog.csdn.net/ZYC88888/article/details/80353357)
  - 怎么打出线程栈信息。
