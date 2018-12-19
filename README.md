@@ -174,7 +174,7 @@
  - 应用服务器怎么监控性能，各种方式的区别。
  - 如何设计一套高并发支付方案，架构如何设计。
  - 如何实现负载均衡，有哪些算法可以实现。
- - Zookeeper的用途，选举的原理是什么。
+ - [Zookeeper的用途，选举的原理是什么。](https://blog.csdn.net/liuj2511981/article/details/42460069)
  - Zookeeper watch机制原理。
  - 请思考一个方案，实现分布式环境下的countDownLatch。
  - 后台系统怎么防止请求重复提交。
