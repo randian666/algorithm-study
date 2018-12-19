@@ -139,6 +139,7 @@
  - Http和https的三次握手有什么区别。
  - 什么是分块传送。
  - Session和cookie的区别。
+ - [计算机网络面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78303617)
 ### 架构设计与分布式
 
  - [用java自己实现一个LRU。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/LRUCache/LRUMap.java)
