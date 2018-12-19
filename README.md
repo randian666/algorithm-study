@@ -148,8 +148,8 @@
  - [用java自己实现一个LRU。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/LRUCache/LRUMap.java)
  - 分布式集群下如何做到唯一序列号。
  - 设计一个秒杀系统，30分钟没付款就自动关闭交易。
- - 如何使用redis和zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么
- - 场景。（延伸：如果知道redlock，讲讲他的算法实现，争议在哪里）
+ - [如何使用redis和zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么场景。](https://mp.weixin.qq.com/s/OCIg3TwpmXzqOVqBZ2fSow)
+ - [如果知道redlock，讲讲他的算法实现](http://www.redis.cn/topics/distlock.html)
  - 如果有人恶意创建非法连接，怎么解决。
  - 分布式事务的原理，优缺点，如何使用分布式事务，2pc 3pc 的区别，解决了哪些问题，还有
  - 哪些问题没解决，如何解决，你自己项目里涉及到分布式事务是怎么处理的。

@@ -24,7 +24,6 @@ public class Jianzhi02 {
     private  int size=0;// 保存已含有的节点数
     private  ListNode root;
     private  ListNode last;
-
     /**
      * 添加元素到链表头部
      * @param e
