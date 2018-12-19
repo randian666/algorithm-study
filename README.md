@@ -196,7 +196,7 @@
  - 有1亿个数字，其中有2个是重复的，快速找到它，时间和空间要最优。
  - 2亿个随机生成的无序整数,找出中间大小的值。
  - 给一个不知道长度的（可能很大）输入字符串，设计一种方案，将重复的字符排重。
- - 遍历二叉树。
+ - [遍历二叉树。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/datastructure/tree/LinkBinTree.java)
  - 有3n+1个数字，其中3n个中是重复的，只有1个是不重复的，怎么找出来。
  - 写一个字符串（如：www.jd.cn）反转函数。
  - 常用的排序算法，快排，归并、冒泡。 快排的最优时间复杂度，最差复杂度。冒泡排序的
