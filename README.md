@@ -174,7 +174,7 @@
  - 如何实现负载均衡，有哪些算法可以实现。
  - Zookeeper的用途，选举的原理是什么。
  - Zookeeper watch机制原理。
- - Mybatis的底层实现原理。
+ - [Mybatis的底层实现原理。](https://mp.weixin.qq.com/s/AqqSRYPdUbruSAhhmqVneA)
  - 请思考一个方案，实现分布式环境下的countDownLatch。
  - 后台系统怎么防止请求重复提交。
  - 描述一个服务从发布到被消费的详细过程。
