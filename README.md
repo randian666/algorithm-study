@@ -62,6 +62,7 @@
  - 简单讲讲tomcat结构，以及其类加载器流程，线程模型等。
  - tomcat如何调优，涉及哪些参数 。
  - 讲讲Spring加载流程。
+ - [spring循环依赖](http://www.tianxiaobo.com/2018/06/08/Spring-IOC-%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/)
  - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
