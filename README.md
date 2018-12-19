@@ -227,6 +227,7 @@
  - 你做过的项目里遇到分库分表了吗，怎么做的，有用到中间件么，比如sharding jdbc等,他
  - 们的原理知道么。
  - MYSQL的主从延迟怎么解决。
+ - [数据库面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78308460)
 ### 消息队列
 
  - [消息队列的使用场景。](https://blog.csdn.net/seven__________7/article/details/70225830)
