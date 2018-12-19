@@ -75,7 +75,8 @@
  - netty的通讯协议是什么样的。
  - springmvc用到的注解，作用是什么，原理。
  - springboot启动机制。
- - 点击这里有一套答案版的Spring试题。
+ - [Mybatis的底层实现原理。](https://mp.weixin.qq.com/s/AqqSRYPdUbruSAhhmqVneA)
+ - [69道Spring面试题和答案](http://ifeve.com/spring-interview-questions-and-answers/)
 ### 操作系统
 
  - Linux系统下你关注过哪些内核参数，说说你知道的。
@@ -177,7 +178,6 @@
  - 如何实现负载均衡，有哪些算法可以实现。
  - Zookeeper的用途，选举的原理是什么。
  - Zookeeper watch机制原理。
- - [Mybatis的底层实现原理。](https://mp.weixin.qq.com/s/AqqSRYPdUbruSAhhmqVneA)
  - 请思考一个方案，实现分布式环境下的countDownLatch。
  - 后台系统怎么防止请求重复提交。
  - 描述一个服务从发布到被消费的详细过程。
