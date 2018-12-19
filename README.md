@@ -39,7 +39,7 @@
  - [各大公司Java面试题超详细总结](http://www.cnblogs.com/java1024/p/7685400.html)
  
 ### JVM知识
- - 
+ - [讲讲jvm运行时数据区](https://mp.weixin.qq.com/s/li3ISdodGu2EK_Fo_4NJPA)
  - 什么情况下会发生栈内存溢出。
  - [JVM的内存结构，Eden和Survivor比例。](https://blog.csdn.net/bluetjs/article/details/52874852)
  - JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。
