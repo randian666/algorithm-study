@@ -45,6 +45,7 @@ public class LRULinkedMap<K,V> {
         map.put("2",2);
         map.put("3",3);
         map.put("4",4);
+        System.out.println(map.get("1"));
         map.put("5",5);
         for (Map.Entry<String, Integer> e : map.getAll()){
             System.out.print(e.getKey() + " : " + e.getValue() + "\t");

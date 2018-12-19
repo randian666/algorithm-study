@@ -74,12 +74,10 @@ public class LRUMap<K,V> {
      * @return
      */
     private Node<K,V> getNode(K key){
-        Node<K,V> node = header ;
-        while (node != null){
+        for (Node<K,V> node = header;node!=null;node=node.next){
             if (node.getKey().equals(key)){
                 return node ;
             }
-            node = node.next ;
         }
         return null ;
     }
@@ -147,14 +145,12 @@ public class LRUMap<K,V> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder() ;
-        Node<K,V> node = header ;
-        while (node != null){
+        for (Node<K,V> node = header;node!=null;node=node.next){
             if (node.getKey()!=null){
                 sb.append(node.getKey()).append(":")
                         .append(node.getValue())
                         .append("-->");
             }
-            node = node.next ;
         }
         return sb.toString();
     }
