@@ -7,7 +7,7 @@
 ### JAVA基础
  - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
  - [ArrayList和LinkedList有什么区别。](https://blog.csdn.net/seulzz/article/details/77905779)
- - [讲讲类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当new的时候，他们的执行顺序。](https://blog.csdn.net/justloveyou_/article/details/72466416)
+ - [讲讲类的实例化顺序，比如父类静态数据，构造函数，字段，子类静态数据，构造函数，字段，当new的时候，他们的执行顺序。](https://blog.csdn.net/justloveyou_/article/details/72466105)
  - [什么是HashMap?](https://mp.weixin.qq.com/s/SZqJBLRVIT-Y4SqGoVzP9g)
  - [用过哪些Map类，都有什么区别](https://blog.csdn.net/qq_30683329/article/details/80455779)
  - [JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。](http://www.importnew.com/28263.html)
