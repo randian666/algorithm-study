@@ -150,16 +150,14 @@
  - 设计一个秒杀系统，30分钟没付款就自动关闭交易。
  - [如何使用redis和zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么场景。](https://mp.weixin.qq.com/s/OCIg3TwpmXzqOVqBZ2fSow)
  - [如果知道redlock，讲讲他的算法实现](http://www.redis.cn/topics/distlock.html)
- - 如果有人恶意创建非法连接，怎么解决。
- - 分布式事务的原理，优缺点，如何使用分布式事务，2pc 3pc 的区别，解决了哪些问题，还有
- - 哪些问题没解决，如何解决，你自己项目里涉及到分布式事务是怎么处理的。
+ - [分布式事务的原理，优缺点，如何使用分布式事务，2pc 3pc 的区别，解决了哪些问题，还有哪些问题没解决，如何解决，你自己项目里涉及到分布式事务是怎么处理的。](https://www.jianshu.com/p/16b1baf015e8)
  - [什么是一致性hash。](https://www.cnblogs.com/lpfuture/p/5796398.html)
  - 什么是restful，讲讲你理解的restful。
  - 如何设计一个良好的API。
  - 如何设计建立和保持100w的长连接。
  - 解释什么是MESI协议(缓存一致性)。
  - 说说你知道的几种HASH算法，简单的也可以。
- - 什么是paxos算法， 什么是zab协议。
+ - [什么是paxos算法， 什么是zab协议。](https://blog.csdn.net/zhengzhihust/article/details/53456371)
  - 一个在线文档系统，文档可以被编辑，如何防止多人同时对同
  - 一份文档进行编辑更新。
  - 线上系统突然变得异常缓慢，你如何查找问题。
