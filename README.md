@@ -45,6 +45,7 @@
  - JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。
  - JVM中一次完整的GC流程是怎样的，对象如何晋升到老年代，说说你知道的几种主要的JVM参数。
  - 你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms和G1，包括原理，流程，优缺点。
+ - [CMS收集器学习笔记](https://mp.weixin.qq.com/s/OzE7WrvcGPEcf_UHj2a-lg)
  - 垃圾回收算法的实现原理。
  - 当出现了内存溢出，你怎么排错。
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
