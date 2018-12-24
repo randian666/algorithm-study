@@ -64,7 +64,7 @@
  - tomcat如何调优，涉及哪些参数 。
  - 讲讲Spring加载流程。
  - [spring循环依赖](http://www.tianxiaobo.com/2018/06/08/Spring-IOC-%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/)
- - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
+ - [Spring AOP的实现原理。](http://www.tianxiaobo.com/2018/06/17/Spring-AOP-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E5%AF%BC%E8%AF%BB/)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
  - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理。
