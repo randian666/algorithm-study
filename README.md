@@ -190,8 +190,7 @@
  - [遍历二叉树。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/datastructure/tree/LinkBinTree.java)
  - 有3n+1个数字，其中3n个中是重复的，只有1个是不重复的，怎么找出来。
  - 写一个字符串（如：www.jd.cn）反转函数。
- - 常用的排序算法，快排，归并、冒泡。 快排的最优时间复杂度，最差复杂度。冒泡排序的
- - 优化方案。
+ - 常用的排序算法，快排，归并、冒泡。 快排的最优时间复杂度，最差复杂度。冒泡排序的优化方案。
  - 二分查找的时间复杂度，优势。
  - 一个已经构建好的TreeSet，怎么完成倒排序。
  - 什么是B+树，B-树，列出实际的使用场景。
