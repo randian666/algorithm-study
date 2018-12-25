@@ -124,8 +124,8 @@ public class SortProject {
      */
     private static void insertSort( int ls[]){
         for (int i=1;i<ls.length;i++){
-            int key = ls[i];
-            int j = i-1;
+            int key = ls[i];//需要插入的元素
+            int j = i-1;//已经排好序的末索引
             for(;j>=0&&key<ls[j];j--){
                 ls[j+1]=ls[j];                       //将大于temp的值整体后移一个单位
             }

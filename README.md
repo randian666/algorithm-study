@@ -5,7 +5,7 @@
 | [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统) |[多线程](#多线程)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[数据结构与算法](#数据结构与算法)|[数据库知识](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
 
 ### JAVA基础
- - [String，Stringbuffer，StringBuilder的区](https://github.com/randian666/algorithm-study/blob/master/MD/String.MD)。
+ - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
  - [ArrayList和LinkedList有什么区别。](https://blog.csdn.net/seulzz/article/details/77905779)
  - [什么是HashMap?](https://mp.weixin.qq.com/s/SZqJBLRVIT-Y4SqGoVzP9g)
  - [用过哪些Map类，都有什么区别](https://blog.csdn.net/qq_30683329/article/details/80455779)
@@ -34,7 +34,6 @@
  - Java中的HashSet内部是如何工作的。
  - 什么是序列化，怎么序列化，为什么序列化，反序列化会遇到什么问题，如何解决。
  - java8的新特性。
- - [强引用、软引用、弱引用、幻象引用有什么区别？](https://github.com/randian666/algorithm-study/blob/master/MD/Reference.md)
  - [java运算符 与（&）、非（~）、或（|）、异或（^）](https://www.cnblogs.com/yesiamhere/p/6675067.html)
  - [史上最全Java面试题](https://blog.csdn.net/linzhiqiang0316/article/details/80473906)
  - [各大公司Java面试题超详细总结](http://www.cnblogs.com/java1024/p/7685400.html)
@@ -46,18 +45,14 @@
  - JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。
  - JVM中一次完整的GC流程是怎样的，对象如何晋升到老年代，说说你知道的几种主要的JVM参数。
  - 你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms和G1，包括原理，流程，优缺点。
- - [CMS收集器学习笔记](https://mp.weixin.qq.com/s/OzE7WrvcGPEcf_UHj2a-lg)
- - 垃圾回收算法的实现原理。
+ - [垃圾回收算法的实现原理。](http://www.cnblogs.com/xiaoxi/p/6486852.html)
  - 当出现了内存溢出，你怎么排错。
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
- - 简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。
- - 讲讲JAVA的反射机制。
  - [加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
  - [Java类加载的方式](http://blog.csdn.net/justloveyou_/article/details/72217806)
  - [Java对象的创建过程](http://blog.csdn.net/justloveyou_/article/details/72466416)
  - [你们线上应用的JVM参数有哪些。](https://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html)
  - [g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择。](https://blog.csdn.net/ZYC88888/article/details/80353357)
- - 怎么打出线程栈信息。
  
 ### 开源框架知识
  
@@ -65,7 +60,7 @@
  - tomcat如何调优，涉及哪些参数 。
  - 讲讲Spring加载流程。
  - [spring循环依赖](http://www.tianxiaobo.com/2018/06/08/Spring-IOC-%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/)
- - [Spring AOP的实现原理。](http://www.tianxiaobo.com/2018/06/17/Spring-AOP-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E5%AF%BC%E8%AF%BB/)
+ - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
  - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理。
@@ -127,7 +122,6 @@
  - 开启多个线程，如果保证顺序执行，有哪几种实现方式，或者如何保证多个线程都执行完再拿到结果。
  - 延迟队列的实现方式，delayQueue和时间轮算法的异同。
  - [史上最全 Java 多线程面试题及答案](https://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&mid=2247486721&idx=2&sn=c2058d5ddd7453eb9c39732c114879d5&scene=21#wechat_redirect)
- - [Java并发编程73道面试题及答案](https://mp.weixin.qq.com/s/N1YAZmBLX-bC-XkuC7yl_Q)
 ### TCP与HTTP
 
  - http1.0和http1.1有什么区别。
@@ -179,7 +173,7 @@
  - 如何设计一套高并发支付方案，架构如何设计。
  - 如何实现负载均衡，有哪些算法可以实现。
  - [Zookeeper的用途，选举的原理是什么。](https://blog.csdn.net/liuj2511981/article/details/42460069)
- - [Zookeeper watch机制原理。](https://blog.csdn.net/z69183787/article/details/53023578)
+ - Zookeeper watch机制原理。
  - 请思考一个方案，实现分布式环境下的countDownLatch。
  - 后台系统怎么防止请求重复提交。
  - 描述一个服务从发布到被消费的详细过程。
