@@ -5,7 +5,7 @@
 | [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统) |[多线程](#多线程)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[数据结构与算法](#数据结构与算法)|[数据库知识](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
 
 ### JAVA基础
- - [String，Stringbuffer，StringBuilder的区](https://github.com/randian666/algorithm-study/MD/String.MD)。
+ - [String，Stringbuffer，StringBuilder的区](https://github.com/randian666/algorithm-study/blob/master/MD/String.MD)。
  - [ArrayList和LinkedList有什么区别。](https://blog.csdn.net/seulzz/article/details/77905779)
  - [什么是HashMap?](https://mp.weixin.qq.com/s/SZqJBLRVIT-Y4SqGoVzP9g)
  - [用过哪些Map类，都有什么区别](https://blog.csdn.net/qq_30683329/article/details/80455779)
@@ -34,7 +34,7 @@
  - Java中的HashSet内部是如何工作的。
  - 什么是序列化，怎么序列化，为什么序列化，反序列化会遇到什么问题，如何解决。
  - java8的新特性。
- - [强引用、软引用、弱引用、幻象引用有什么区别？](https://github.com/randian666/algorithm-study/MD/Reference.md)
+ - [强引用、软引用、弱引用、幻象引用有什么区别？](https://github.com/randian666/algorithm-study/blob/master/MD/Reference.md)
  - [java运算符 与（&）、非（~）、或（|）、异或（^）](https://www.cnblogs.com/yesiamhere/p/6675067.html)
  - [史上最全Java面试题](https://blog.csdn.net/linzhiqiang0316/article/details/80473906)
  - [各大公司Java面试题超详细总结](http://www.cnblogs.com/java1024/p/7685400.html)
