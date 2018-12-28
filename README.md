@@ -45,7 +45,7 @@
  - [JVM的内存结构，Eden和Survivor比例。](https://blog.csdn.net/bluetjs/article/details/52874852)
  - JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。
  - JVM中一次完整的GC流程是怎样的，对象如何晋升到老年代，说说你知道的几种主要的JVM参数。
- - 你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms和G1，包括原理，流程，优缺点。
+ - [讲下cms和G1，包括原理，流程，优缺点。](https://blog.csdn.net/zhanggang807/article/details/45956325)
  - [垃圾回收算法的实现原理。](http://www.cnblogs.com/xiaoxi/p/6486852.html)
  - [G1，包括原理，流程，优缺点。](https://www.cnblogs.com/nashiyue/p/5797713.html)
  - [CMS收集器学习笔记](https://mp.weixin.qq.com/s/OzE7WrvcGPEcf_UHj2a-lg)
