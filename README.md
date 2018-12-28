@@ -5,7 +5,7 @@
 | [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统) |[多线程](#多线程)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[数据结构与算法](#数据结构与算法)|[数据库知识](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
 
 ### JAVA基础
- - [String，Stringbuffer，StringBuilder的区](https://github.com/randian666/algorithm-study/blob/master/MD/String.MD)。
+ - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
  - [ArrayList和LinkedList有什么区别。](https://blog.csdn.net/seulzz/article/details/77905779)
  - [什么是HashMap?](https://mp.weixin.qq.com/s/SZqJBLRVIT-Y4SqGoVzP9g)
  - [用过哪些Map类，都有什么区别](https://blog.csdn.net/qq_30683329/article/details/80455779)
@@ -45,6 +45,8 @@
  - [JVM的内存结构，Eden和Survivor比例。](https://blog.csdn.net/bluetjs/article/details/52874852)
  - JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。
  - JVM中一次完整的GC流程是怎样的，对象如何晋升到老年代，说说你知道的几种主要的JVM参数。
+ - 你知道哪几种垃圾收集器，各自的优缺点，重点讲下cms和G1，包括原理，流程，优缺点。
+ - [垃圾回收算法的实现原理。](http://www.cnblogs.com/xiaoxi/p/6486852.html)
  - [G1，包括原理，流程，优缺点。](https://www.cnblogs.com/nashiyue/p/5797713.html)
  - [CMS收集器学习笔记](https://mp.weixin.qq.com/s/OzE7WrvcGPEcf_UHj2a-lg)
  - 垃圾回收算法的实现原理。
@@ -65,7 +67,7 @@
  - tomcat如何调优，涉及哪些参数 。
  - 讲讲Spring加载流程。
  - [spring循环依赖](http://www.tianxiaobo.com/2018/06/08/Spring-IOC-%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/)
- - [Spring AOP的实现原理。](http://www.tianxiaobo.com/2018/06/17/Spring-AOP-%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0%E5%AF%BC%E8%AF%BB/)
+ - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
  - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理。
@@ -201,8 +203,7 @@
  - [遍历二叉树。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/datastructure/tree/LinkBinTree.java)
  - 有3n+1个数字，其中3n个中是重复的，只有1个是不重复的，怎么找出来。
  - 写一个字符串（如：www.jd.cn）反转函数。
- - 常用的排序算法，快排，归并、冒泡。 快排的最优时间复杂度，最差复杂度。冒泡排序的
- - 优化方案。
+ - 常用的排序算法，快排，归并、冒泡。 快排的最优时间复杂度，最差复杂度。冒泡排序的优化方案。
  - 二分查找的时间复杂度，优势。
  - 一个已经构建好的TreeSet，怎么完成倒排序。
  - 什么是B+树，B-树，列出实际的使用场景。
