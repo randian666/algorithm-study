@@ -129,6 +129,7 @@
  - 讲讲java同步机制的wait和notify。
  - CAS机制是什么，如何解决ABA问题。
  - 多线程如果线程挂住了怎么办。
+ - [深入分析AQS实现原理](https://mp.weixin.qq.com/s/2v0T3Nu7m2ka9D8PLl2XxQ)
  - countdowlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别(比如
  - countdownlatch的await方法和是怎么实现的)。
  - 对AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平所加锁有什么不同。
