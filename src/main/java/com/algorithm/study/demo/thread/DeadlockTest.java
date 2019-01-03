@@ -10,9 +10,7 @@ public class DeadlockTest {
     private static Object o1=new Object();
     private static Object o2=new Object();
     public static void main(String[] args) {
-          new Thread(){
-              @Override
-              public void run() {
+          new Thread(()->{
                   synchronized (o1){
                       System.out.println("Thread1 get lock o1");
                       try {
@@ -25,25 +23,21 @@ public class DeadlockTest {
                       }
                       System.out.println("Thread1 end");
                   }
-              }
-          }.start();
+          }).start();
 
-        new Thread(){
-            @Override
-            public void run() {
-                synchronized (o2){
-                    System.out.println("Thread2 get lock o1");
-                    try {
-                        TimeUnit.SECONDS.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    synchronized (o1){
-                        System.out.println("Thread2 get lock o2");
-                    }
-                    System.out.println("Thread2 end");
+        new Thread(() -> {
+            synchronized (o2){
+                System.out.println("Thread2 get lock o1");
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
+                synchronized (o1){
+                    System.out.println("Thread2 get lock o2");
+                }
+                System.out.println("Thread2 end");
             }
-        }.start();
+        }).start();
     }
 }
