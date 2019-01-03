@@ -122,15 +122,13 @@
  - 假如有一个第三方接口，有很多个线程去调用获取数据，现在规定每秒钟最多有10个线程同时调用它，如何做到。
  - spring的controller是单例还是多例，怎么保证并发的安全。
  - 用三个线程按顺序循环打印abc三个字母，比如abcabcabc。
- - ThreadLocal用过么，用途是什么，原理是什么，用的时候要注意什么。
+ - [ThreadLocal用过么，用途是什么，原理是什么，用的时候要注意什么。](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247484994&idx=1&sn=18ff91ffc530f5bf9a016b3e06c17168&chksm=f94a87abce3d0ebd0d23d0cf190777974ef6ba353653071a63ba7b06c417deca59c4279a2171&token=375547551&lang=zh_CN&scene=21#wechat_redirect)
  - 如果让你实现一个并发安全的链表，你会怎么做。
  - 讲讲java同步机制的wait和notify。
  - [CAS机制是什么，如何解决ABA问题。](https://mp.weixin.qq.com/s/nRnQKhiSUrDKu3mz3vItWg)
  - 多线程如果线程挂住了怎么办。
  - [深入分析AQS实现原理](https://mp.weixin.qq.com/s/2v0T3Nu7m2ka9D8PLl2XxQ)
- - countdowlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别(比如
- - countdownlatch的await方法和是怎么实现的)。
- - 对AbstractQueuedSynchronizer了解多少，讲讲加锁和解锁的流程，独占锁和公平所加锁有什么不同。
+ - countdowlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别(比如countdownlatch的await方法和是怎么实现的)。
  - 使用synchronized修饰静态方法和非静态方法有什么区别。
  - 简述ConcurrentLinkedQueue和LinkedBlockingQueue的用处和不同之处。
  - [导致线程死锁的原因？怎么解除线程死锁。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/thread/DeadlockTest.java)
