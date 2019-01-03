@@ -112,9 +112,8 @@
  - 画一个线程的生命周期状态图。
  - sleep和wait的区别。
  - sleep和sleep(0)的区别。
- - Lock与Synchronized的区别 。
- - synchronized的原理是什么，一般用在什么地方(比如加在静态方法和非静态方法的区别，静
- - 态方法和非静态方法同时执行的时候会有影响吗)，解释以下名词：重排序，自旋锁，偏向锁，轻
+ - [Lock与Synchronized的区别 。](https://blog.csdn.net/javazejian/article/details/75043422)
+ - [synchronized的原理是什么](https://blog.csdn.net/javazejian/article/details/72828483)
  - [量级锁，可重入锁，公平锁，非公平锁，乐观锁，悲观锁。](https://www.toutiao.com/i6630764198357893646/)
  - 用过哪些原子类，他们的原理是什么。
  - JUC下研究过哪些并发工具，讲讲原理。
@@ -126,7 +125,7 @@
  - ThreadLocal用过么，用途是什么，原理是什么，用的时候要注意什么。
  - 如果让你实现一个并发安全的链表，你会怎么做。
  - 讲讲java同步机制的wait和notify。
- - CAS机制是什么，如何解决ABA问题。
+ - [CAS机制是什么，如何解决ABA问题。](https://mp.weixin.qq.com/s/nRnQKhiSUrDKu3mz3vItWg)
  - 多线程如果线程挂住了怎么办。
  - [深入分析AQS实现原理](https://mp.weixin.qq.com/s/2v0T3Nu7m2ka9D8PLl2XxQ)
  - countdowlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别(比如
