@@ -26,7 +26,9 @@ import java.util.concurrent.Executors;
  * Created by liuxun on 2017/6/27.
  */
 public class CyclicBarrierTest {
-    static CyclicBarrier c=new CyclicBarrier(3);
+    static CyclicBarrier c=new CyclicBarrier(3,()->{
+        System.out.println("Action...Go!");
+    });
     static ExecutorService executorService= Executors.newFixedThreadPool(2);
     public static void main(String[] args) {
         executorService.submit(new Runnable() {
