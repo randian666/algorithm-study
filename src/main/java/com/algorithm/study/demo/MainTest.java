@@ -7,6 +7,8 @@ package com.algorithm.study.demo;
  */
 public class MainTest {
     public static void main(String[] args) {
-        System.out.println(-1 << Integer.SIZE-3);
+        while (true){
+
+        }
     }
 }
