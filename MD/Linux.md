@@ -7,4 +7,4 @@
 方法一：echo "obase=64;n"|bc
 方法二：printf 0x%x n
 #### 下一步，执行jstack -l pid| grep spid -A 100 打印后面100行分析问题
-或者  Jstack -l PID >> 123.txt输出到文件后然后根据spid搜索定位问题
+或者  Jstack -l PID >> 123.txt输出到文件后(spid等于文件中的nid)然后根据spid搜索定位问题
