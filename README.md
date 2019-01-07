@@ -16,6 +16,7 @@
  - [IO模型有哪些，讲讲你理解的nio ，他和bio，aio的区别是啥，谈谈reactor模型。](https://www.cnblogs.com/javalyy/p/8882066.html)
  - [反射的原理，反射创建类实例的三种方式是什么。](http://blog.51cto.com/4247649/2109128)
  - 反射中，Class.forName和ClassLoader区别 。
+ - [java动态代理实现与原理详细分析](https://www.cnblogs.com/gonjan-blog/p/6685611.html)
  - [描述动态代理的几种实现方式，分别说出相应的优缺点。](https://blog.csdn.net/wufaliang003/article/details/79305688/)
  - [动态代理与cglib实现的区别。](https://www.cnblogs.com/ygj0930/p/6542259.html)
  - 为什么CGlib方式可以对接口实现代理。
