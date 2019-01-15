@@ -54,7 +54,6 @@
  - 当出现了内存溢出，你怎么排错。
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
  - 简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。
- - 讲讲JAVA的反射机制。
  - [加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
  - [Java类加载的方式](http://blog.csdn.net/justloveyou_/article/details/72217806)
  - [Java对象的创建过程](http://blog.csdn.net/justloveyou_/article/details/72466416)
