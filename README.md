@@ -2,7 +2,7 @@
 
 | 🍏 | 🍎 | 🍐 | 🍈 | 🥑  | 🥔| 🍠 | 🥝 | 🍱 | 🥞 |🌽| 🥦  
 | :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|:------:| :--------: |  
-| [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统) |[多线程](#多线程)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[数据结构与算法](#数据结构与算法)|[数据库知识](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
+| [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统) |[多线程与并发](#多线程与并发)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[数据结构与算法](#数据结构与算法)|[数据库知识](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
 
 ### JAVA基础
  - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
@@ -53,7 +53,7 @@
  - [垃圾回收算法的实现原理。](http://www.cnblogs.com/aspirant/p/8662690.html)
  - 当出现了内存溢出，你怎么排错。
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
- - 简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。
+ - [简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。](http://blog.csdn.net/javazejian/article/details/73413292)
  - [加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
  - [Java类加载的方式](http://blog.csdn.net/justloveyou_/article/details/72217806)
  - [Java对象的创建过程](http://blog.csdn.net/justloveyou_/article/details/72466416)
@@ -92,10 +92,10 @@
  - 介绍下你理解的操作系统中线程切换过程。
  - 进程和线程的区别。
  
-### 多线程
+### 多线程与并发
 
  - 多线程的几种实现方式，什么是线程安全。
- - [volatile的原理，作用，能代替锁么。](http://ifeve.com/volatile/)
+ - [volatile的原理，作用，能代替锁么。](https://blog.csdn.net/javazejian/article/details/72772461)
  - 画一个线程的生命周期状态图。
  - sleep和wait的区别。
  - sleep和sleep(0)的区别。
@@ -112,12 +112,13 @@
  - [ThreadLocal用过么，用途是什么，原理是什么，用的时候要注意什么。](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247484994&idx=1&sn=18ff91ffc530f5bf9a016b3e06c17168&chksm=f94a87abce3d0ebd0d23d0cf190777974ef6ba353653071a63ba7b06c417deca59c4279a2171&token=375547551&lang=zh_CN&scene=21#wechat_redirect)
  - 如果让你实现一个并发安全的链表，你会怎么做。
  - 讲讲java同步机制的wait和notify。
- - [CAS机制是什么，如何解决ABA问题。](https://mp.weixin.qq.com/s/nRnQKhiSUrDKu3mz3vItWg)
+ - [CAS机制是什么，如何解决ABA问题。](https://blog.csdn.net/javazejian/article/details/72772470)
  - 多线程如果线程挂住了怎么办。
  - [深入分析AQS实现原理](https://mp.weixin.qq.com/s/2v0T3Nu7m2ka9D8PLl2XxQ)
  - countdowlatch和cyclicbarrier的内部原理和用法，以及相互之间的差别(比如countdownlatch的await方法和是怎么实现的)。
- - 使用synchronized修饰静态方法和非静态方法有什么区别。
+ - [synchronized原理](http://blog.csdn.net/javazejian/article/details/72828483)
  - 简述ConcurrentLinkedQueue和LinkedBlockingQueue的用处和不同之处。
+ - [阻塞队列LinkedBlockingQueue与ArrayBlockingQueue](http://blog.csdn.net/javazejian/article/details/77410889)
  - [导致线程死锁的原因？怎么解除线程死锁。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/thread/DeadlockTest.java)
  - 非常多个线程（可能是不同机器），相互之间需要等待协调，才能完成某种工作，问怎么设计这种协调方案。
  - 用过读写锁吗，原理是什么，一般在什么场景下用。
@@ -128,11 +129,11 @@
 ### TCP与HTTP
 
  - http1.0和http1.1有什么区别。
- - TCP三次握手和四次挥手的流程，为什么断开连接要4次,如果握手只有两次，会出现什么。
+ - [TCP三次握手和四次挥手的流程，为什么断开连接要4次,如果握手只有两次，会出现什么。](https://blog.csdn.net/qzcsu/article/details/72861891)
  - TIME_WAIT和CLOSE_WAIT的区别。
- - 说说你知道的几种HTTP响应码，比如200, 302, 404。
- - 当你用浏览器打开一个链接（如：http://www.javastack.cn）的时候，计算机做了哪些工作步骤。
- - TCP/IP如何保证可靠性，说说TCP头的结构。
+ - [说说你知道的几种HTTP响应码，比如200, 302, 404。](https://blog.csdn.net/ddhsea/article/details/79405996)
+ - 当你用浏览器打开一个链接（如：http://www.baidu.cn）的时候，计算机做了哪些工作步骤。
+ - [TCP/IP如何保证可靠性，说说TCP头的结构。](https://blog.csdn.net/liuchenxia8/article/details/80428157)
  - 如何避免浏览器缓存。
  - 如何理解HTTP协议的无状态性。
  - 简述Http请求get和post的区别以及数据包格式。
