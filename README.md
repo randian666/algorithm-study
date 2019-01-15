@@ -15,7 +15,7 @@
  - 抽象类和接口的区别，类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么。
  - [IO模型有哪些，讲讲你理解的nio ，他和bio，aio的区别是啥，谈谈reactor模型。](https://www.cnblogs.com/javalyy/p/8882066.html)
  - [反射的原理，反射创建类实例的三种方式是什么。](http://blog.51cto.com/4247649/2109128)
- - 反射中，Class.forName和ClassLoader区别 。
+ - [反射中，Class.forName和ClassLoader区别 。](https://blog.csdn.net/qq_27093465/article/details/52262340)
  - [java动态代理实现与原理详细分析](https://www.cnblogs.com/gonjan-blog/p/6685611.html)
  - [描述动态代理的几种实现方式，分别说出相应的优缺点。](https://blog.csdn.net/wufaliang003/article/details/79305688/)
  - [动态代理与cglib实现的区别。](https://www.cnblogs.com/ygj0930/p/6542259.html)
@@ -29,7 +29,7 @@
  - [error和exception的区别，CheckedException，RuntimeException的区别。](https://blog.csdn.net/iblade/article/details/78196016)
  - [在自己的代码中，如果创建一个java.lang.String类，这个类是否可以被类加载器加载？为什么。](https://blog.csdn.net/qq_26807245/article/details/80912026)
  - [说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需要重新实现这两个方法。](https://blog.csdn.net/qq_21163061/article/details/73606523)
- - 在jdk1.5中，引入了泛型，泛型的存在是用来解决什么问题。
+ - [在jdk1.5中，引入了泛型，泛型的存在是用来解决什么问题。](https://www.cnblogs.com/panjun-Donet/articles/1131446.html)
  - 这样的a.hashcode() 有什么用，与a.equals(b)有什么关系。
  - 有没有可能2个不相等的对象有相同的hashcode。
  - Java中的HashSet内部是如何工作的。
