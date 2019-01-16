@@ -37,6 +37,7 @@
  - java8的新特性。
  - [强引用、软引用、弱引用、幻象引用有什么区别？](https://github.com/randian666/algorithm-study/blob/master/MD/Reference.md)
  - [java运算符 与（&）、非（~）、或（|）、异或（^）](https://www.cnblogs.com/yesiamhere/p/6675067.html)
+ - [集合框架面试题](https://github.com/Snailclimb/JavaGuide/blob/master/Java%E7%9B%B8%E5%85%B3/%E8%BF%99%E5%87%A0%E9%81%93Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E9%9D%A2%E8%AF%95%E9%A2%98%E5%87%A0%E4%B9%8E%E5%BF%85%E9%97%AE.md#hashmap-%E7%9A%84%E9%95%BF%E5%BA%A6%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF2%E7%9A%84%E5%B9%82%E6%AC%A1%E6%96%B9)
  - [史上最全Java面试题](https://blog.csdn.net/linzhiqiang0316/article/details/80473906)
  - [各大公司Java面试题超详细总结](http://www.cnblogs.com/java1024/p/7685400.html)
  
