@@ -12,7 +12,7 @@
  - [JAVA8的ConcurrentHashMap为什么放弃了分段锁，有什么问题吗，如果你来设计，你如何设计。](http://www.importnew.com/28263.html)
  - [HashMap, ConcurrentHashMap 原理](https://mp.weixin.qq.com/s/QggmWkrgYrNtVkdSKYuRfg) 
  - [有没有有顺序的Map实现类，如果有，他们是怎么保证有序的。](https://www.jianshu.com/p/07cceede7b03)
- - 抽象类和接口的区别，类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么。
+ - [抽象类和接口的区别，类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么。](https://www.cnblogs.com/dolphin0520/p/3811437.html)
  - [IO模型有哪些，讲讲你理解的nio ，他和bio，aio的区别是啥，谈谈reactor模型。](https://www.cnblogs.com/javalyy/p/8882066.html)
  - [反射的原理，反射创建类实例的三种方式是什么。](http://blog.51cto.com/4247649/2109128)
  - [反射中，Class.forName和ClassLoader区别 。](https://blog.csdn.net/qq_27093465/article/details/52262340)
@@ -20,12 +20,12 @@
  - [描述动态代理的几种实现方式，分别说出相应的优缺点。](https://blog.csdn.net/wufaliang003/article/details/79305688/)
  - [动态代理与cglib实现的区别。](https://www.cnblogs.com/ygj0930/p/6542259.html)
  - 为什么CGlib方式可以对接口实现代理。
- - final的用途。
- - [写出三种单例模式实现](http://tech.hunts.work/2015/09/01/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/#1-%E5%8D%95%E4%BE%8Bsingleton) 。
+ - [final的用途。](https://www.cnblogs.com/dolphin0520/p/3736238.html)
+ - [写出三种单例模式实现](https://mp.weixin.qq.com/s/lZDqy5WatnORY9fEqjjztw) 。
  - 如何在父类中为子类自动完成所有的hashcode和equals实现？这么做有何优劣。
  - 请结合OO设计理念，谈谈访问修饰符public、private、protected、default在应用设计中的作用。
  - [深拷贝和浅拷贝区别](https://blog.csdn.net/wangxueming/article/details/52034841)。
- - 数组和链表数据结构描述，各自的时间复杂度。
+ - [数组和链表数据结构描述，各自的时间复杂度。](https://blog.csdn.net/u013632854/article/details/70338252)
  - [error和exception的区别，CheckedException，RuntimeException的区别。](https://blog.csdn.net/iblade/article/details/78196016)
  - [在自己的代码中，如果创建一个java.lang.String类，这个类是否可以被类加载器加载？为什么。](https://blog.csdn.net/qq_26807245/article/details/80912026)
  - [说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需要重新实现这两个方法。](https://blog.csdn.net/qq_21163061/article/details/73606523)
@@ -34,7 +34,7 @@
  - 有没有可能2个不相等的对象有相同的hashcode。
  - Java中的HashSet内部是如何工作的。
  - 什么是序列化，怎么序列化，为什么序列化，反序列化会遇到什么问题，如何解决。
- - java8的新特性。
+ - [java8的新特性。](http://www.runoob.com/java/java8-new-features.html)
  - [强引用、软引用、弱引用、幻象引用有什么区别？](https://github.com/randian666/algorithm-study/blob/master/MD/Reference.md)
  - [java运算符 与（&）、非（~）、或（|）、异或（^）](https://www.cnblogs.com/yesiamhere/p/6675067.html)
  - [集合框架面试题](https://github.com/Snailclimb/JavaGuide/blob/master/Java%E7%9B%B8%E5%85%B3/%E8%BF%99%E5%87%A0%E9%81%93Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E9%9D%A2%E8%AF%95%E9%A2%98%E5%87%A0%E4%B9%8E%E5%BF%85%E9%97%AE.md)
@@ -46,7 +46,7 @@
  - 什么情况下会发生栈内存溢出。
  - [JVM的内存结构，Eden和Survivor比例。](https://blog.csdn.net/bluetjs/article/details/52874852)
  - JVM内存为什么要分成新生代，老年代，持久代。新生代中为什么要分为Eden和Survivor。
- - JVM中一次完整的GC流程是怎样的，对象如何晋升到老年代，说说你知道的几种主要的JVM参数。
+ - [JVM中一次完整的GC流程是怎样的，对象如何晋升到老年代，说说你知道的几种主要的JVM参数。](https://www.jianshu.com/p/314272e6d35b)
  - [讲下cms和G1，包括原理，流程，优缺点。](https://blog.csdn.net/zhanggang807/article/details/45956325)
  - [垃圾回收算法的实现原理。](http://www.cnblogs.com/xiaoxi/p/6486852.html)
  - [G1，包括原理，流程，优缺点。](https://www.cnblogs.com/nashiyue/p/5797713.html)
@@ -60,13 +60,13 @@
  - [Java对象的创建过程](http://blog.csdn.net/justloveyou_/article/details/72466416)
  - [你们线上应用的JVM参数有哪些。](https://www.cnblogs.com/redcreen/archive/2011/05/04/2037057.html)
  - [g1和cms区别,吞吐量优先和响应优先的垃圾收集器选择。](https://blog.csdn.net/ZYC88888/article/details/80353357)
- - 怎么打出线程栈信息。
+ - [怎么打出线程栈信息。](http://www.cnblogs.com/kongzhongqijing/articles/3630264.html)
  
 ### 开源框架知识
  
  - 简单讲讲tomcat结构，以及其类加载器流程，线程模型等。
  - tomcat如何调优，涉及哪些参数 。
- - 讲讲Spring加载流程。
+ - [讲讲Spring加载流程。](https://segmentfault.com/a/1190000012887776)
  - [spring循环依赖](http://www.tianxiaobo.com/2018/06/08/Spring-IOC-%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/)
  - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
@@ -88,7 +88,7 @@
 
  - Linux系统下你关注过哪些内核参数，说说你知道的。
  - [Linux下IO模型有几种，各自的含义是什么。](https://juejin.im/post/5b94e93b5188255c672e901e)
- - epoll和poll有什么区别。
+ - [epoll和poll有什么区别。](https://www.cnblogs.com/Anker/p/3265058.html)
  - [平时用到哪些Linux命令。以及如何排查线上问题](https://github.com/randian666/algorithm-study/blob/master/MD/Linux.md)
  - 介绍下你理解的操作系统中线程切换过程。
  - 进程和线程的区别。
@@ -97,7 +97,7 @@
 
  - 多线程的几种实现方式，什么是线程安全。
  - [volatile的原理，作用，能代替锁么。](https://blog.csdn.net/javazejian/article/details/72772461)
- - 画一个线程的生命周期状态图。
+ - [画一个线程的生命周期状态图。](https://blog.csdn.net/houbin0912/article/details/77969563)
  - sleep和wait的区别。
  - sleep和sleep(0)的区别。
  - [Lock与Synchronized的区别 。](https://blog.csdn.net/javazejian/article/details/75043422)
@@ -108,7 +108,7 @@
  - [用过线程池吗，如果用过，请说明原理，并说说newCache和newFixed有什么区别，构造函数的各个参数的含义是什么，比如coreSize，maxsize等。](https://blog.csdn.net/wy11933/article/details/80399562)
  - 线程池的关闭方式有几种，各自的区别是什么。
  - 假如有一个第三方接口，有很多个线程去调用获取数据，现在规定每秒钟最多有10个线程同时调用它，如何做到。
- - spring的controller是单例还是多例，怎么保证并发的安全。
+ - [spring的controller是单例还是多例，怎么保证并发的安全。](https://www.cnblogs.com/zxf330301/articles/6105127.html)
  - 用三个线程按顺序循环打印abc三个字母，比如abcabcabc。
  - [ThreadLocal用过么，用途是什么，原理是什么，用的时候要注意什么。](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247484994&idx=1&sn=18ff91ffc530f5bf9a016b3e06c17168&chksm=f94a87abce3d0ebd0d23d0cf190777974ef6ba353653071a63ba7b06c417deca59c4279a2171&token=375547551&lang=zh_CN&scene=21#wechat_redirect)
  - 如果让你实现一个并发安全的链表，你会怎么做。
@@ -124,7 +124,7 @@
  - 非常多个线程（可能是不同机器），相互之间需要等待协调，才能完成某种工作，问怎么设计这种协调方案。
  - 用过读写锁吗，原理是什么，一般在什么场景下用。
  - 开启多个线程，如果保证顺序执行，有哪几种实现方式，或者如何保证多个线程都执行完再拿到结果。
- - 延迟队列的实现方式，delayQueue和时间轮算法的异同。
+ - [延迟队列的实现方式，delayQueue和时间轮算法的异同。](https://blog.csdn.net/u014634338/article/details/78385603)
  - [史上最全 Java 多线程面试题及答案](https://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw==&mid=2247486721&idx=2&sn=c2058d5ddd7453eb9c39732c114879d5&scene=21#wechat_redirect)
  - [Java并发编程73道面试题及答案](https://mp.weixin.qq.com/s/N1YAZmBLX-bC-XkuC7yl_Q)
 ### TCP与HTTP
@@ -143,6 +143,8 @@
  - HTTP的长连接是什么意思。
  - HTTPS的加密方式是什么，讲讲整个加密解密流程。
  - Http和https的三次握手有什么区别。
+ - [http请求过程](https://www.jianshu.com/p/c1d6a294d3c0)
+ - [Https实现原理](https://www.cnblogs.com/zery/p/5164795.html)
  - 什么是分块传送。
  - Session和cookie的区别。
  - [计算机网络面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78303617)
