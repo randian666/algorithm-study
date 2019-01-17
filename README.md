@@ -136,12 +136,11 @@
  - 当你用浏览器打开一个链接（如：http://www.baidu.cn）的时候，计算机做了哪些工作步骤。
  - [TCP/IP如何保证可靠性，说说TCP头的结构。](https://blog.csdn.net/liuchenxia8/article/details/80428157)
  - 如何避免浏览器缓存。
- - 如何理解HTTP协议的无状态性。
+ - [如何理解HTTP协议的无状态性。](https://blog.csdn.net/tennysonsky/article/details/44562435)
  - 简述Http请求get和post的区别以及数据包格式。
  - HTTP有哪些method
  - 简述HTTP请求的报文格式。
- - HTTP的长连接是什么意思。
- - HTTPS的加密方式是什么，讲讲整个加密解密流程。
+ - [HTTP的长连接是什么意思。](http://www.cnblogs.com/gotodsp/p/6366163.html)
  - Http和https的三次握手有什么区别。
  - [http请求过程](https://www.jianshu.com/p/c1d6a294d3c0)
  - [Https实现原理](https://www.cnblogs.com/zery/p/5164795.html)
