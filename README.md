@@ -52,7 +52,7 @@
  - [G1，包括原理，流程，优缺点。](https://www.cnblogs.com/nashiyue/p/5797713.html)
  - [CMS收集器学习笔记](https://mp.weixin.qq.com/s/OzE7WrvcGPEcf_UHj2a-lg)
  - [垃圾回收算法的实现原理。](http://www.cnblogs.com/aspirant/p/8662690.html)
- - 当出现了内存溢出，你怎么排错。
+ - [当出现了内存溢出，你怎么排错。](https://blog.csdn.net/wtt945482445/article/details/52483944)
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
  - [简单说说你了解的类加载器，可以打破双亲委派么，怎么打破。](http://blog.csdn.net/javazejian/article/details/73413292)
  - [加载时机与加载过程](https://blog.csdn.net/justloveyou_/article/details/72466105)
