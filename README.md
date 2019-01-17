@@ -142,6 +142,7 @@
  - 简述HTTP请求的报文格式。
  - [HTTP的长连接是什么意思。](http://www.cnblogs.com/gotodsp/p/6366163.html)
  - Http和https的三次握手有什么区别。
+ - HTTP和HTTPS的区别
  - [http请求过程](https://www.jianshu.com/p/c1d6a294d3c0)
  - [Https实现原理](https://www.cnblogs.com/zery/p/5164795.html)
  - 什么是分块传送。
