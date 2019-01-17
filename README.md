@@ -133,7 +133,7 @@
  - [TCP三次握手和四次挥手的流程，为什么断开连接要4次,如果握手只有两次，会出现什么。](https://blog.csdn.net/qzcsu/article/details/72861891)
  - TIME_WAIT和CLOSE_WAIT的区别。
  - [说说你知道的几种HTTP响应码，比如200, 302, 404。](https://blog.csdn.net/ddhsea/article/details/79405996)
- - 当你用浏览器打开一个链接（如：http://www.baidu.cn）的时候，计算机做了哪些工作步骤。
+ - 当你用浏览器打开一个链接（如：http://www.baidu.com）的时候，计算机做了哪些工作步骤。
  - [TCP/IP如何保证可靠性，说说TCP头的结构。](https://blog.csdn.net/liuchenxia8/article/details/80428157)
  - 如何避免浏览器缓存。
  - [如何理解HTTP协议的无状态性。](https://blog.csdn.net/tennysonsky/article/details/44562435)
