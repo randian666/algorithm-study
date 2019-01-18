@@ -255,14 +255,13 @@
  - Redis的数据结构都有哪些。
  - Redis的使用要注意什么，讲讲持久化方式，内存设置，集群的应用和优劣势，淘汰策略等。
  - 当前redis集群有哪些玩法，各自优缺点，场景。
- - Memcache的原理，哪些数据适合放在缓存中。
  - redis和memcached 的内存管理的区别。
  - Redis的并发竞争问题如何解决，了解Redis事务的CAS操作吗。
  - Redis的选举算法和流程是怎样的。
- - redis的持久化的机制，aof和rdb的区别。
+ - [redis的持久化的机制，aof和rdb的区别。](https://blog.csdn.net/jackpk/article/details/30073097)
  - redis的集群怎么同步的数据的。
  - 知道哪些redis的优化操作。
- - Reids的主从复制机制原理。
+ - [Reids的主从复制机制原理。](http://www.cnblogs.com/kevingrace/p/5685332.html)
  - Redis的线程模型是什么。
  - 请思考一个方案，设计一个可以控制缓存总体大小的自动适应的本地缓存。
  - 如何看待缓存的使用（本地缓存，集中式缓存），简述本地缓存和集中式缓存和优缺点。
