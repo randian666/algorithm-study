@@ -151,6 +151,7 @@
  - [计算机网络面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78303617)
 ### 架构设计与分布式
  - [ZooKeeper基本原理](https://zhuanlan.zhihu.com/p/30024403)
+ - [分布式锁解决并发的三种实现方式](https://www.jianshu.com/p/8bddd381de06)
  - 分布式集群下如何做到唯一序列号。
  - 设计一个秒杀系统，30分钟没付款就自动关闭交易。
  - [如何使用redis和zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么场景。](https://mp.weixin.qq.com/s/OCIg3TwpmXzqOVqBZ2fSow)
@@ -192,6 +193,7 @@
  - 分布式服务调用方，不依赖服务提供方的话，怎么处理服务方挂掉后，大量无效资源请求的浪费，如果只是服务提供方吞吐不高的时候该怎么做，如果服务挂了，那么一会重启，该怎么做到最小的资源浪费，流量半开的实现机制是什么。
  - dubbo的泛化调用怎么实现的，如果是你，你会怎么做。
  - 远程调用会有超时现象，如果做到优雅的控制，JDK自带的超时机制有哪些，怎么实现的。
+ 
 ### 数据结构与算法
  - [用java自己实现一个LRU。](https://github.com/randian666/algorithm-study/blob/master/src/main/java/com/algorithm/study/demo/LRUCache/LRUMap.java)
  - 10亿个数字里里面找最小的10个。
