@@ -30,8 +30,7 @@
  - [在自己的代码中，如果创建一个java.lang.String类，这个类是否可以被类加载器加载？为什么。](https://blog.csdn.net/qq_26807245/article/details/80912026)
  - [说一说你对java.lang.Object对象中hashCode和equals方法的理解。在什么场景下需要重新实现这两个方法。](https://blog.csdn.net/qq_21163061/article/details/73606523)
  - [在jdk1.5中，引入了泛型，泛型的存在是用来解决什么问题。](https://www.cnblogs.com/panjun-Donet/articles/1131446.html)
- - 这样的a.hashcode() 有什么用，与a.equals(b)有什么关系。
- - 有没有可能2个不相等的对象有相同的hashcode。
+ - [有没有可能2个不相等的对象有相同的hashcode。](https://blog.csdn.net/dalang_1234/article/details/79200889)
  - Java中的HashSet内部是如何工作的。
  - 什么是序列化，怎么序列化，为什么序列化，反序列化会遇到什么问题，如何解决。
  - [java8的新特性。](http://www.runoob.com/java/java8-new-features.html)
