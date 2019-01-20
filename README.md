@@ -51,6 +51,7 @@
  - [垃圾回收算法的实现原理。](http://www.cnblogs.com/xiaoxi/p/6486852.html)
  - [G1，包括原理，流程，优缺点。](https://www.cnblogs.com/nashiyue/p/5797713.html)
  - [CMS收集器学习笔记](https://mp.weixin.qq.com/s/OzE7WrvcGPEcf_UHj2a-lg)
+ - 谈谈你的GC调优思路?
  - [垃圾回收算法的实现原理。](http://www.cnblogs.com/aspirant/p/8662690.html)
  - [当出现了内存溢出，你怎么排错。](https://blog.csdn.net/wtt945482445/article/details/52483944)
  - [JVM内存模型的相关知识了解多少，比如重排序，内存屏障，happen-before，主内存，工作内存等。](https://mp.weixin.qq.com/s/rkxcqZCvCnC0Psr0_oJzbQ)
@@ -75,7 +76,7 @@
  - [Springmvc 中DispatcherServlet初始化过程。](https://www.cnblogs.com/xiaoxi/p/6164383.html)
  - netty的线程模型，netty如何基于reactor模型上实现的。
  - 为什么选择netty。
- - 什么是TCP粘包，拆包。解决方式是什么。
+ - [什么是TCP粘包，拆包。解决方式是什么。](https://blog.csdn.net/wxy941011/article/details/80428470)
  - netty的fashwheeltimer的用法，实现原理，是否出现过调用不够准时，怎么解决。
  - netty的心跳处理在弱网下怎么办。
  - netty的通讯协议是什么样的。
@@ -220,11 +221,11 @@
  - 聚集索引和非聚集索引的区别。
  - select for update 是什么含义，会锁表还是锁行或是其他。
  - 为什么要用Btree实现，它是怎么分裂的，什么时候分裂，为什么是平衡的。
- - 数据库的ACID是什么。
+ - [数据库的ACID是什么。](https://www.cnblogs.com/lichunyang321/p/9594196.html)
  - 某个表有近千万数据，CRUD比较慢，如何优化。
  - Mysql怎么优化table scan的。
  - 如何写sql能够有效的使用到复合索引。
- - mysql中in 和exists 区别。
+ - [mysql中in 和exists 区别。](https://www.cnblogs.com/xiaoxiong-kankan/p/7928153.html)
  - 数据库自增主键可能的问题。
  - MVCC的含义，如何实现的。
  - 你做过的项目里遇到分库分表了吗，怎么做的，有用到中间件么，比如sharding jdbc等,他们的原理知道么。
