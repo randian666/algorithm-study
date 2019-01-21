@@ -151,7 +151,7 @@
 ### 架构设计与分布式
  - [ZooKeeper基本原理](https://zhuanlan.zhihu.com/p/30024403)
  - [分布式锁解决并发的三种实现方式](https://www.jianshu.com/p/8bddd381de06)
- - 分布式集群下如何做到唯一序列号。
+ - [分布式集群下如何做到唯一序列号。](https://blog.csdn.net/hl_java/article/details/78462283)
  - 设计一个秒杀系统，30分钟没付款就自动关闭交易。
  - [如何使用redis和zookeeper实现分布式锁？有什么区别优缺点，会有什么问题，分别适用什么场景。](https://mp.weixin.qq.com/s/OCIg3TwpmXzqOVqBZ2fSow)
  - [基于Zookeeper的分布式锁](https://blog.csdn.net/qiangcuo6087/article/details/79067136)
@@ -168,8 +168,7 @@
  - 一份文档进行编辑更新。
  - 线上系统突然变得异常缓慢，你如何查找问题。
  - [说说你平时用到的设计模式](http://tech.hunts.work/2015/09/01/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/#2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82simple-factory)。
- - Dubbo的原理，有看过源码么，数据怎么流转的，怎么实现集群，负载均衡，服务注册
- - 和发现，重试转发，快速失败的策略是怎样的 。
+ - [Dubbo的原理，有看过源码么，数据怎么流转的，怎么实现集群，负载均衡，服务注册和发现，重试转发，快速失败的策略是怎样的 。](https://blog.csdn.net/he90227/article/details/70157046/)
  - 一次RPC请求的流程是什么。
  - [自己实现过rpc么，原理可以简单讲讲。Rpc要解决什么问题。](https://mp.weixin.qq.com/s/kHcbIgMFNB0np6olcPch4w)
  - 异步模式的用途和意义。
@@ -213,7 +212,7 @@
 ### 数据库
  - [MySQL数据库的索引原理、与慢SQL优化的5大原则](https://www.toutiao.com/i6611390023797309960/)
  - [数据库隔离级别有哪些，各自的含义是什么，MYSQL默认的隔离级别是是什么。](http://www.cnblogs.com/huanongying/p/7021555.html)
- - MYSQL有哪些存储引擎，各自优缺点。
+ - [MYSQL有哪些存储引擎，各自优缺点。](https://blog.csdn.net/liu857279611/article/details/51558927)
  - 高并发下，如何做到安全的修改同一行数据。
  - 乐观锁和悲观锁是什么，INNODB的标准行级锁有哪2种，解释其含义。
  - SQL优化的一般步骤是什么，怎么看执行计划，如何理解其中各个字段的含义。
