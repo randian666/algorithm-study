@@ -1,8 +1,5 @@
 package com.algorithm.study.demo.jike;
 
-import com.algorithm.study.demo.LRUCache.LRULinked;
-
-import java.util.LinkedList;
 import java.util.Stack;
 
 /**
