@@ -10,8 +10,9 @@ import java.util.Map;
  * @Version: 1.0
  */
 public class LRULinked<K,V>{
+    //缓存
     private final Map<K, V> cacheMap = new HashMap<>();
-
+    //根节点
     private Node<K, V> root;
     private int cacheSize;
     private int size;
@@ -29,7 +30,6 @@ public class LRULinked<K,V>{
             Node<K, V> temp=root.next;
             if (temp==null){
                 root=null;
-                size--;
             }else{
                 Node<K, V> current=root;
                 while (temp.next!=null){
@@ -37,15 +37,15 @@ public class LRULinked<K,V>{
                     temp=temp.next;
                 }
                 current.next=null;
-                size--;
             }
+            size--;
         }
         node.next=root;
         root=node;
         size++;
     }
     public V get(K key){
-        for (Node<K,V> node = root; node!=null; node=node.next){
+        for (Node<K,V> node = root; node!=null&&!root.key.equals(key); node=node.next){
             if (node.next.key.equals(key)){
                 Node<K, V> nodeNew=new Node<K, V>(node.next.key,node.next.value);
                 node.next=node.next.next;
@@ -84,7 +84,7 @@ public class LRULinked<K,V>{
         linked.put("a","a");
         linked.put("b","b");
         linked.put("c","c");
-        linked.get("a");
+        linked.get("b");
         linked.put("d","d");
         System.out.println(linked.size);
         System.out.println(linked.toString());
