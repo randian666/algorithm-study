@@ -90,8 +90,5 @@ public class LRULinked<K,V>{
         System.out.println(linked.toString());
         System.out.println(linked.toString());
         System.out.println(linked.size);
-
-
-
     }
 }
