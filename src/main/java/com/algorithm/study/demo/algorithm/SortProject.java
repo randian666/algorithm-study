@@ -1,6 +1,7 @@
 package com.algorithm.study.demo.algorithm;
 
 import com.algorithm.study.demo.model.User;
+import com.alibaba.fastjson.JSON;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -24,14 +25,10 @@ public class SortProject {
             "heapSort",
             "binaryTreeSort"
     };
-    public static void main(String[] args) {
-        int[] ls=new int[]{1,30,15,11,40};
-        quick(ls);
-//        try {
-//            performanceTest(10000);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+    public static void main(String[] args) throws Exception {
+        int[] ls=new int[]{30,1,15,11,40};
+        Method method = SortProject.class.getDeclaredMethod(methodNames[4], ls.getClass());
+        method.invoke(SortProject.class.newInstance(),ls);
     }
 
     /**
@@ -58,10 +55,14 @@ public class SortProject {
         }
     }
     /**
-     * 冒泡排序
-     * 两两相邻比较记录的关键字，如果反序就交换，直到没有反序的记录为止。
+     * 冒泡排序：两两相邻比较记录的关键字，如果反序就交换，直到没有反序的记录为止。
+     * 原地排序算法
+     * 稳定排序算法
+     * 时间复杂度为O(n²)
+     * 空间复杂度为O(1)
      */
     private static void maopaoSort(int score[]){
+        System.out.println("排序前："+ JSON.toJSONString(score));
         boolean flag=true;//数据发生了交换才继续冒泡
         for (int i = 1; i < score.length && flag; i++){    //最多做n-1趟排序
             flag=false;
@@ -73,12 +74,8 @@ public class SortProject {
                     flag=true;//发生了数据交换
                 }
             }
-//            System.out.print("第" + (i) + "趟排序结果：");
-//            for(int a = 0; a < score.length; a++){
-//                System.out.print(score[a] + "\t");
-//            }
-//            System.out.println("");
         }
+        System.out.println("排序后："+ JSON.toJSONString(score));
     }
 
     /**
@@ -93,9 +90,13 @@ public class SortProject {
     /**
      * 简单选择排序算法
      * 每一趟从待排序的记录中选出最小的元素，顺序放在已排好序的序列最后，直到全部记录排序完毕
+     * 空间复杂度为O(1)
+     * 非稳定排序
+     * 时间复杂度为O(n²)
      * 性能上优于冒泡
      */
     private static void selectSort(int ls[]){
+        System.out.println("排序前："+ JSON.toJSONString(ls));
         for (int i=0;i<ls.length-1;i++){
             int min=i;//记录数字最小的那个值的索引
             for (int j=(i+1);j<ls.length;j++){
@@ -108,35 +109,34 @@ public class SortProject {
                 ls[i]=ls[min];
                 ls[min]=temp;
             }
-//            System.out.print("第" + (i + 1) + "趟排序结果：");
-//            for(int a = 0; a < ls.length; a++){
-//                System.out.print(ls[a] + "\t");
-//            }
-//            System.out.println("");
         }
+        System.out.println("排序后："+ JSON.toJSONString(ls));
     }
 
     /**
      * 插入排序算法
      * 插入排序就是每一步都将一个待排数据按其大小插入到已经排序的数据中的适当位置，直到全部插入完毕。
+     * 将数组中的数据分为两个区间，已排序区间和未排序区间。初始已排序区间只有一个元素，就是数组的第一个元素。
+     * 空间复杂度为O(1)
+     * 稳定排序
+     * 时间复杂度为O(n²)
      * 性能优于选择排序、冒泡排序
-     * {69, 70, 2, 87}
      */
     private static void insertSort( int ls[]){
+        System.out.println("排序前："+ JSON.toJSONString(ls));
         for (int i=1;i<ls.length;i++){
             int key = ls[i];//需要插入的元素
             int j = i-1;//已经排好序的末索引
-            for(;j>=0&&key<ls[j];j--){
-                ls[j+1]=ls[j];                       //将大于temp的值整体后移一个单位
+            for(;j>=0;j--){
+                if (key<ls[j]) {
+                    ls[j + 1] = ls[j];//将大于temp的值整体后移一个单位
+                }else {
+                    break;
+                }
             }
             ls[j+1] = key;
-
-//            System.out.print("第" + (i + 1) + "趟排序结果：");
-//            for(int a = 0; a < ls.length; a++){
-//                System.out.print(ls[a] + "\t");
-//            }
-//            System.out.println("");
         }
+        System.out.println("排序后："+ JSON.toJSONString(ls));
     }
     /**
      * 希尔排序(Shell)算法
@@ -229,9 +229,11 @@ public class SortProject {
         quickSortByList(list, hi, high);
     }
     public static void quick(int[] a2) {
+        System.out.println("排序前："+JSON.toJSONString(a2));
         if (a2.length > 1) {    //查看数组是否为空
             quickSort(a2, 0, a2.length - 1);
         }
+        System.out.println("排序后："+JSON.toJSONString(a2));
     }
 
     /**
@@ -272,10 +274,14 @@ public class SortProject {
     /**
      * 归并排序<br>
      * 把数组从中间一分为二，并对左右两部分递归调用，直到数组长度为1的时候，开始两两归并；<br>
+     * 递推公式：
+     * merge_sort(p…r) = merge(merge_sort(p…q), merge_sort(q+1…r))
+     * 终止条件：
+     * p >= r 不用再继续分解
      * 时间复杂度: 平均:O(nlogn)，最好:O(nlogn);最坏:O(nlogn);
      * 空间复杂度: O(n);要为归并的结果分配空间
-     * @param a 待排序数组；
-     * @return 有序数组；
+     * 稳定排序算法
+     * 不是原地排序算法
      */
     public static int[] mergeSort(int[] a){
         if(a.length==1){
@@ -290,6 +296,7 @@ public class SortProject {
         rightPart = mergeSort(rightPart);
         return merge(leftPart, rightPart);
     }
+
 
 
     /**
