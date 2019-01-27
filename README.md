@@ -167,7 +167,7 @@
  - 一个在线文档系统，文档可以被编辑，如何防止多人同时对同
  - 一份文档进行编辑更新。
  - 线上系统突然变得异常缓慢，你如何查找问题。
- - [说说你平时用到的设计模式](http://tech.hunts.work/2015/09/01/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/#2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82simple-factory)。
+ - [说说你平时用到的设计模式](https://github.com/Snailclimb/JavaGuide/blob/master/Java%E7%9B%B8%E5%85%B3/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.md)。
  - [Dubbo的原理，有看过源码么，数据怎么流转的，怎么实现集群，负载均衡，服务注册和发现，重试转发，快速失败的策略是怎样的 。](https://blog.csdn.net/he90227/article/details/70157046/)
  - 一次RPC请求的流程是什么。
  - [自己实现过rpc么，原理可以简单讲讲。Rpc要解决什么问题。](https://mp.weixin.qq.com/s/kHcbIgMFNB0np6olcPch4w)

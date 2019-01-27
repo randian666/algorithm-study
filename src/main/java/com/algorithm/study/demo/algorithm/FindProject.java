@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 public class FindProject {
     public static void main(String[] args) {
 
-        int[] is=new int[]{3,5,6,7,10};
-        System.out.println(binary_search_xiaoyu(is,10));
+        int[] is=new int[]{4,5,6,7,0,1,2};
+        System.out.println(binary_search_33(is,4));
 //        System.out.println(binarySearch(is,2));
 //        Shape redRectangle = new RedShapeDecorator(new Rectangle());
 //        redRectangle.doShaper();
@@ -209,6 +209,44 @@ public class FindProject {
                     return middle;
                 else
                     low=middle+1;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * 假设按照升序排序的数组在预先未知的某个点上进行了旋转
+     * ( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。
+     * 搜索一个给定的目标值，如果数组中存在这个目标值，则返回它的索引，否则返回 -1 。
+     * @return
+     */
+    public static int binary_search_33(int[] nums,int target){
+        if (nums.length==0) return -1;
+        if (nums.length==1){
+            if (nums[0]==target){
+                return 0;
+            }else{
+                return -1;
+            }
+        }
+        int left=0;
+        int right=nums.length-1;
+        int middle=0;
+        while (left<=right){
+            middle=(left+right)>>1;
+            if (nums[middle]==target) return middle;
+            if (nums[middle]>=nums[right]){
+                if(nums[left]<=target&&target<nums[middle]){
+                    right = middle-1;
+                }else{
+                    left = middle+1;
+                }
+            }else{
+                if(nums[middle]<target&&target<=nums[right]){
+                    left = middle+1;
+                }else{
+                    right = middle==0?middle:middle-1;
+                }
             }
         }
         return -1;
