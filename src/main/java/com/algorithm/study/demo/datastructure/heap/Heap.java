@@ -1,4 +1,4 @@
-package com.algorithm.study.demo.datastructure.tree;
+package com.algorithm.study.demo.datastructure.heap;
 
 import com.alibaba.fastjson.JSON;
 
