@@ -51,11 +51,11 @@ public class MLinkList<E> {
      * @return
      */
     public E deleteFirst(){
-        Node temp=data;
-        data=temp.next;
-        temp.next=null;//释放应用
-        size--;
-        return temp.value;
+        Node current=data;
+        E val=current.value;
+        current.value=current.next.value;
+        current.next=current.next.next;
+        return val;
     }
 
     /**
@@ -140,15 +140,14 @@ public class MLinkList<E> {
         if (index==0){
             deleteFirst();
         }else{
-            Node current,temp;
-            current=data;
+            Node current=data;
             int j=1;
             while (j<index){//找到第j个结点
                 current=current.next;
                 j++;
             }
-            temp=current.next;
-            current.next=temp.next;
+            current.value=current.next.value;
+            current.next=current.next.next;
         }
         size--;
     }
@@ -159,19 +158,14 @@ public class MLinkList<E> {
      */
     public void delete(E element){
         Node temp=data;
-        Node current=data;
         while (!temp.value.equals(element)){
             if (temp.next==null){
                 return;
             }
-            current=temp;
             temp=temp.next;
         }
-        if (temp==data){
-            data=data.next;
-        }else{
-            current.next=temp.next;
-        }
+        temp.value=temp.next.value;
+        temp.next=temp.next.next;
         size--;
     }
     public void clear(){
@@ -219,6 +213,8 @@ public class MLinkList<E> {
         data=p1;
         System.out.println("反转完毕");
     }
+
+
     public static void main(String[] args) {
         MLinkList mLinkList=new MLinkList();
         mLinkList.add("a");
@@ -226,9 +222,10 @@ public class MLinkList<E> {
         mLinkList.add("c");
         mLinkList.add("d");
 //        System.out.println(mLinkList.toString());
+//        mLinkList.delete("b");
+        mLinkList.delete(0);
         System.out.println(mLinkList.size);
-//        System.out.println(mLinkList.toString());
-        mLinkList.reverseLinkedList();
+//        mLinkList.reverseLinkedList();
         System.out.println(mLinkList.toString());
 
     }
