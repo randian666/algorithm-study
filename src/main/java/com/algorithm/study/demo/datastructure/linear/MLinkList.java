@@ -13,7 +13,7 @@ import java.util.Stack;
 public class MLinkList<E> {
     // 定义一个内部类Node，代表链表的节点
     private class Node {
-        private E data;// 保存数据
+        private E value;// 保存数据
         private Node next;// 指向下个节点的引用
 
         // 无参构造器
@@ -21,7 +21,7 @@ public class MLinkList<E> {
         }
         // 初始化全部属性的构造器
         public Node(E data, Node next) {
-            this.data = data;
+            this.value = data;
             this.next = next;
         }
     }
@@ -55,7 +55,7 @@ public class MLinkList<E> {
         data=temp.next;
         temp.next=null;//释放应用
         size--;
-        return temp.data;
+        return temp.value;
     }
 
     /**
@@ -94,7 +94,7 @@ public class MLinkList<E> {
             current=current.next;
             j++;
         }
-        current.data=element;
+        current.value=element;
     }
     /**
      * 增加一个末尾结点
@@ -128,7 +128,7 @@ public class MLinkList<E> {
             temp=temp.next;
             j++;
         }
-        return temp.data;
+        return temp.value;
     }
 
     /**
@@ -160,7 +160,7 @@ public class MLinkList<E> {
     public void delete(E element){
         Node temp=data;
         Node current=data;
-        while (!temp.data.equals(element)){
+        while (!temp.value.equals(element)){
             if (temp.next==null){
                 return;
             }
@@ -191,24 +191,44 @@ public class MLinkList<E> {
     @Override
     public String toString(){
         StringBuilder sb=new StringBuilder();
-        int j=1;
         Node temp=data;
-        while (j<size){
-            sb.append(data.data);
-            temp= data.next;//找到最后一个结点
-            j++;
+        while (temp!=null){
+            sb.append(temp.value);
+            temp= temp.next;//找到最后一个结点
         }
         return sb.toString();
+    }
+
+    /**
+     * 反转链表O(n)复杂度实现
+     */
+    public void reverseLinkedList(){
+        if (data==null || data.next==null){
+            return;
+        }
+        Node p1=data;
+        Node p2=data.next;
+        Node p3=null;
+        while (p2!=null){
+            p3=p2.next;
+            p2.next=p1;
+            p1=p2;
+            p2=p3;
+        }
+        data.next=null;
+        data=p1;
+        System.out.println("反转完毕");
     }
     public static void main(String[] args) {
         MLinkList mLinkList=new MLinkList();
         mLinkList.add("a");
         mLinkList.add("b");
         mLinkList.add("c");
-        mLinkList.add("b");
-        mLinkList.add("a");
-        System.out.println(mLinkList.toString());
+        mLinkList.add("d");
+//        System.out.println(mLinkList.toString());
         System.out.println(mLinkList.size);
+//        System.out.println(mLinkList.toString());
+        mLinkList.reverseLinkedList();
         System.out.println(mLinkList.toString());
 
     }
