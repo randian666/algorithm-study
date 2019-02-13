@@ -9,11 +9,11 @@ import java.util.Map;
  * @CreateDate: 2019/1/23 下午4:03
  * @Version: 1.0
  */
-public class LRULinked<K,V>{
+public class LRULinked{
     //缓存
-    private final Map<K, V> cacheMap = new HashMap<>();
+    private final Map<Integer, Integer> cacheMap = new HashMap<>();
     //根节点
-    private Node<K, V> root;
+    private Node root;
     private int cacheSize;
     private int size;
     public LRULinked(int cacheSize){
@@ -24,14 +24,15 @@ public class LRULinked<K,V>{
      * 插入头结点
      * @param value
      */
-    public void put(K key,V value){
-        Node<K, V> node=new Node<K, V>(key,value);
+    public void put(int key,int value){
+        cacheMap.put(key,value);
+        Node node=new Node(key,value);
         if (size==cacheSize){//容量满了删除尾节点
-            Node<K, V> temp=root.next;
+            Node temp=root.next;
             if (temp==null){
                 root=null;
             }else{
-                Node<K, V> current=root;
+                Node current=root;
                 while (temp.next!=null){
                     current=temp;
                     temp=temp.next;
@@ -44,10 +45,13 @@ public class LRULinked<K,V>{
         root=node;
         size++;
     }
-    public V get(K key){
-        for (Node<K,V> node = root; node!=null&&!root.key.equals(key); node=node.next){
+    public int get(int key){
+        if (!cacheMap.containsKey(key)){
+            return -1;
+        }
+        for (Node node = root; node!=null&&!root.key.equals(key); node=node.next){
             if (node.next.key.equals(key)){
-                Node<K, V> nodeNew=new Node<K, V>(node.next.key,node.next.value);
+                Node nodeNew=new Node(node.next.key,node.next.value);
                 node.next=node.next.next;
                 size--;
                 this.put(nodeNew.key,nodeNew.value);//查找的节点放到头结点
@@ -60,7 +64,7 @@ public class LRULinked<K,V>{
     public String toString(){
         StringBuilder sb=new StringBuilder();
         int j=0;
-        Node<K, V> temp=root;
+        Node temp=root;
         while (j<size){
             sb.append(temp.value);
             temp= temp.next;//找到最后一个结点
@@ -69,26 +73,24 @@ public class LRULinked<K,V>{
         return sb.toString();
     }
 
-    public static class Node<K, V>{
-        private K key;
-        private V value;
-        private Node<K, V> next;
-        public Node(K key, V value){
+    public static class Node{
+        private Integer key;
+        private Integer value;
+        private Node next;
+        public Node(Integer key, Integer value){
             this.key=key;
             this.value=value;
         }
     }
 
     public static void main(String[] args) {
-        LRULinked<String,String> linked=new LRULinked<>(3);
-        linked.put("a","a");
-        linked.put("b","b");
-        linked.put("c","c");
-        linked.get("b");
-        linked.put("d","d");
+        LRULinked linked=new LRULinked(3);
+        linked.put(1,2);
+        linked.put(2,2);
+        linked.put(3,3);
+        System.out.println(linked.get(1));
+        linked.put(4,4);
         System.out.println(linked.size);
         System.out.println(linked.toString());
-        System.out.println(linked.toString());
-        System.out.println(linked.size);
     }
 }
