@@ -12,7 +12,7 @@ import java.util.Stack;
  */
 public class MLinkList<E> {
     // 定义一个内部类Node，代表链表的节点
-    private class Node {
+    public class Node {
         private E value;// 保存数据
         private Node next;// 指向下个节点的引用
 
@@ -214,17 +214,17 @@ public class MLinkList<E> {
         System.out.println("反转完毕");
     }
 
-
     public static void main(String[] args) {
-        MLinkList mLinkList=new MLinkList();
-        mLinkList.add("a");
-        mLinkList.add("b");
-        mLinkList.add("c");
-        mLinkList.add("d");
+        MLinkList<Integer> mLinkList=new MLinkList();
+        mLinkList.add(4);
+        mLinkList.add(1);
+        mLinkList.add(8);
+        mLinkList.add(4);
+        mLinkList.add(5);
 //        System.out.println(mLinkList.toString());
 //        mLinkList.delete("b");
-        mLinkList.delete(0);
-        System.out.println(mLinkList.size);
+//        mLinkList.delete(0);
+//        System.out.println(mLinkList.size);
 //        mLinkList.reverseLinkedList();
         System.out.println(mLinkList.toString());
 

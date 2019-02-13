@@ -100,6 +100,7 @@
  - [画一个线程的生命周期状态图。](https://blog.csdn.net/houbin0912/article/details/77969563)
  - sleep和wait的区别。
  - sleep和sleep(0)的区别。
+ - [Java 各种锁的小结](https://mp.weixin.qq.com/s/_xazrXa8MBYaz2WaX6BNew)
  - [Lock与Synchronized的区别 。](https://blog.csdn.net/javazejian/article/details/75043422)
  - [synchronized的原理是什么](https://blog.csdn.net/javazejian/article/details/72828483)
  - [量级锁，可重入锁，公平锁，非公平锁，乐观锁，悲观锁。](https://www.toutiao.com/i6630764198357893646/)
