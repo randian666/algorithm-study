@@ -10,7 +10,7 @@ import java.util.BitSet;
  */
 public class Suanfa50 {
     public static void main(String[] args) {
-        printMissingNumber(new int[]{1, 3, 6}, 6);
+//        printMissingNumber(new int[]{1, 3, 6}, 6);
     }
     private static void printMissingNumber(int[] numbers, int count) {
         int missingCount = count - numbers.length;
@@ -30,4 +30,6 @@ public class Suanfa50 {
         }
 
     }
+
+
 }

@@ -19,7 +19,6 @@ public class LRULinked{
     public LRULinked(int cacheSize){
         this.cacheSize=cacheSize;
     }
-
     /**
      * 插入头结点
      * @param value
@@ -63,17 +62,12 @@ public class LRULinked{
     @Override
     public String toString(){
         StringBuilder sb=new StringBuilder();
-        int j=0;
-        Node temp=root;
-        while (j<size){
+        for (Node temp=root;temp!=null;temp=temp.next){
             sb.append(temp.value);
-            temp= temp.next;//找到最后一个结点
-            j++;
         }
         return sb.toString();
     }
-
-    public static class Node{
+    class Node{
         private Integer key;
         private Integer value;
         private Node next;
