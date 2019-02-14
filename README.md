@@ -92,6 +92,7 @@
  - [平时用到哪些Linux命令。以及如何排查线上问题](https://github.com/randian666/algorithm-study/blob/master/MD/Linux.md)
  - 介绍下你理解的操作系统中线程切换过程。
  - 进程和线程的区别。
+ - [BATJ面试必会之Linux命令篇](https://mp.weixin.qq.com/s/6ZPNeX9d3avscI642x2kHA)
  
 ### 多线程与并发
 
