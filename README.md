@@ -84,6 +84,7 @@
  - [Mybatis的底层实现原理。](https://mp.weixin.qq.com/s/AqqSRYPdUbruSAhhmqVneA)
  - [69道Spring面试题和答案](http://ifeve.com/spring-interview-questions-and-answers/)
  - [Spring 面试问题 TOP 50](https://mp.weixin.qq.com/s/eQ-lpYiW7a437djqliKhmg)
+ - [Spring中用了哪些设计模式](https://mp.weixin.qq.com/s/iGbwKDqB6A0ktNCY8Wd-XQ)
 ### 操作系统
 
  - Linux系统下你关注过哪些内核参数，说说你知道的。
