@@ -74,6 +74,7 @@
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
  - 说说你对Spring的理解，非单例注入的原理？循环注入的原理。
  - [Springmvc 中DispatcherServlet初始化过程。](https://www.cnblogs.com/xiaoxi/p/6164383.html)
+ - [SpringMVC 原理了解吗？](https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247484496&idx=1&sn=5472ffa687fe4a05f8900d8ee6726de4&chksm=fd985231caefdb27fc75b44ecf76b6f43e4617e0b01b3c040f8b8fab32e51dfa5118eed1d6ad&token=1990180468&lang=zh_CN#rd)
  - netty的线程模型，netty如何基于reactor模型上实现的。
  - 为什么选择netty。
  - [什么是TCP粘包，拆包。解决方式是什么。](https://blog.csdn.net/wxy941011/article/details/80428470)
