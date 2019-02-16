@@ -66,12 +66,13 @@
  
  - 简单讲讲tomcat结构，以及其类加载器流程，线程模型等。
  - tomcat如何调优，涉及哪些参数 。
+ - [Spring中bean的作用域与生命周期](https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247484400&idx=2&sn=7201eb365102fce017f89cb3527fb0bc&chksm=fd985591caefdc872a2fac897288119f94c345e4e12150774f960bf5f816b79e4b9b46be3d7f&token=1990180468&lang=zh_CN#rd)
  - [讲讲Spring加载流程。](https://segmentfault.com/a/1190000012887776)
  - [spring循环依赖](http://www.tianxiaobo.com/2018/06/08/Spring-IOC-%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90-%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/)
  - [Spring AOP的实现原理。](https://www.jianshu.com/p/7fa3e6ebf0c1)
  - [讲讲Spring事务的传播属性。](https://www.cnblogs.com/cnmenglang/p/6410848.html)
  - [Spring如何管理事务的。](https://blog.csdn.net/donggua3694857/article/details/69858827)
- - 说说你对Spring的理解，非单例注入的原理？它的生命周期？循环注入的原理。
+ - 说说你对Spring的理解，非单例注入的原理？循环注入的原理。
  - [Springmvc 中DispatcherServlet初始化过程。](https://www.cnblogs.com/xiaoxi/p/6164383.html)
  - netty的线程模型，netty如何基于reactor模型上实现的。
  - 为什么选择netty。
