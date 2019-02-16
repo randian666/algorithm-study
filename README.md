@@ -213,6 +213,7 @@
  - 一个单向链表，删除倒数第N个数据。
  - 200个有序的数组，每个数组里面100个元素，找出top20的元素。
  - 单向链表，查找中间的那个元素。
+ - [如何判断一个数是否在40亿个整数中？](https://mp.weixin.qq.com/s?__biz=MzU4NDQ4MzU5OA==&mid=2247484394&idx=1&sn=769e86bd815cf836eaa88a46836e4287&chksm=fd98558bcaefdc9d362f4d0912849924ae2d1f1277147edab7508cd3f1753ea4afd719237fa1&scene=21#wechat_redirect)
  - [剑指Offer学习【所有面试题汇总】](https://blog.csdn.net/derrantcm/article/details/46887821)
  - [Leetcode 题解](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/Leetcode%20%E9%A2%98%E8%A7%A3.md)
  - [算法](https://github.com/CyC2018/CS-Notes/blob/master/docs/notes/%E7%AE%97%E6%B3%95.md)
