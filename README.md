@@ -260,6 +260,7 @@
 ### 缓存
  - [Redis的高并发和快速原因](https://mp.weixin.qq.com/s/HuwgTvNtmHJ9tpF7V53opg)
  - [常见的缓存策略有哪些，如何做到缓存(比如redis)与DB里的数据一致性，你们项目中用到了](https://mp.weixin.qq.com/s/yQjTddLWy-oSYPYxyGVeKw)
+ - [一文揭秘单线程的Redis为什么这么快?](https://mp.weixin.qq.com/s/4ndQI4CyqtjaYJKts8ChdA)
  - 什么缓存系统，如何设计的。
  - [如何防止缓存击穿和雪崩。](https://mp.weixin.qq.com/s/SQQy6NKvoAgIaeAjzkRpDw)
  - 缓存数据过期后的更新如何设计。
