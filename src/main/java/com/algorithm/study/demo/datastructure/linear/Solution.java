@@ -1,7 +1,6 @@
 package com.algorithm.study.demo.datastructure.linear;
 
 /**
- * 求一个字符串的最大不重复子串
  * 单链表链表算法题
  * @Author: liuxun
  * @CreateDate: 2019/2/12 下午3:43
