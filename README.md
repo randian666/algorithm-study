@@ -4,7 +4,7 @@
 ### 求职、技术交流微信群
 <img src="https://github.com/randian666/algorithm-study/blob/master/image/871550714055_.pic_hd.jpg" width="250" height="280"/>
 ### Java并发编程实战
-<img src="https://github.com/randian666/algorithm-study/blob/master/image/WechatIMG105.jpeg"/>
+<img src="https://github.com/randian666/algorithm-study/blob/master/image/WechatIMG105.jpeg" width="500" height="700"/>
 
 ### JAVA基础
  - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
