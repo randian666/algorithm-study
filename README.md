@@ -1,10 +1,10 @@
-![enter image description here](https://drscdn.500px.org/photo/286065929/q=80_m=2000/v2?user_id=20361103&webp=true&sig=5246d3ececc0976199a64920c236729da09957c8ad23afa513084c27681961e4)
-
 | 🍏 | 🍎 | 🍐 | 🍈 | 🥑  | 🥔| 🍠 | 🥝 | 🍱 | 🥞 |🌽| 🥦  
 | :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|:------:| :--------: |  
 | [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统) |[多线程与并发](#多线程与并发)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[数据结构与算法](#数据结构与算法)|[数据库](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
 ### 求职、技术交流微信群
 <img src="https://github.com/randian666/algorithm-study/blob/master/image/871550714055_.pic_hd.jpg" width="250" height="280"/>
+### Java并发编程实战
+<img src="https://github.com/randian666/algorithm-study/blob/master/image/WechatIMG105.jpeg"/>
 
 ### JAVA基础
  - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。

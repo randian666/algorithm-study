@@ -20,6 +20,12 @@
             <artifactId>cglib</artifactId>
             <version>2.2.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.6</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

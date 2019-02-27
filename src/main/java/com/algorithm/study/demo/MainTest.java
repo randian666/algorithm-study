@@ -11,20 +11,22 @@ import java.lang.ref.ReferenceQueue;
  */
 public class MainTest {
     public static void main(String[] args) {
-        Object counter = new Object();
-        ReferenceQueue refQueue = new ReferenceQueue<>();
-        PhantomReference<Object> p = new PhantomReference<>(counter, refQueue);
-        counter = null;
-        System.gc();
-        try {
-            // Remove 是一个阻塞方法，可以指定 timeout，或者选择一直阻塞
-            Reference<Object> ref = refQueue.remove(1000L);
-            if (ref != null) {
-                System.out.println("counter gc");
-            }
-        } catch (InterruptedException e) {
-            // Handle it
-        }
-
+//        Object counter = new Object();
+//        ReferenceQueue refQueue = new ReferenceQueue<>();
+//        PhantomReference<Object> p = new PhantomReference<>(counter, refQueue);
+//        counter = null;
+//        System.gc();
+//        try {
+//            // Remove 是一个阻塞方法，可以指定 timeout，或者选择一直阻塞
+//            Reference<Object> ref = refQueue.remove(1000L);
+//            if (ref != null) {
+//                System.out.println("counter gc");
+//            }
+//        } catch (InterruptedException e) {
+//            // Handle it
+//        }
+        AbstractLoadBalance randomLoadBalance=new RandomLoadBalance();
+        String name=randomLoadBalance.select("liuxun");
+        System.out.println(name);
     }
 }
