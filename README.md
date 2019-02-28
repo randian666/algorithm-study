@@ -282,7 +282,9 @@
  - [Redis过期策略及实现原理](https://www.cnblogs.com/linuxprobe-sarah/p/10386800.html)
  - [redis面试49题](https://mp.weixin.qq.com/s/5mLTVpjn_iebsOp60HFU2Q)
 ### 搜索
-
+ - [es 的分布式架构原理能说一下么（es 是如何实现分布式的啊）？](https://doocs.github.io/advanced-java/#/docs/high-concurrency/es-architecture)
+ - [es 写入数据的工作原理是什么啊？es 查询数据的工作原理是什么啊？底层的 lucene 介绍一下呗？倒排索引了解吗？](https://doocs.github.io/advanced-java/#/docs/high-concurrency/es-write-query-search)
+ - [es 在数据量很大的情况下（数十亿级别）如何提高查询效率啊？](https://doocs.github.io/advanced-java/#/docs/high-concurrency/es-optimizing-query-performance)
  - elasticsearch了解多少，说说你们公司es的集群架构，索引数据大小，分片有多少，以及一些调优手段 。
  - elasticsearch的倒排索引是什么。
  - elasticsearch 索引数据多了怎么办，如何调优，部署。
