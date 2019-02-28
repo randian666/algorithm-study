@@ -2,10 +2,7 @@
 | :--------: | :---------: | :---------: | :---------: | :---------: | :---------:| :---------: | :-------: | :-------:| :------:|:------:| :--------: |  
 | [JAVA基础](#JAVA基础) | [JVM知识](#JVM知识)|[开源框架知识](#开源框架知识) | [操作系统知识](#操作系统) |[多线程与并发](#多线程与并发)|[TCP与HTTP](#TCP与HTTP)| [架构设计与分布式](#架构设计与分布式) |[数据结构与算法](#数据结构与算法)|[数据库](#数据库知识)| [消息队列](#消息队列)|[缓存](#缓存) | [搜索](#搜索)
 ### 求职、技术交流微信群
-<img src="https://github.com/randian666/algorithm-study/blob/master/image/871550714055_.pic_hd.jpg" width="250" height="280"/>
-
-### Java并发编程实战
-<img src="https://github.com/randian666/algorithm-study/blob/master/image/WechatIMG105.jpeg" width="500" height="700"/>
+<img src="https://github.com/randian666/algorithm-study/blob/master/image/931551357495_.pic.jpg" width="250" height="280"/>
 
 ### JAVA基础
  - [String，Stringbuffer，StringBuilder的区](http://www.cnblogs.com/su-feng/p/6659064.html)。
@@ -282,6 +279,7 @@
  - 请思考一个方案，设计一个可以控制缓存总体大小的自动适应的本地缓存。
  - 如何看待缓存的使用（本地缓存，集中式缓存），简述本地缓存和集中式缓存和优缺点。
  - 本地缓存在并发使用时的注意事项。
+ - [Redis过期策略及实现原理](https://www.cnblogs.com/linuxprobe-sarah/p/10386800.html)
  - [redis面试49题](https://mp.weixin.qq.com/s/5mLTVpjn_iebsOp60HFU2Q)
 ### 搜索
 
