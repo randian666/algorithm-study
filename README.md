@@ -241,6 +241,7 @@
  - MVCC的含义，如何实现的。
  - 你做过的项目里遇到分库分表了吗，怎么做的，有用到中间件么，比如sharding jdbc等,他们的原理知道么。
  - MYSQL的主从延迟怎么解决。
+ - [MySQL索引背后的数据结构及算法原理](https://www.kancloud.cn/kancloud/theory-of-mysql-index/41846)
  - [数据库面试问题集锦](https://blog.csdn.net/justloveyou_/article/details/78308460)
 ### 消息队列
 
