@@ -108,6 +108,7 @@
  - [Lock与Synchronized的区别 。](https://blog.csdn.net/javazejian/article/details/75043422)
  - [synchronized的原理是什么](https://blog.csdn.net/javazejian/article/details/72828483)
  - [量级锁，可重入锁，公平锁，非公平锁，乐观锁，悲观锁。](https://www.toutiao.com/i6630764198357893646/)
+ - [ReentranLock源码，设计原理，整体过程](https://www.cnblogs.com/chengxiao/p/7255941.html)
  - 用过哪些原子类，他们的原理是什么。
  - JUC下研究过哪些并发工具，讲讲原理。
  - [用过线程池吗，如果用过，请说明原理，并说说newCache和newFixed有什么区别，构造函数的各个参数的含义是什么，比如coreSize，maxsize等。](https://blog.csdn.net/wy11933/article/details/80399562)
