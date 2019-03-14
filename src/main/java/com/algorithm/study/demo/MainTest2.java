@@ -3,7 +3,6 @@ package com.algorithm.study.demo;
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.*;
-import java.util.stream.Stream;
 
 /**
  * @Author: liuxun
@@ -27,12 +26,14 @@ public class MainTest2 {
                 Future<Long> future = executors.submit(new DoFolderSize(new File(s)));
                 futures.put(s,future);
             }
+            /**获取统计结果**/
             Map<String,Long> resultMap=new HashMap<>();
             for (Map.Entry<String, Future<Long>> me:futures.entrySet()){
                 String fileStr=me.getKey();
                 Long size=me.getValue().get();
                 resultMap.put(fileStr,size);
             }
+            /**排序**/
             Map<String, Long> sortMap = sortMapByValue(resultMap);
             for (Map.Entry<String,Long> fileInfo:sortMap.entrySet()){
                 doOutTxt("/Users/liuxun/Downloads/temp/out.txt",fileInfo.getKey()+"  "+fileInfo.getValue());
@@ -60,6 +61,10 @@ public class MainTest2 {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 异步获取文件夹大小
+     */
     static class DoFolderSize implements Callable<Long>{
         private File file;
         public DoFolderSize(File file){
