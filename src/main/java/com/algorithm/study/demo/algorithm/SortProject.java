@@ -172,6 +172,7 @@ public class SortProject {
         int hi = high;
         if (lo >= hi)
             return;
+        //11,1,15,30,40
         //确定指针方向的逻辑变量
         boolean transfer=true;
         while (lo != hi) {
@@ -250,26 +251,31 @@ public class SortProject {
      * @param b 有序数组2
      * @return 合并之后的有序数组；
      */
-    public static int[] merge(int[] a, int[] b){
-        int result[] = new int[a.length+b.length];
-        int i=0,j=0,k=0;
-        while(i<a.length&&j<b.length){
-            if(a[i]<b[j]){
-                result[k++] = a[i];
-                i++;
+    public static void merge(int[] a, int low, int mid, int high){
+        int[] temp = new int[high-low+1];
+        int i= low;
+        int j = mid+1;
+        int k=0;
+        // 把较小的数先移到新数组中
+        while(i<=mid && j<=high){
+            if(a[i]<a[j]){
+                temp[k++] = a[i++];
+            }else{
+                temp[k++] = a[j++];
             }
-            else{
-                result[k++] = b[j];
-                j++;
-            }
         }
-        while(i<a.length){
-            result[k++] = a[i++];
+        // 把左边剩余的数移入数组
+        while(i<=mid){
+            temp[k++] = a[i++];
         }
-        while(j<b.length){
-            result[k++] = b[j++];
+        // 把右边边剩余的数移入数组
+        while(j<=high){
+            temp[k++] = a[j++];
         }
-        return result;
+        // 把新数组中的数覆盖nums数组
+        for(int x=0;x<temp.length;x++){
+            a[x+low] = temp[x];
+        }
     }
     /**
      * 归并排序<br>
@@ -283,18 +289,19 @@ public class SortProject {
      * 稳定排序算法
      * 不是原地排序算法
      */
-    public static int[] mergeSort(int[] a){
-        if(a.length==1){
-            return a;
+    public static int[] mSort(int[] a,int low,int high){
+        int mid = (low+high)/2;
+        if(low<high){
+            mSort(a,low,mid);
+            mSort(a,mid+1,high);
+            //左右归并
+            merge(a,low,mid,high);
         }
-        int mid = a.length/2;
-        int[] leftPart = new int[mid];
-        int[] rightPart = new int[a.length-mid];
-        System.arraycopy(a, 0, leftPart, 0, leftPart.length);
-        System.arraycopy(a, mid, rightPart, 0, rightPart.length);
-        leftPart = mergeSort(leftPart);
-        rightPart = mergeSort(rightPart);
-        return merge(leftPart, rightPart);
+        System.out.println("排序后："+ JSON.toJSONString(a));
+        return a;
+    }
+    public static int[] mergeSort(int[] a){
+        return mSort(a,0,a.length-1);
     }
 
 
