@@ -115,5 +115,11 @@ public class Mgraph {
         graph.createGraph();
         System.out.println("BFS(广度优先搜索)");
         graph.bfs(0,6);
+        System.out.println();
+        System.out.println("---");
+        System.out.println(100%16);
+        System.out.println(100&(16-1));
+        System.out.println("---");
+
     }
 }
