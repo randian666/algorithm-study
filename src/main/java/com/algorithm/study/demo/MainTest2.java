@@ -53,7 +53,7 @@ public class MainTest2 {
         try {
             /**创建一个线程池**/
             ExecutorService executors = new ThreadPoolExecutor(8, 8,
-                    60L, TimeUnit.SECONDS,new ArrayBlockingQueue(10));
+                    60L, TimeUnit.SECONDS,new ArrayBlockingQueue(1024));
             /**读取一个文件**/
             br = new BufferedReader(new FileReader(file));
             String s = null;
