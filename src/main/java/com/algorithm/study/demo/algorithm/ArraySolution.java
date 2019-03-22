@@ -1,12 +1,20 @@
 package com.algorithm.study.demo.algorithm;
 
-import com.sun.javadoc.SeeTag;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
-import java.util.*;
+/**
+ * 数组练习题
+ * @Author: liuxun
+ * @CreateDate: 2019/3/22 上午9:47
+ * @Version: 1.0
+ */
+public class ArraySolution {
 
-public class ArrayProject {
     public static void main(String[] args) {
-        ArrayProject p=new ArrayProject();
+        ArraySolution p=new ArraySolution();
 
         System.out.println(p.containsDuplicate(new int[]{1,2,3,1}));
     }

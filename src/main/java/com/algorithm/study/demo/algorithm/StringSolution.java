@@ -1,5 +1,8 @@
 package com.algorithm.study.demo.algorithm;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 字符串算法系列
  * @Author: liuxun
@@ -38,8 +41,67 @@ public class StringSolution {
         return -1;
     }
 
+    /**
+     * 手写字符串转换成小写
+     * @param str
+     * @return
+     */
+    public static String toLowerCase(String str) {
+        if (null==str || str.length()==0){
+            return str;
+        }
+        char[] strArr = str.toCharArray();
+        for (int i = 0,len=strArr.length;i < len; i++) {
+            //判断是否为大写
+            if (Character.isUpperCase(strArr[i])) {
+                strArr[i] +=32;
+            }
+        }
+        return String.valueOf(strArr);
+    }
+
+    /**
+     * 反转字符串
+     * @param s
+     */
+    public static String reverseString(char[] s) {
+        int i=0;
+        int j=s.length-1;
+        while (i<j){
+            char c = s[i];
+            s[i]=s[j];
+            s[j]=c;
+            i++;
+            j--;
+        }
+        return String.valueOf(s);
+    }
+
+    /**
+     * 国际摩尔斯密码定义一种标准编码方式，将每个字母对应于一个由一系列点和短线组成的字符串，
+     * 比如: "a" 对应 ".-", "b" 对应 "-...", "c" 对应 "-.-.", 等等。
+     */
+    private static String[] m=new String[]{".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+    public static int uniqueMorseRepresentations(String[] words) {
+        Set<String> objects = new HashSet<>();
+        for (String w:words){
+            StringBuilder sb=new StringBuilder();
+            char[] chars = w.toCharArray();
+            for (char aChar : chars) {
+                sb.append(m[aChar-'a']);
+            }
+            System.out.println("密码为："+sb);
+            objects.add(sb.toString());
+        }
+        return objects.size();
+    }
+
     public static void main(String[] args) {
-        System.out.println(StringSolution.indexOf("ab","asdkfjasldjfab"));
-        System.out.println("asdkfjasldjfab".indexOf("ab"));
+//        System.out.println(StringSolution.indexOf("ab","asdkfjasldjfab"));
+//        System.out.println("asdkfjasldjfab".indexOf("ab"));
+
+//        System.out.println(StringSolution.toLowerCase("ccccccccccBB"));
+        System.out.println(StringSolution.reverseString("abc".toCharArray()));
+        System.out.println(StringSolution.uniqueMorseRepresentations(new String[]{"abc","cba"}));
     }
 }
