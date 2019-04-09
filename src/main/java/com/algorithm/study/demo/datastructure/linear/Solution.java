@@ -81,6 +81,35 @@ public class Solution {
         System.out.println("反转完毕");
         printNode(data);
     }
+
+    /**
+     为了能够只遍历一次就能找到倒数第k个节点，可以定义两个指针：
+ 　　（1）第一个指针从链表的头指针开始遍历向前走k-1，第二个指针保持不动；
+ 　　（2）从第k步开始，第二个指针也开始从链表的头指针开始遍历；
+ 　　（3）由于两个指针的距离保持在k-1，当第一个（走在前面的）指针到达链表的尾结点时，第二个指针（走在后面的）指针正好是倒数第k个结点。
+     * @param data 链表
+     * @param k k个节点
+     */
+    public static void findKthToTail(ListNode data,int k){
+        ListNode aNode=data;
+        ListNode bNode=null;
+        //第一个指针从链表的头指针开始遍历向前走k-1，第二个指针保持不动；
+        for (int i = 0; i <k-1 ; i++) {
+            if (aNode.next!=null){
+                aNode=aNode.next;
+            }else{
+                System.out.println("查找链表越界");
+                return;
+            }
+        }
+        bNode=data;
+        while (aNode.next!=null){
+            aNode=aNode.next;
+            bNode=bNode.next;
+        }
+        System.out.println("倒数第"+k+"个节点为："+bNode.val);
+    }
+
     public static void printNode(ListNode data){
         for (ListNode temp=data;temp!=null;temp=temp.next){
             System.out.print(temp.val+"->");
@@ -106,6 +135,8 @@ public class Solution {
         head1.next=head2;
         head2.next=null;
 //        Solution.reverseLinkedList(head);
-        Solution.reversedTopK(head,2);
+//        Solution.reversedTopK(head,2);
+
+        Solution.findKthToTail(head,2);
     }
 }
