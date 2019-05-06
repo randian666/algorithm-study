@@ -1,11 +1,11 @@
 package com.algorithm.study.demo.algorithm;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import com.alibaba.fastjson.JSON;
+
+import java.util.*;
 
 /**
+ * 算法面试题
  * @Author: liuxun
  * @CreateDate: 2019/2/13 下午3:11
  * @Version: 1.0
@@ -50,8 +50,37 @@ public class Solution {
         return ans;
     }
 
+    /**
+     * 求2个有序数组的有序交集
+     * @param args
+     */
+    public static void arrayIntersection(int[] a,int[] b){
+        int lena=a.length;
+        int lenb=b.length;
+        if (lena==0 || lenb==0){
+            System.out.println("无数据交集");
+            return;
+        }
+        int i=0,j=0;
+        List<Integer> result=new ArrayList<>();
+        while (i<lena && j<lenb){
+            if (a[i]<b[j]){
+                i++;
+            }else if(a[i]>b[j]){
+                j++;
+            }else{
+                result.add(a[i]);
+                i++;
+                j++;
+            }
+        }
+        System.out.println("交集为："+ JSON.toJSONString(result));
+    }
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring("abaa"));
+        int[] a = { 2, 3, 4, 4, 4, 4, 7, 8, 8, 8, 8, 9, 100, 130, 150, 160 };
+        int[] b = { 4, 6, 7, 7, 7, 7, 8, 8, 9, 10, 100, 130, 130, 140, 150 };
+        arrayIntersection(a,b);
     }
 
 }
