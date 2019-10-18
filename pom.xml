@@ -26,6 +26,27 @@
             <artifactId>zookeeper</artifactId>
             <version>3.4.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.rholder</groupId>
+            <artifactId>guava-retrying</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wuyushuo</groupId>
+            <artifactId>spring-mould-beyond</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+
+
+
+
+        <dependency>
+            <groupId>com.ly.isbase</groupId>
+            <artifactId>isbase</artifactId>
+            <version>1.0.14</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
