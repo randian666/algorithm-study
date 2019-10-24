@@ -72,4 +72,7 @@ public class Paging implements Serializable {
 		return Math.max((page - 1) * pageSize, 0);
 	}
 
+	public static void main(String[] args) {
+
+	}
 }

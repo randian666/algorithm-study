@@ -201,23 +201,23 @@ public class GZIPUtils {
         String unzip = unzip(gzip);
         FileUtils.write(new File("D:/2234567.txt"),unzip,"UTF-8");
 
-        int num=10000;
-
-        long beginTime = System.currentTimeMillis();
-        for (int i = 0; i < num; i++) {
-            zip(strOld);
-        }
-        long endTime = System.currentTimeMillis();
-        System.out.println("压缩总耗时"+(endTime - beginTime));
-        System.out.println("压缩平均耗时"+(endTime - beginTime) / 10000);
-
-        long currentTimeMillis = System.currentTimeMillis();
-        for (int i = 0; i < 10000; i++) {
-            unzip(gzip);
-        }
-        long endTimeMillis = System.currentTimeMillis();
-        System.out.println("解压总耗时"+(endTimeMillis - currentTimeMillis));
-        System.out.println("解压平均耗时"+(endTimeMillis - currentTimeMillis) / 10000);
+//        int num=10000;
+//
+//        long beginTime = System.currentTimeMillis();
+//        for (int i = 0; i < num; i++) {
+//            zip(strOld);
+//        }
+//        long endTime = System.currentTimeMillis();
+//        System.out.println("压缩总耗时"+(endTime - beginTime));
+//        System.out.println("压缩平均耗时"+(endTime - beginTime) / 10000);
+//
+//        long currentTimeMillis = System.currentTimeMillis();
+//        for (int i = 0; i < 10000; i++) {
+//            unzip(gzip);
+//        }
+//        long endTimeMillis = System.currentTimeMillis();
+//        System.out.println("解压总耗时"+(endTimeMillis - currentTimeMillis));
+//        System.out.println("解压平均耗时"+(endTimeMillis - currentTimeMillis) / 10000);
 
     }
 }
