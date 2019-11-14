@@ -13,7 +13,6 @@ import java.util.Map;
 import java.util.zip.*;
 
 /**
- * @author xun2.liu
  * @title: GZIPUtils
  * @projectName algorithm-study
  * @description: TODO

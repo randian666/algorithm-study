@@ -9,7 +9,6 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 
 /**
- * @author xun2.liu
  * @title: TestBase64
  * @projectName algorithm-study
  * @description: TODO

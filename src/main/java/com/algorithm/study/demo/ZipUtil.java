@@ -1,7 +1,6 @@
 package com.algorithm.study.demo;
 
 /**
- * @author xun2.liu
  * @title: ZipUtil
  * @projectName algorithm-study
  * @description: TODO

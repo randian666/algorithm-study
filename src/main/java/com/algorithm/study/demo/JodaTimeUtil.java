@@ -9,7 +9,6 @@ import java.util.Date;
 
 /**
  * @description: JodaTime工具类
- * @author xun2.liu
  * @date 2019/5/31 11:24
  **/
 public class JodaTimeUtil {

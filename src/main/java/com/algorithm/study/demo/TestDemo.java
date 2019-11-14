@@ -1,14 +1,7 @@
 package com.algorithm.study.demo;
 
 
-import com.google.common.collect.Lists;
-
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * @author xun2.liu
  * @title: TestDemo
  * @projectName algorithm-study
  * @description: TODO

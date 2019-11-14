@@ -3,7 +3,6 @@ package com.algorithm.study.demo.algorithm.greedyalgorithm;
 import lombok.*;
 
 /**
- * @author xun2.liu
  * @title: MoneyBusi
  * @projectName algorithm-study
  * @description: 零钱支付

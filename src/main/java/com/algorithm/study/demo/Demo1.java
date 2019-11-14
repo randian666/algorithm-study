@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.TreeMap;
 
 /**
- * @author xun2.liu
  * @title: Demo1
  * @projectName algorithm-study
  * @description: TODO
