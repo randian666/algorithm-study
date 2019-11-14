@@ -3,6 +3,7 @@ package com.algorithm.study.demo;
 
 import com.google.common.collect.Lists;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,10 +25,11 @@ public class TestDemo {
 //            }
 //        }
 
-        int totalNum=2000;
-        int pageSize=1000;
-        int pageNo=(totalNum+pageSize-1)/pageSize;
-        System.out.println(getFrom(3,1000));
+//        int totalNum=2000;
+//        int pageSize=1000;
+//        int pageNo=(totalNum+pageSize-1)/pageSize;
+//        System.out.println(getFrom(3,1000));
+        System.out.println(".17usoft.com".length());
     }
 
     public static int getFrom(int pageNo,int pageSize) {
