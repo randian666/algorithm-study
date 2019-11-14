@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 /**
- * @author xun2.liu
  * @title: Solutions
  * @projectName algorithm-study
  * @description: 零钱支付问题
@@ -17,9 +16,9 @@ import java.util.PriorityQueue;
  */
 public class Solutions {
     /**
-     * 用于存储金额的信息
+     * 用于存储金额的信息,根据金额从大到小排序
      */
-    private PriorityQueue<MoneyBusi> moneyQueue =
+    public PriorityQueue<MoneyBusi> moneyQueue =
             new PriorityQueue<>(
                     (o1, o2) -> {
                         if (o1.getMemory() < o2.getMemory()) {
@@ -55,9 +54,10 @@ public class Solutions {
         int surplus = money;
 
         while (surplus > 0) {
+            //返回队列头部元素
             MoneyBusi busi = moneyQueue.peek();
-
             if (null != busi) {
+                System.out.println("当前金额："+busi.getMemory());
                 if (busi.getMemory() <= surplus) {
                     busi = moneyQueue.poll();
                     surplus = surplus - busi.getMemory();
@@ -90,7 +90,7 @@ public class Solutions {
         instance.addMemoryInfo("5元", 2, 5);
         instance.addMemoryInfo("2元", 2, 2);
         instance.addMemoryInfo("1元", 5, 1);
-
+        System.out.println(instance.moneyQueue);
         List<MoneyBusi> list = instance.looseChange(332);
         for (MoneyBusi busi : list) {
             System.out.println(busi);
