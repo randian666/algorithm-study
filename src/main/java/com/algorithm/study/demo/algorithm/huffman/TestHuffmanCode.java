@@ -12,7 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class TestHuffmanCode {
     public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
+//        for (int i = 0; i < 5; i++) {
             int valueRand = ThreadLocalRandom.current().nextInt(1, 50);
 
             StringBuilder msg = new StringBuilder();
@@ -43,13 +43,13 @@ public class TestHuffmanCode {
             // DataOutputStreamHuffman.OUTPUT.outHuffmantoFile(hufOutValue.getBytes());
 
             String deValue = instance.decodeHuffman(hufOutValue, instance.root);
-            System.out.println("原始" + src);
-            System.out.println("结果" + deValue);
+            System.out.println("原始：" + src);
+            System.out.println("结果：" + deValue);
 
 //            Assert.assertEquals(src, deValue);
 
             System.out.println(
                     "--------------------------------------------------------------------------------");
         }
-    }
+//    }
 }
