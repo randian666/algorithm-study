@@ -21,7 +21,7 @@ public class TestHuffmanCode {
                 msg.append((char) ThreadLocalRandom.current().nextInt(65, 122));
             }
 
-            String src = "我我我我我我我我我我我我是是是是是是小小小小小小thisis" + msg.toString();
+            String src = "我我是是一只小小鸟" + msg.toString();
 
             Map<Character, Integer> conMap = StrProc.countCharset(src);
 
@@ -38,7 +38,7 @@ public class TestHuffmanCode {
 
             // String hufOutValue = instance.parseHuffman(src, parseTwo);
             String hufOutValue = instance.parseHuffman2(src, huffCode);
-
+            System.out.println(hufOutValue);
             // DataOutputStreamHuffman.OUTPUT.outtoFile(src.getBytes(StandardCharsets.UTF_8));
             // DataOutputStreamHuffman.OUTPUT.outHuffmantoFile(hufOutValue.getBytes());
 
