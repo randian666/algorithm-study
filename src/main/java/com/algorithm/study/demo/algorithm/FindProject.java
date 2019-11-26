@@ -1,12 +1,5 @@
 package com.algorithm.study.demo.algorithm;
 
-import com.alibaba.fastjson.JSON;
-import com.sun.deploy.util.StringUtils;
-
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * 查找算法
  * Created by liuxun on 2017/4/25.
