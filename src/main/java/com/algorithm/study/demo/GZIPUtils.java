@@ -1,16 +1,18 @@
 package com.algorithm.study.demo;
 
 
+import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Maps;
 import org.apache.commons.io.FileUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.util.Map;
 import java.util.zip.*;
 
 /**
- * @author xun2.liu
  * @title: GZIPUtils
  * @projectName algorithm-study
  * @description: TODO
@@ -201,6 +203,9 @@ public class GZIPUtils {
         String unzip = unzip(gzip);
         FileUtils.write(new File("D:/2234567.txt"),unzip,"UTF-8");
 
+        Map<String,Integer> map= Maps.newHashMap();
+        map.put("iflight.java.dsf.itradecore",100);
+        System.out.println(JSON.toJSONString(map));
 //        int num=10000;
 //
 //        long beginTime = System.currentTimeMillis();

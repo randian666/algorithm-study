@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author xun2.liu
  * @title: DateUtils
  * @projectName algorithm-study
  * @description: TODO

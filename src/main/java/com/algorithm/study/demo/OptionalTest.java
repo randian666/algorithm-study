@@ -7,7 +7,6 @@ import java.text.NumberFormat;
 import java.util.Optional;
 
 /**
- * @author xun2.liu
  * @title: OptionalTest
  * @projectName algorithm-study
  * @description: TODO
