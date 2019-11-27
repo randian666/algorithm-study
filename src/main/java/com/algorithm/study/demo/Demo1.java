@@ -1,5 +1,7 @@
 package com.algorithm.study.demo;
 
+import java.math.BigDecimal;
+
 /**
  * @title: Demo1
  * @projectName algorithm-study
@@ -8,7 +10,9 @@ package com.algorithm.study.demo;
  */
 public class Demo1 {
     public static void main(String[] args) throws Exception {
-        System.out.println(StrToBinstr("a"));
+        BigDecimal b = new BigDecimal(0.115);
+        double d = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+        System.out.println(d);
     }
     // 将字符串转换成二进制字符串，以空格相隔
     private static String StrToBinstr(String str) {

@@ -196,13 +196,13 @@ public class GZIPUtils {
     }
 
     public static void main(String[] args) throws IOException {
-        String strOld = FileUtils.readFileToString(new File("D:/123456.txt"), "utf-8");
+        //78910.txt 123456.txt
+        String strOld = FileUtils.readFileToString(new File("D:/78910.txt"), "utf-8");
         System.out.println("压缩前长度："+strOld.length());
         String gzip = zip(strOld);
         System.out.println("压缩后长度："+gzip.length());
         String unzip = unzip(gzip);
         FileUtils.write(new File("D:/2234567.txt"),unzip,"UTF-8");
-
 //        int num=10000;
 //
 //        long beginTime = System.currentTimeMillis();

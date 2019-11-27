@@ -19,7 +19,7 @@ public class TestHuffmanCode {
                 msg.append((char) ThreadLocalRandom.current().nextInt(65, 122));
             }
 
-            String src = "aabbcceed" + msg.toString();
+            String src = "aaaaaaabbcceed" + msg.toString();
             System.out.println("原始：" + src);
 
             Map<Character, Integer> conMap = StrProc.countCharset(src);
