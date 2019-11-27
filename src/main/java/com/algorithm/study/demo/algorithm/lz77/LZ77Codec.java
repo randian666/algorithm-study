@@ -106,6 +106,7 @@ public class LZ77Codec {
                 builder.append(builder.charAt(iv+i));
             }
             builder.append(nextChar);
+            System.out.println("decoding:"+iv+" "+ builder.toString());
         }
         return builder.toString();
     }
