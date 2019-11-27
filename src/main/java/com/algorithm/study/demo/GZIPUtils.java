@@ -203,9 +203,6 @@ public class GZIPUtils {
         String unzip = unzip(gzip);
         FileUtils.write(new File("D:/2234567.txt"),unzip,"UTF-8");
 
-        Map<String,Integer> map= Maps.newHashMap();
-        map.put("iflight.java.dsf.itradecore",100);
-        System.out.println(JSON.toJSONString(map));
 //        int num=10000;
 //
 //        long beginTime = System.currentTimeMillis();

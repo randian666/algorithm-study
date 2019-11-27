@@ -5,7 +5,7 @@ import java.util.*;
  * @author xun2.liu
  * @title: HuffmanCode
  * @projectName algorithm-study
- * @description: TODO
+ * @description: Huffman编码
  * @date 2019/11/19 17:03
  */
 public class HuffmanCode {
