@@ -1,5 +1,7 @@
 package com.algorithm.study.demo;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.math.BigDecimal;
 
 /**
@@ -10,17 +12,16 @@ import java.math.BigDecimal;
  */
 public class Demo1 {
     public static void main(String[] args) throws Exception {
-        BigDecimal b = new BigDecimal(0.115);
-        double d = b.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
-        System.out.println(d);
-    }
-    // 将字符串转换成二进制字符串，以空格相隔
-    private static String StrToBinstr(String str) {
-        char[] strChar = str.toCharArray();
-        String result = "";
-        for (int i = 0; i < strChar.length; i++) {
-            result += Integer.toBinaryString(strChar[i]) + " ";
-        }
-        return result;
+//       String str="2020-01-07 19:42:06.386 INFO  [BUS_VCC_ORDER_DETAIL][common][][BJ2001071650476613943652869165056][VCC20200107173708DDPSYV]PsiDAOProxy 类 listBySerialNo 方法入参:BJ2001071650476613943652869165056";
+//       String traceId="VCC20200107173708DDPSYV";
+//       String p="["+traceId+"]";
+//       if (str.indexOf(p)>0){
+//           str=StringUtils.substring(str,str.indexOf("["+traceId+"]")+p.length());
+//       }
+//        System.out.println(str);
+        String msg="asdfasdf";
+        String throwable="asdfasdfasdfadaskdjfaskdjf";
+        msg+=throwable;
+        System.out.println(msg);
     }
 }
