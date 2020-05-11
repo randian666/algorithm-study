@@ -1,9 +1,9 @@
 package com.algorithm.study.demo.datastructure.tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import com.alibaba.fastjson.JSON;
+import org.testng.collections.Lists;
+
+import java.util.*;
 
 /**
  *
@@ -114,9 +114,13 @@ public class LinkBinTree {
         }
     }
     private void add2(TreeNode t,int value){
+        if(null==t.data){
+            t.data=value;
+            return;
+        }
         TreeNode node=new TreeNode(value);
         TreeNode current=t;
-        while(current!=null){
+        while(true){
             TreeNode parentNode=current;
             if (current.data>value){
                 current=current.left;
@@ -280,26 +284,43 @@ public class LinkBinTree {
      * 层级遍历
      * @param t
      */
-    public void divOrderTraverse(TreeNode t){
+    public List<List<Integer>> divOrderTraverse(TreeNode t){
         if (t==null) {
-            return;
+            return new ArrayList<List<Integer>>();
         }
+        //初始化队列只包含一个节点 root 和层次编号 0 ： level = 0。
+        List<List<Integer>> levels= new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<TreeNode>() ;
         queue.add(root);
+        //树的层数
+        int level=0;
         while(queue.size() != 0)
         {
+            //插入一个空列表，开始当前层的算法。
+            levels.add(new ArrayList<>());
             int len = queue.size();
+            //计算当前层有多少个元素：等于队列的长度。
             for(int i=0;i <len; i++)
             {
+                //将这些元素从队列中弹出，并加入 levels 当前层的空列表中。
                 TreeNode temp = queue.poll();
-                System.out.print(temp.data+" ");
-                if(temp.left != null)  queue.add(temp.left);
-                if(temp.right != null) queue.add(temp.right);
+                levels.get(level).add(temp.data);
+                //将他们的孩子节点作为下一层压入队列中。
+                if(temp.left != null) {
+                    queue.add(temp.left);
+                }
+                if(temp.right != null) {
+                    queue.add(temp.right);
+                }
+                //进入下一层 level++
+                level++;
             }
         }
+        return levels;
     }
     public void divOrderTraverse(){
-        divOrderTraverse(root);
+        List<List<Integer>> lists = divOrderTraverse(root);
+        System.out.println(JSON.toJSONString(lists));
     }
     /**区间搜索**/
     private void searchSection(TreeNode t,int k1,int k2,ArrayList<Integer> result){
@@ -364,9 +385,9 @@ public class LinkBinTree {
         return maxNode;
     }
     public static void main(String[] args) {
-        int[] ls=new int[]{30,9,8};
-        LinkBinTree linkBinTree=new LinkBinTree(ls[0]);
-        for (int i=1;i<ls.length;i++){
+        int[] ls=new int[]{30,9,8,33,45,11,55,66};
+        LinkBinTree linkBinTree=new LinkBinTree();
+        for (int i=0;i<ls.length;i++){
             linkBinTree.add2(ls[i]);//非递归
 //            linkBinTree.add(ls[i]);//递归
         }
@@ -381,28 +402,29 @@ public class LinkBinTree {
 //        ArrayList<Integer> list=new ArrayList<Integer>();
 //        linkBinTree.searchSection(linkBinTree.getRoot(),10,20,list);
 //        System.out.println("区间查询"+list.toString());
-//        System.out.println("-------------递归遍历----------------");
-//        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
-//        System.out.println("-----------------------------");
-//        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
-//        System.out.println("-----------------------------");
-//        linkBinTree.postOrderTraverse();//后序遍历
-//        System.out.println("-----------------------------");
-//        linkBinTree.divOrderTraverse();//层次遍历
+        System.out.println("-------------递归遍历----------------");
+        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
+        System.out.println("-----------------------------");
+        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
+        System.out.println("-----------------------------");
+        linkBinTree.postOrderTraverse();//后序遍历
+        System.out.println("-----------------------------");
+        linkBinTree.divOrderTraverse();//层次遍历
+
 //        //前序遍历：根节点->左子树->右子树
 //        //中序遍历：左子树->根节点->右子树
 //        //后序遍历：左子树->右子树->根节点
 //        System.out.println();
 //        System.out.println("-------------非递归遍历----------------");
-        linkBinTree.preOrderTraverse2();//前序遍历
+//        linkBinTree.preOrderTraverse2();//前序遍历
 //        System.out.println("-----------------------------");
 //        linkBinTree.inOrderTraverse2();//中序遍历
 //        System.out.println("-----------------------------");
 //        linkBinTree.postOrderTraverse2();//后序遍历
           //二叉查找树搜索
-          TreeNode node = linkBinTree.find(9);
-          System.out.println(node.data);
-          System.out.println("最小值为："+linkBinTree.findMin().data);
+//          TreeNode node = linkBinTree.find(9);
+//          System.out.println(node.data);
+//          System.out.println("最小值为："+linkBinTree.findMin().data);
     }
 
 }
