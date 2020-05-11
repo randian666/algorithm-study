@@ -1,4 +1,4 @@
-package com.algorithm.study.demo;
+package com.algorithm.study.demo.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;

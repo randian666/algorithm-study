@@ -1,4 +1,4 @@
-package com.algorithm.study.demo;
+package com.algorithm.study.demo.util;
 
 
 import com.alibaba.fastjson.JSON;
