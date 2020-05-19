@@ -46,6 +46,7 @@ public class Solution7 {
                 break;
             }
         }
+        //如果快慢指针没有相遇代表是无环链表
         if (p1!=p2){
             return null;
         }
