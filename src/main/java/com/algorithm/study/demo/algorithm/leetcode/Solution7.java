@@ -49,20 +49,16 @@ public class Solution7 {
             p1=p1.next;
             p2=p2.next.next;
             if(p1==p2){
-                break;
+                //p1指向头结点。找到环形入口
+                p1=head;
+                while(p1!=p2){
+                    p1=p1.next;
+                    p2=p2.next;
+                }
+                return p1;
             }
         }
-        //如果快慢指针没有相遇代表是无环链表
-        if (p1!=p2){
-            return null;
-        }
-        //p1指向头结点。找到环形入口
-        p1=head;
-        while(p1!=p2){
-            p1=p1.next;
-            p2=p2.next;
-        }
-        return p1;
+        return null;
     }
     public static void main(String[] args) {
         ListNode a=new ListNode(5);
