@@ -30,6 +30,11 @@ public class Solution7 {
 
     /**
      * 快慢指针遍历连表。看是否相遇。如果相遇在判断是否是循环链表。
+     * p1=x+y
+     * p2=x+y+z+y;
+     * 因为p2是p1的两倍
+     * 2*(x+y)=x+y+z+y
+     * x=z
      * @param head
      * @return
      */
@@ -37,6 +42,7 @@ public class Solution7 {
         if (null== head || head.next==null){
             return null;
         }
+        //p1指针走一步、p2指针走两步。如果相等就表示是环形。
         ListNode p1=head;
         ListNode p2=head;
         while(p2!=null && p2.next!=null){
@@ -50,6 +56,7 @@ public class Solution7 {
         if (p1!=p2){
             return null;
         }
+        //p1指向头结点。找到环形入口
         p1=head;
         while(p1!=p2){
             p1=p1.next;
