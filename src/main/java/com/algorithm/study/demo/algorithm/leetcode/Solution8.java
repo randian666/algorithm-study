@@ -31,7 +31,7 @@ public class Solution8 {
         if (head.next==null){
             return null;
         }
-        //增加一个头部节点，方便删除第一个节点。
+        //增加一个头部节点，方便删除倒数的节点刚好是第一个节点。
         ListNode temp=new ListNode(-1);
         temp.next=head;
         ListNode p1=temp;

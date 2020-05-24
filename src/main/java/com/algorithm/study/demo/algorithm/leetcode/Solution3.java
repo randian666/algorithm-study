@@ -58,6 +58,9 @@ public class Solution3 {
     }
 
     public static void main(String[] args) {
-        topKFrequent(new int[]{1,1,3,3,3,3,5},2);
+        int[] ints = topKFrequent(new int[]{1, 1, 3, 3, 3, 3, 5}, 2);
+        for (int anInt : ints) {
+            System.out.println(anInt);
+        }
     }
 }

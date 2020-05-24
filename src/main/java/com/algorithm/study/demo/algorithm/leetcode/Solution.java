@@ -67,8 +67,10 @@ public class Solution {
     public static void main(String[] args) {
         ListNode a=new ListNode(5);
         ListNode b=new ListNode(5);
+        a.next=b;
 
-        ListNode result = addTwoNumbers(a, b);
+
+        ListNode result = addTwoNumbers(a, a);
         for (ListNode node=result;node!=null;node=node.next){
             System.out.println(node.val);
         }
