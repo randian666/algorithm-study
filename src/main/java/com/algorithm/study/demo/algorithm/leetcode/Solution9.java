@@ -43,17 +43,16 @@ public class Solution9   {
         }
         String res="";
         for (int i=0;i<s.length()-1;i++){
-            //判断aba汇文字符串
+            //判断aba回文字符串 奇数回文
             String p1 = palindrome(s, i, i);
-            //判断aa回文字符串
+            //判断aa回文字符串  偶数回文
             String p2 = palindrome(s, i, i+1);
-            System.out.println(p1);
             res=res.length()>=p1.length()?res:p1;
             res=res.length()>=p2.length()?res:p2;
         }
         return res;
     }
     public static void main(String[] args) {
-        System.out.println(longestPalindrome("abc"));
+        System.out.println(longestPalindrome("babad"));
     }
 }

@@ -12,6 +12,7 @@ import java.util.*;
  */
 public class Solution4 {
 
+
     public static String function(int a, int b){
         //存储商和余数
         List<Map<Integer,Integer>> temp=new ArrayList<>();
@@ -23,6 +24,7 @@ public class Solution4 {
             remainder= a%b;
             for (int i=0;i<temp.size();i++){
                 Map<Integer, Integer> integerIntegerMap = temp.get(i);
+                //如果相除得到的整数答案和余数在之前出现过，那么就会开始循环。也就是循环节点
                 if (integerIntegerMap.containsKey(value) && integerIntegerMap.containsValue(remainder)){
                     flag=true;
                     break;
@@ -45,7 +47,7 @@ public class Solution4 {
     }
 
     public static void main(String[] args) {
-        System.out.println(function(1,7));
+        System.out.println(function(3,7));
     }
 
 }

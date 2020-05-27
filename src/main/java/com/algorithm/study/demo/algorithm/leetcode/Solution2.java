@@ -41,7 +41,7 @@ public class Solution2 {
         for(int end=0;end<s.length();end++){
             Character currChar=s.charAt(end);
             if(map.containsKey(currChar)){
-                //移动start
+                //移动start+1
                 start=Math.max(start,map.get(currChar)+1);
             }
             //计算出start和end之间长度

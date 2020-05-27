@@ -33,19 +33,8 @@ public class Solution11 {
         }
         return i;
     }
-    public static int removeElement2(int[] nums, int val) {
-        //双指针-覆盖
-        int n=0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[n]!=val){
-                nums[n]=nums[i];
-                n++;
-            }
-        }
-        return n;
-    }
     public static void main(String[] args) {
         int[] nums=new int[]{3,2,2,1};
-        System.out.println(removeElement2(nums,2));
+        System.out.println(removeElement1(nums,3));
     }
 }
