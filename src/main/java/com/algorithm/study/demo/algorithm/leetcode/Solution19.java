@@ -54,8 +54,8 @@ public class Solution19 {
             }else{
                 //当前节点为空，说明左边走到头了，从栈中弹出节点并保存
                 //然后转向右边节点，继续上面整个过程
-                TreeNode popNode = stack.pop();
-                result.add(popNode.val);
+                curr= stack.pop();
+                result.add(curr.val);
                 curr=curr.right;
             }
         }
