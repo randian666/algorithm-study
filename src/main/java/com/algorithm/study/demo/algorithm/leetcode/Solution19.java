@@ -32,6 +32,14 @@ public class Solution19 {
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
+
+    /**
+     * 前序遍历:打印-左-右
+     * 中序遍历:左-打印-右
+     * 后序遍历:左-右-打印
+     * @param root
+     * @return
+     */
     public static List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result=new ArrayList<Integer>();
         Stack<TreeNode> stack=new Stack<TreeNode>();

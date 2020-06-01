@@ -42,12 +42,13 @@ public class Solution7 {
         if (null== head || head.next==null){
             return null;
         }
-        //p1指针走一步、p2指针走两步。如果相等就表示是环形。
+        //p1指针走一步、p2指针走两步。
         ListNode p1=head;
         ListNode p2=head;
         while(p2!=null && p2.next!=null){
             p1=p1.next;
             p2=p2.next.next;
+            //如果相等就表示是环形。然后寻找环形入口。
             if(p1==p2){
                 //p1指向头结点。找到环形入口
                 p1=head;
