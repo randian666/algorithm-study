@@ -45,16 +45,19 @@ public class Solution19 {
         Stack<TreeNode> stack=new Stack<TreeNode>();
         TreeNode curr=root;
         while(curr!=null || !stack.isEmpty()){
-            //先遍历左子树
-            while(curr!=null){
+            //首先遍历左子节点
+            if (curr!=null){
+                //不断往左子树方向走，每走一次就将当前节点保存到栈中
+                //这是模拟递归的调用
                 stack.push(curr);
                 curr=curr.left;
+            }else{
+                //当前节点为空，说明左边走到头了，从栈中弹出节点并保存
+                //然后转向右边节点，继续上面整个过程
+                TreeNode popNode = stack.pop();
+                result.add(popNode.val);
+                curr=curr.right;
             }
-            //取出栈顶的节点并且赋给指针
-            curr=stack.pop();
-            result.add(curr.val);
-            //然后取出右子树节点
-            curr=curr.right;
         }
         return result;
     }
