@@ -318,11 +318,47 @@ public class LinkBinTree {
         }
         return levels;
     }
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        if(root==null){
+            return new ArrayList<List<Integer>>();
+        }
+        List<List<Integer>> lists=new ArrayList<>();
+        Queue<TreeNode> queue=new LinkedList<TreeNode>();
+        queue.offer(root);
+        while(queue.size()>0){
+            LinkedList<Integer> levelList=new LinkedList<>();
+            for(int i=queue.size();i>0;i--){
+                TreeNode node=queue.poll();
+                if((lists.size() & 1)==1){
+                    //奇数层放到队列尾部
+                    levelList.addLast(node.data);
+                }else{
+                    //偶数层放到队列头部
+                    levelList.addFirst(node.data);
+                }
+                if(node.right!=null){
+                    queue.offer(node.right);
+                }
+                if(node.left!=null){
+                    queue.offer(node.left);
+                }
+            }
+            lists.add(levelList);
+        }
+        return lists;
+    }
+
     public void divOrderTraverse(){
         List<List<Integer>> lists = divOrderTraverse(root);
         System.out.println(JSON.toJSONString(lists));
     }
-    /**区间搜索**/
+    public void levelOrder() {
+        List<List<Integer>> lists = levelOrder(root);
+        System.out.println(JSON.toJSONString(lists));
+    }
+
+        /**区间搜索**/
     private void searchSection(TreeNode t,int k1,int k2,ArrayList<Integer> result){
         if (t==null){
             return;
@@ -403,13 +439,14 @@ public class LinkBinTree {
 //        linkBinTree.searchSection(linkBinTree.getRoot(),10,20,list);
 //        System.out.println("区间查询"+list.toString());
         System.out.println("-------------递归遍历----------------");
-        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
+//        linkBinTree.preOrderTraverse();//前序遍历 从根节点开始遍历
         System.out.println("-----------------------------");
-        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
+//        linkBinTree.inOrderTraverse();//中序遍历  从根节点开始
         System.out.println("-----------------------------");
-        linkBinTree.postOrderTraverse();//后序遍历
+//        linkBinTree.postOrderTraverse();//后序遍历
         System.out.println("-----------------------------");
-        linkBinTree.divOrderTraverse();//层次遍历
+//        linkBinTree.divOrderTraverse();//层次遍历
+        linkBinTree.levelOrder();
 
 //        //前序遍历：根节点->左子树->右子树
 //        //中序遍历：左子树->根节点->右子树
@@ -425,6 +462,7 @@ public class LinkBinTree {
 //          TreeNode node = linkBinTree.find(9);
 //          System.out.println(node.data);
 //          System.out.println("最小值为："+linkBinTree.findMin().data);
+
     }
 
 }
