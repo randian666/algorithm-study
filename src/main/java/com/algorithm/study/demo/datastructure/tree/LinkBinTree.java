@@ -573,12 +573,10 @@ public class LinkBinTree {
         System.out.println("-----------------------------");
 //        linkBinTree.divOrderTraverse();//层次遍历
 //        linkBinTree.levelOrder();
-        //序列化树
+        //序列化、反序列化树
         System.out.println("-----------------------------");
-        linkBinTree.serialize();
-        String abc = "abc";
-        abc = abc.substring(1, abc.length() - 1);
-        System.out.println(abc);
+        TreeNode deserializeTree = linkBinTree.deserialize(linkBinTree.serialize());
+        linkBinTree.levelOrder(deserializeTree);
 //        //前序遍历：根节点->左子树->右子树
 //        //中序遍历：左子树->根节点->右子树
 //        //后序遍历：左子树->右子树->根节点
