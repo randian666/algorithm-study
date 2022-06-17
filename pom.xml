@@ -12,7 +12,7 @@
         <dependency>
             <artifactId>fastjson</artifactId>
             <groupId>com.alibaba</groupId>
-            <version>1.2.9</version>
+            <version>1.2.83</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
         <dependency>
